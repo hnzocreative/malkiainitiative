@@ -1,0 +1,337 @@
+/* ==========================================================================
+   STICKY 20% SIDEBAR NAVIGATION
+   ========================================================================== */
+.corporate-sidebar {
+    width: 100%;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: transform 0.45s var(--spring);
+    will-change: transform;
+}
+
+@media (max-width: 1023px) {
+    .corporate-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--sidebar-w);
+        height: 100vh;
+        height: 100dvh;
+        padding: 32px 24px;
+        z-index: 130;
+        transform: translateX(-100%);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .corporate-sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 1024px) {
+    .corporate-sidebar {
+        width: 20%;
+        min-width: 240px;
+        position: sticky;
+        top: 40px;
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        overflow-y: auto;
+        /* Fixes cut-off navigation */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .corporate-sidebar::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+}
+
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+/* Theme-Aware Logo */
+.brand-logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo-img {
+    height: 168px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.25s ease;
+    outline: none;
+}
+
+.brand-logo-img.logo-light {
+    display: block;
+}
+
+.brand-logo-img.logo-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .brand-logo-img.logo-light {
+        display: none;
+    }
+
+    .brand-logo-img.logo-dark {
+        display: block;
+    }
+}
+
+html[data-theme="light"] .brand-logo-img.logo-light {
+    display: block !important;
+}
+
+html[data-theme="light"] .brand-logo-img.logo-dark {
+    display: none !important;
+}
+
+html[data-theme="dark"] .brand-logo-img.logo-light {
+    display: none !important;
+}
+
+html[data-theme="dark"] .brand-logo-img.logo-dark {
+    display: block !important;
+}
+
+/* Sidebar Close Button */
+.btn-sidebar-close {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--c-border);
+    color: var(--c-text-bright);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    margin-left: -1rem;
+    top: -5rem;
+}
+
+.btn-sidebar-close:hover {
+    background: var(--c-surface-hover);
+    color: var(--c-gold);
+    transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+    .btn-sidebar-close {
+        display: none !important;
+    }
+}
+
+/* Nav Links */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-nav a,
+.sidebar-nav-details summary {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-text-base);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.sidebar-nav-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav-details summary:hover {
+    color: var(--c-accent-adaptive);
+    background: var(--c-surface-hover);
+    transform: translateX(4px);
+}
+
+.sidebar-nav a.active {
+    color: #361037;
+    background: var(--c-gold);
+}
+
+.nested-nav-group {
+    padding-left: 14px;
+    margin: 4px 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 2px solid var(--c-border);
+}
+
+.nested-nav-group a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 12px;
+}
+
+/* Arrows */
+.sidebar-nav-details .nav-arrow-icon {
+    font-size: 0.9rem;
+    transition: transform 0.28s var(--spring);
+    transform-origin: center;
+}
+
+.sidebar-nav-details[open] .nav-arrow-icon {
+    transform: rotate(90deg);
+}
+
+/* Theme Switcher */
+.theme-switch-box {
+    margin: 20px 0;
+    padding: 6px;
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-theme-toggle {
+    border: none;
+    background: transparent;
+    color: var(--c-text-muted);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    border-radius: 16px;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-theme-toggle.active {
+    background: var(--c-surface);
+    color: var(--c-text-bright);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Footer */
+.sidebar-footer {
+    font-size: 0.78rem;
+    color: var(--c-text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--c-border);
+    padding-top: 20px;
+}
+
+.sidebar-footer a {
+    color: var(--c-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sidebar-footer a:hover {
+    color: var(--c-gold);
+}
+
+/* Sidebar Footer Layout */
+.sidebar-socials {
+    display: flex;
+    gap: 14px;
+    font-size: 1.2rem;
+}
+
+.sidebar-socials a {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-socials a:hover {
+    transform: translateY(-2px);
+}
+
+.sidebar-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* ==========================================================================
+   ACTIVE NAVIGATION STATES
+   ========================================================================== */
+
+/* Parent Summary Highlight when Inside an Active Section */
+.sidebar-nav-details summary.parent-active {
+    color: var(--c-accent-adaptive);
+}
+
+.sidebar-nav-details summary.parent-active .nav-arrow-icon {
+    color: var(--c-accent-adaptive);
+}
+
+/* Active Child Link (Mirrors Hover State + Persistent Indication) */
+.nested-nav-group a.active-child {
+    color: var(--c-accent-adaptive);
+    background: var(--c-surface-hover);
+    transform: translateX(4px);
+    font-weight: 700;
+}
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: color 0.25s ease;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Fluid spring expansion on details content */
+details[open] summary~* {
+    animation: bounceInContent 0.45s var(--spring) forwards;
+}
+
+@keyframes bounceInContent {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

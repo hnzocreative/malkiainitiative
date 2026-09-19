@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Audited Financial Report | The Malkia Initiative</title>
+    <meta name="description"
+        content="Independent 2025 audited financial statements: $310,002.18 USD revenue, 81.4% direct program spend efficiency, itemized ledgers, and multi-year revenue trends.">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico?v=1" type="image/x-icon">
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+    <!-- Highcharts Core -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <!-- Shared Corporate Dark Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/ar-corporate.css">
+    <link rel="stylesheet" href="../assets/css/financial-report.css">
+
+    <!-- JSON-LD Schema: Financial Audited Report -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialReport",
+        "@id": "https://malkiainitiative.org/@10/ar2025/financial-report/#financials",
+        "name": "The Malkia Initiative 2025 Audited Financial Statements",
+        "description": "Independent audited financial review certifying $310,002.18 USD in revenue and $302,420.37 USD in operating expenditures with an 81.4% direct programmatic delivery ratio.",
+        "publisher": {
+        "@type": "NGO",
+        "name": "The Malkia Initiative",
+        "url": "https://malkiainitiative.org"
+        },
+        "fiscalYear": "2025",
+        "totalRevenue": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": 310002.18
+        },
+        "totalExpenditure": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": 302420.37
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- VIEWPORT WRAPPER -->
+    <div class="ar-page-layout" id="arPageLayout">
+
+        <!-- ====================================================================
+         1. STICKY 20% COLUMN: UNIFIED VERTICAL MENU
+         ==================================================================== -->
+        <aside class="ar-sidebar-column smooth-transition" id="arSidebar">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px;">
+                    <a href="../" class="ar-sidebar-brand" style="margin-bottom: 0;">
+                        <img src="../assets/images/logo.png" alt="The Malkia Initiative"
+                            onerror="this.src='../assets/images/logo.png'; this.onerror=null;">
+                    </a>
+                    <button class="ar-sidebar-close-btn" onclick="toggleNavDrawer(false)"
+                        aria-label="Close Menu">✕</button>
+                </div>
+
+                <nav class="ar-vertical-menu" aria-label="Annual Report Sections">
+                    <a href="../">
+                        <span>Overview</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../impact-numbers/">
+                        <span>Impact Numbers</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../toc-validated/">
+                        <span>ToC Validated</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="./" class="active">
+                        <span>Financial Report</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../program-report/">
+                        <span>Program Report & Forecast</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../donors-partnerships/">
+                        <span>Donor & Partnerships</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="ar-sidebar-footer">
+                <p style="color: var(--ar-text-muted); margin-bottom: 8px;">Malkia Initiative 2025 Annual Report</p>
+                <a href="../../">&larr; Corporate Website</a>
+            </div>
+        </aside>
+
+        <!-- ====================================================================
+         2. 80% COLUMN: FINANCIAL REPORT CONTENT
+         ==================================================================== -->
+        <div class="ar-main-column" id="arMainColumn">
+
+            <!-- Mobile Top Bar Trigger (<1024px) -->
+            <div class="ar-mobile-top-bar">
+                <span class="ar-badge-pill">AR2025 • Financials</span>
+                <button class="btn-mobile-menu-fab" id="arMenuFab" onclick="toggleNavDrawer()"
+                    aria-label="Toggle Navigation">
+                    <i class="ph-bold ph-list"></i>
+                    <span>Menu</span>
+                </button>
+            </div>
+
+            <!-- PAGE HEADER -->
+            <header class="ar-header-strip">
+                <span class="ar-badge-pill">Audited Financial Statements</span>
+                <h1>Fiduciary Discipline. Scaled Efficiency.</h1>
+                <p>
+                    In 2025, The Malkia Initiative maintained strict accountability standards, channeling 81.4% of total
+                    expenditures directly into frontline girl-child programs across Kajiado. Our books received
+                    an unqualified independent audit opinion.
+                </p>
+            </header>
+
+            <!-- 1. TOP FINANCIAL KPIS (GRAPH PAPER CARDS) -->
+            <section class="financial-kpi-grid" aria-label="Financial Summary Cards">
+                <div class="financial-kpi-card">
+                    <div class="kpi-label">Audited Revenue</div>
+                    <div class="kpi-val">$310,002</div>
+                    <div class="kpi-note">Total institutional grants, bilateral funding, and private donations.
+                    </div>
+                </div>
+
+                <div class="financial-kpi-card">
+                    <div class="kpi-label">Total Expenditure</div>
+                    <div class="kpi-val">$302,420</div>
+                    <div class="kpi-note">Frontline program operations and administrative governance.</div>
+                </div>
+
+                <div class="financial-kpi-card">
+                    <div class="kpi-label">Direct Program Ratio</div>
+                    <div class="kpi-val">81.4%</div>
+                    <div class="kpi-note">Surpassing the global 75% charity efficiency standard.</div>
+                </div>
+
+                <div class="financial-kpi-card">
+                    <div class="kpi-label">Year-End Net Position</div>
+                    <div class="kpi-val">+$7,582</div>
+                    <div class="kpi-note">Carried forward to reserve liquidity for 2026 operations.</div>
+                </div>
+            </section>
+
+            <!-- 2. HIGHCHARTS INTERACTIVE VISUALS ROW -->
+            <section class="ar-bento-grid">
+                <!-- Donut: Spend Breakdown -->
+                <div class="ar-card col-span-6" id="financialsDonutCard">
+                    <span class="ar-section-tag">2025 Allocation</span>
+                    <h2 class="ar-card-title">Expenditure Allocation</h2>
+                    <p class="ar-card-desc">Programmatic delivery vs. administrative oversight.</p>
+                    <div id="chartSpendEfficiency" class="ar-chart-container"></div>
+                </div>
+
+                <!-- Spline: Historical Revenue Growth -->
+                <div class="ar-card col-span-6" id="revenueRampCard">
+                    <span class="ar-section-tag">Historical Trajectory</span>
+                    <h2 class="ar-card-title">4-Year Revenue Growth (USD)</h2>
+                    <p class="ar-card-desc">Scaling institutional trust from 2022 to 2025.</p>
+                    <div id="chartRevenueGrowth" class="ar-chart-container"></div>
+                </div>
+            </section>
+
+            <!-- 3. ITEMIZED LEDGER TABLES -->
+            <section class="ar-card col-span-12 audited-ledgers-card" aria-label="Itemized Financial Statements">
+                <span class="ar-section-tag">Audited Ledgers</span>
+                <h2 class="ar-card-title">Consolidated Statement of Activities (FY 2025)</h2>
+                <p class="ar-card-desc">
+                    Itemized breakdown of incoming revenue streams and operational resource utilization.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 16px;">
+                    <!-- Revenue Ledger -->
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.15rem; color: var(--ar-gold); margin-bottom: 8px;">
+                            Revenue & Financial Support
+                        </h3>
+                        <div class="ledger-table-wrap">
+                            <table class="ledger-table">
+                                <thead>
+                                    <tr>
+                                        <th>Funding Source</th>
+                                        <th>Category</th>
+                                        <th class="text-right">Amount (USD)</th>
+                                        <th class="text-right">% Share</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Institutional Philanthropic Grants</strong></td>
+                                        <td>Bilateral & Foundation Trust Funding</td>
+                                        <td class="text-right">$218,551.54</td>
+                                        <td class="text-right">70.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Direct Public & Donor Giving</strong></td>
+                                        <td>Individual Benefactors & Campaigns</td>
+                                        <td class="text-right">$65,100.46</td>
+                                        <td class="text-right">21.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Corporate Alliances & CSR</strong></td>
+                                        <td>Private Sector Matching Funds</td>
+                                        <td class="text-right">$26,350.18</td>
+                                        <td class="text-right">8.5%</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2"><strong>Total Revenue (Audited)</strong></td>
+                                        <td class="text-right"><strong>$310,002.18</strong></td>
+                                        <td class="text-right"><strong>100.0%</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Expenditure Ledger -->
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.15rem; color: var(--ar-gold); margin-bottom: 8px;">
+                            Programmatic & Operating Expenditures
+                        </h3>
+                        <div class="ledger-table-wrap">
+                            <table class="ledger-table">
+                                <thead>
+                                    <tr>
+                                        <th>Expenditure Functional Area</th>
+                                        <th>Pillar / Focus</th>
+                                        <th class="text-right">Amount (USD)</th>
+                                        <th class="text-right">% Share</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Girl-Centered Programming & Education</strong></td>
+                                        <td>Pillar 01: Scholarships, Pads & Mentorship</td>
+                                        <td class="text-right">$184,476.22</td>
+                                        <td class="text-right">61.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Evidence Generation, TaRL & Research</strong></td>
+                                        <td>Pillar 02: MERL & Adolescent Fellows</td>
+                                        <td class="text-right">$38,105.10</td>
+                                        <td class="text-right">12.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Community Protection & Rescue Barazas</strong></td>
+                                        <td>Pillar 01: Elders' Pacts & Safe Housing</td>
+                                        <td class="text-right">$23,722.80</td>
+                                        <td class="text-right">7.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Operational Governance & Institutional Audits</strong></td>
+                                        <td>Pillar 03: Compliance, Board & Staff</td>
+                                        <td class="text-right">$56,116.25</td>
+                                        <td class="text-right">18.6%</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2"><strong>Total Expenditures (Audited)</strong></td>
+                                        <td class="text-right"><strong>$302,420.37</strong></td>
+                                        <td class="text-right"><strong>100.0%</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- RIGHT TELEMETRY SLIDE-OUT ASIDE (FISCAL AUDIT THEME) -->
+    <aside class="ar-telemetry-drawer" id="arTelemetry" aria-label="Fiscal Audit Telemetry">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-family: var(--font-display); color: var(--ar-bg);">Fiscal Telemetry</h3>
+            <button onclick="toggleTelemetry(false)"
+                style="background:none; border:none; color: var(--ar-bg); font-size:1.4rem; cursor:pointer;"
+                aria-label="Close Telemetry">✕</button>
+        </div>
+
+        <div>
+            <h4 style="font-family: var(--font-display); color: var(--ar-bg); font-size: 0.95rem; margin-bottom: 8px;">
+                Auditor Opinion & Independence
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--ar-bg);">
+                The audit was conducted in compliance with International Standards on Auditing (ISA). The independent
+                auditors expressed an unqualified opinion, verifying accurate representation of financial position and
+                internal control integrity.
+            </p>
+        </div>
+
+        <div>
+            <h4 style="font-family: var(--font-display); color: var(--ar-bg); font-size: 0.95rem; margin-bottom: 8px;">
+                Overhead Governance Policy
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--ar-bg);">
+                The Board of Directors maintains a mandatory governance policy capping administrative and fundraising
+                expenses at 20% of total expenditure (18.6% achieved in 2025).
+            </p>
+        </div>
+
+        <div>
+            <h4 style="font-family: var(--font-display); color: var(--ar-bg); font-size: 0.95rem; margin-bottom: 8px;">
+                Operating Reserve Liquidity
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--ar-bg);">
+                Malkia maintains an operating cash reserve equivalent to 90 days of core operational expenditures,
+                ensuring rescue and safe boarding continuity during humanitarian or environmental emergencies.
+            </p>
+        </div>
+    </aside>
+
+    <!-- SHARED BACKDROP -->
+    <div class="ar-backdrop" id="arBackdrop" onclick="closeAllDrawers()"></div>
+
+    <!-- FLOATING TELEMETRY TRIGGER -->
+    <button class="ar-fab-telemetry" id="arFabTelemetry" onclick="toggleTelemetry()" aria-label="Open Fiscal Telemetry">
+        <i class="ph-bold ph-scales"></i>
+        <span>Fiscal Telemetry</span>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="../assets/js/ar-corporate.js"></script>
+    <script src="../assets/js/financial-report.js"></script>
+</body>
+
+</html>

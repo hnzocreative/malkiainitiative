@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Report & Forecast | The Malkia Initiative Annual Report</title>
+    <meta name="description"
+        content="Frontline execution across SheRISE, Voices Uncut, and KUZA, mapped to the 2026–2029 multi-year capital deployment and beneficiary scale forecast.">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico?v=1" type="image/x-icon">
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+    <!-- Highcharts Core & Modules -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <!-- Shared Corporate Dark Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/ar-corporate.css">
+    <link rel="stylesheet" href="../assets/css/program-report.css">
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Report",
+        "@id": "https://malkiainitiative.org/@10/ar2025/program-report/#programs",
+        "name": "The Malkia Initiative 2025 Program Report & Strategic Horizon",
+        "description": "Comprehensive program highlights across SheRISE TVET, Voices Uncut SRHR, and KUZA TaRL literacy alongside a 2026-2029 capital allocation forecast.",
+        "publisher": {
+        "@type": "NGO",
+        "name": "The Malkia Initiative",
+        "url": "https://malkiainitiative.org"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- VIEWPORT WRAPPER -->
+    <div class="ar-page-layout" id="arPageLayout">
+
+        <!-- ====================================================================
+         1. STICKY 20% COLUMN: UNIFIED VERTICAL MENU
+         ==================================================================== -->
+        <aside class="ar-sidebar-column smooth-transition" id="arSidebar">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px;">
+                    <a href="../" class="ar-sidebar-brand" style="margin-bottom: 0;">
+                        <img src="../assets/images/logo.png" alt="The Malkia Initiative"
+                            onerror="this.src='../assets/images/logo.png'; this.onerror=null;">
+                    </a>
+                    <button class="ar-sidebar-close-btn" onclick="toggleNavDrawer(false)"
+                        aria-label="Close Menu">✕</button>
+                </div>
+
+                <nav class="ar-vertical-menu" aria-label="Annual Report Sections">
+                    <a href="../">
+                        <span>Overview</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../impact-numbers/">
+                        <span>Impact Numbers</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../toc-validated/">
+                        <span>ToC Validated</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../financial-report/">
+                        <span>Financial Report</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="./" class="active">
+                        <span>Program Report & Forecast</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                    <a href="../donors-partnerships/">
+                        <span>Donor & Partnerships</span>
+                        <i class="ph ph-caret-right"></i>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="ar-sidebar-footer">
+                <p style="color: var(--ar-text-muted); margin-bottom: 8px;">Malkia Initiative 2025 Annual Report</p>
+                <a href="../../">&larr; Corporate Website</a>
+            </div>
+        </aside>
+
+        <!-- ====================================================================
+         2. 80% COLUMN: MAIN PROGRAM & FORECAST CONTENT
+         ==================================================================== -->
+        <div class="ar-main-column" id="arMainColumn">
+
+            <!-- Mobile Top Bar Trigger (<1024px) -->
+            <div class="ar-mobile-top-bar">
+                <span class="ar-badge-pill">AR2025 • Programs</span>
+                <button class="btn-mobile-menu-fab" id="arMenuFab" onclick="toggleNavDrawer()"
+                    aria-label="Toggle Navigation">
+                    <i class="ph-bold ph-list"></i>
+                    <span>Menu</span>
+                </button>
+            </div>
+
+            <!-- PAGE HEADER -->
+            <header class="ar-header-strip">
+                <span class="ar-badge-pill">Frontline Operational Review</span>
+                <h1>Program Delivery & The 2029 Horizon.</h1>
+                <p>
+                    Our programmatic engine bridges immediate crisis response with systemic socio-economic
+                    autonomy. Discover how our three flagship initiatives performed in 2025 and how capital
+                    scales toward our $2M 2029 horizon.
+                </p>
+            </header>
+
+            <!-- 1. THREE FLAGSHIP PILLARS BENTO -->
+            <section class="program-pillars-grid" aria-label="Flagship Programs">
+                <!-- SheRISE Card -->
+                <div class="program-pillar-card">
+                    <div>
+                        <div class="pillar-badge-strip">
+                            <span class="pillar-chip sherise">Pillar 01 • TVET</span>
+                            <i class="ph-bold ph-scissors" style="color: var(--ar-gold); font-size: 1.3rem;"></i>
+                        </div>
+                        <h3>SheRISE Vocational Track</h3>
+                        <p>
+                            Partnering with Maasai National Polytechnic to equip adolescent mothers and survivors of
+                            child marriage with accredited cosmetology, hairdressing, and micro-enterprise
+                            toolkits.
+                        </p>
+                    </div>
+                    <ul class="pillar-impact-list">
+                        <li><i class="ph-bold ph-check-circle"></i> 100% of 2025 cohort graduated with toolkits
+                        </li>
+                        <li><i class="ph-bold ph-check-circle"></i> Micro-salon salon collectives launched</li>
+                        <li><i class="ph-bold ph-check-circle"></i> Childcare crèches integrated during training</li>
+                    </ul>
+                </div>
+
+                <!-- Voices Uncut Card -->
+                <div class="program-pillar-card">
+                    <div>
+                        <div class="pillar-badge-strip">
+                            <span class="pillar-chip voices">Pillar 02 • SRHR</span>
+                            <i class="ph-bold ph-shield-check" style="color: var(--ar-cyan); font-size: 1.3rem;"></i>
+                        </div>
+                        <h3>Voices Uncut & Pad Banks</h3>
+                        <p>
+                            County-wide menstrual equity, school Crown Clubs, and adolescent health mentorship
+                            dismantling silence surrounding SRHR and forced cross-border unions.
+                        </p>
+                    </div>
+                    <ul class="pillar-impact-list">
+                        <li><i class="ph-bold ph-check-circle"></i> 3,800 dignity packages supplied in 2025</li>
+                        <li><i class="ph-bold ph-check-circle"></i> 22 active school-based Crown Club hubs</li>
+                        <li><i class="ph-bold ph-check-circle"></i> 5-Ward traditional elder mediation pacts</li>
+                    </ul>
+                </div>
+
+                <!-- KUZA Card -->
+                <div class="program-pillar-card">
+                    <div>
+                        <div class="pillar-badge-strip">
+                            <span class="pillar-chip kuza">Pillar 03 • Literacy</span>
+                            <i class="ph-bold ph-book-open" style="color: var(--ar-mint); font-size: 1.3rem;"></i>
+                        </div>
+                        <h3>KUZA Literacy (TaRL Pilot)</h3>
+                        <p>
+                            Teaching at the Right Level (TaRL) methodology accelerating phonetic decoding and numeracy
+                            for girls at risk of academic dropout due to seasonal migration.
+                        </p>
+                    </div>
+                    <ul class="pillar-impact-list">
+                        <li><i class="ph-bold ph-check-circle"></i> 324 learners reached story-level fluency
+                        </li>
+                        <li><i class="ph-bold ph-check-circle"></i> 10-week accelerated phonetics bootcamps</li>
+                        <li><i class="ph-bold ph-check-circle"></i> 92.4% primary school retention recorded</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 2. STRATEGIC FORECAST 2026–2029 (INTERACTIVE DRILL-DOWN STAGE) -->
+            <section class="forecast-stage-card col-span-12" aria-label="Strategic Forecast">
+                <span class="ar-section-tag">Capital Deployment Model</span>
+                <h2 class="ar-card-title">Strategic Horizon: 2026–2029 Growth & Impact Projections</h2>
+                <p class="ar-card-desc">
+                    How incremental budget expansion translates directly into frontline girl coverage across Kajiado and
+                    neighboring pastoral corridors.
+                </p>
+
+                <!-- View Switcher Controls -->
+                <div class="forecast-interactive-controls">
+                    <button class="btn-forecast-toggle active" id="btnViewBudget"
+                        onclick="switchForecastView('budget')">
+                        <i class="ph-bold ph-coins"></i> Capital Allocation (USD)
+                    </button>
+                    <button class="btn-forecast-toggle" id="btnViewGirls" onclick="switchForecastView('girls')">
+                        <i class="ph-bold ph-users-three"></i> Adolescent Girls Reached
+                    </button>
+                </div>
+
+                <!-- Highcharts Visualizer -->
+                <div id="chartForecastInteractive" class="ar-chart-container" style="min-height: 420px; height: 420px;">
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- RIGHT TELEMETRY SLIDE-OUT ASIDE (OPERATIONAL THEME) -->
+    <aside class="ar-telemetry-drawer" id="arTelemetry" aria-label="Operational Telemetry">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-family: var(--font-display); color: var(--ar-bg);">Program Telemetry</h3>
+            <button onclick="toggleTelemetry(false)"
+                style="background:none; border:none; color: var(--ar-bg); font-size:1.4rem; cursor:pointer;"
+                aria-label="Close Telemetry">✕</button>
+        </div>
+
+        <div>
+            <h4 style="font-family: var(--font-display); color: var(--ar-bg); font-size: 0.95rem; margin-bottom: 8px;">
+                Polytechnic Accreditation Standards
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--ar-bg);">
+                All SheRISE curricula comply with National Industrial Training Authority (NITA) standards, ensuring
+                beneficiaries receive government-recognized trade credentials.
+            </p>
+        </div>
+
+        <div>
+            <h4 style="font-family: var(--font-display); color: var(--ar-bg); font-size: 0.95rem; margin-bottom: 8px;">
+                TaRL Pedagogical Integrity
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--ar-bg);">
+                Learners are grouped strictly by observed reading ability rather than age or chronological grade,
+                undergoing assessment every 20 instructional days.
+            </p>
+        </div>
+
+        <div>
+            <h4 style="font-family: var(--font-display); color: var(--ar-bg); font-size: 0.95rem; margin-bottom: 8px;">
+                2029 Scale Assumptions
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--ar-bg);">
+                Projections maintain the verified $75/year unit economic baseline, factoring 6% annual inflation and
+                decentralization into two additional pastoral sub-counties.
+            </p>
+        </div>
+    </aside>
+
+    <!-- SHARED BACKDROP -->
+    <div class="ar-backdrop" id="arBackdrop" onclick="closeAllDrawers()"></div>
+
+    <!-- FLOATING TELEMETRY TRIGGER -->
+    <button class="ar-fab-telemetry" id="arFabTelemetry" onclick="toggleTelemetry()"
+        aria-label="Open Program Telemetry">
+        <i class="ph-bold ph-scales"></i>
+        <span>Program Telemetry</span>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="../assets/js/ar-corporate.js"></script>
+    <script src="../assets/js/program-report.js"></script>
+</body>
+
+</html>

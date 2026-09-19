@@ -1,0 +1,112 @@
+/* ==========================================================================
+   DESIGN SYSTEM TOKENS (LIGHT/DARK ADAPTIVE)
+   ========================================================================== */
+:root {
+    color-scheme: light dark;
+
+    /* Semantic Palettes resolving natively to system preference */
+    --c-bg: light-dark(#FDFBF7, #361037);
+    --c-surface: light-dark(#FFFFFF, #421444);
+    --c-surface-hover: light-dark(#F5EFE6, #4e1950);
+    --c-border: light-dark(rgba(91, 27, 93, 0.12), rgba(242, 201, 76, 0.18));
+    --c-border-light: light-dark(rgba(91, 27, 93, 0.22), rgba(242, 201, 76, 0.28));
+
+    /* Core Brand Colors */
+    --c-purple-primary: #5B1B5D;
+    --c-gold: #F2C94C;
+    --c-gold-soft: rgba(242, 201, 76, 0.14);
+    --c-mint: #10B981;
+    --c-cyan: #06B6D4;
+    --c-yellow: #FBC800;
+
+    /* Adaptive Typography Colors */
+    --c-text-bright: light-dark(#250A26, #FFFFFF);
+    --c-text-base: light-dark(#4A3B4C, #F1EBF2);
+    --c-text-muted: light-dark(#766579, #C8BDCB);
+
+    /* Adaptive primary brand accent */
+    --c-accent-adaptive: light-dark(#5B1B5D, #F2C94C);
+
+    /* Legacy Map (Ensures older pasted components respond to Dark Mode) */
+    --malkia-purple: var(--c-purple-primary);
+    --malkia-light-purple: #782573;
+    --malkia-gold: var(--c-gold);
+    --malkia-yellow: var(--c-yellow);
+    --bg-card: var(--c-surface);
+    --bg-card-2: var(--c-surface-hover);
+    --text-dark: var(--c-text-bright);
+    --text-muted: var(--c-text-muted);
+    --border-muted: var(--c-border);
+
+    /* Typography & Metrics */
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --max-w: 1600px;
+    --sidebar-w: min(300px, 82vw);
+    --drawer-w: min(440px, 88vw);
+    --spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* User Manual Theme Overrides */
+html[data-theme="light"] {
+    color-scheme: light;
+    --c-bg: #FDFBF7;
+    --c-surface: #FFFFFF;
+    --c-surface-hover: #F5EFE6;
+    --c-border: rgba(91, 27, 93, 0.12);
+    --c-border-light: rgba(91, 27, 93, 0.22);
+    --c-text-bright: #250A26;
+    --c-text-base: #4A3B4C;
+    --c-text-muted: #766579;
+    --c-accent-adaptive: #5B1B5D;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --c-bg: #361037;
+    --c-surface: #421444;
+    --c-surface-hover: #4e1950;
+    --c-border: rgba(242, 201, 76, 0.18);
+    --c-border-light: rgba(242, 201, 76, 0.28);
+    --c-text-bright: #FFFFFF;
+    --c-text-base: #F1EBF2;
+    --c-text-muted: #C8BDCB;
+    --c-accent-adaptive: #F2C94C;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: var(--c-gold);
+    color: #361037;
+}
+
+body {
+    background-color: var(--c-bg);
+    color: var(--c-text-base);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Visibility Helpers */
+.mobile-only {
+    display: flex !important;
+}
+
+@media (min-width: 1024px) {
+    .mobile-only {
+        display: none !important;
+    }
+}

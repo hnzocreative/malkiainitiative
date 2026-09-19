@@ -1,0 +1,890 @@
+/* ==========================================================================
+   MALKIA INITIATIVE AR2025: CONSOLIDATED CORPORATE DESIGN SYSTEM
+   ========================================================================== */
+:root {
+    --ar-bg: #361037;
+    --ar-surface: #421444;
+    --ar-surface-hover: #4e1950;
+    --ar-border: rgba(242, 201, 76, 0.18);
+    --ar-border-light: rgba(242, 201, 76, 0.28);
+
+    --ar-purple-primary: #5B1B5D;
+    --ar-gold: #F2C94C;
+    --ar-gold-soft: rgba(242, 201, 76, 0.12);
+    --ar-mint: #10B981;
+    --ar-cyan: #06B6D4;
+
+    --ar-text-bright: #FFFFFF;
+    --ar-text-base: #F1EBF2;
+    --ar-text-muted: #C8BDCB;
+
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --max-w: 1600px;
+    --ar-drawer-w: min(320px, 82vw);
+    --stats-w: min(460px, 88vw);
+    --spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: var(--ar-gold);
+    color: var(--ar-bg);
+}
+
+body {
+    background-color: var(--ar-bg);
+    color: var(--ar-text-base);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   LAYOUT STRUCTURE (20% SIDEBAR / 80% CONTENT)
+   ========================================================================== */
+.ar-page-layout {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .ar-page-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 40px 32px;
+        gap: 40px;
+    }
+}
+
+/* ==========================================================================
+   PERSPECTIVE SHIFTS (TARGETING BOTH SIDEBAR & MAIN COLUMN)
+   ========================================================================== */
+.ar-main-column,
+.ar-sidebar-column {
+    transform-origin: center center;
+    transition: transform 0.45s var(--spring), filter 0.45s var(--spring), opacity 0.45s var(--spring);
+    will-change: transform, filter, opacity;
+}
+
+.ar-main-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+@media (min-width: 1024px) {
+    .ar-main-column {
+        width: 80%;
+    }
+}
+
+/* 1. Menu Open: Push Main Right with Blur (Mobile Only) */
+.ar-main-column.shifted-right {
+    transform: translateX(var(--ar-drawer-w)) scale(0.96);
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* 2. Telemetry Open: Shift BOTH Main and Sidebar to the Left */
+.ar-main-column.shifted-left,
+.ar-sidebar-column.shifted-left {
+    transform: translateX(calc(-1 * var(--stats-w))) scale(0.96);
+    opacity: 0.45;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ==========================================================================
+   UNIFIED VERTICAL NAVIGATION & SIDEBAR
+   ========================================================================== */
+.ar-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 36px;
+}
+
+.ar-sidebar-brand img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+.ar-badge-pill {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ar-gold);
+    border: 1px solid var(--ar-border-light);
+    background: var(--ar-gold-soft);
+    padding: 3px 8px;
+    border-radius: 14px;
+}
+
+.ar-vertical-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ar-vertical-menu a {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ar-text-base);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.ar-vertical-menu a:hover {
+    color: var(--ar-gold);
+    background: rgba(242, 201, 76, 0.06);
+    border-color: rgba(242, 201, 76, 0.15);
+    transform: translateX(4px);
+}
+
+.ar-vertical-menu a.active {
+    color: var(--ar-bg);
+    background: var(--ar-gold);
+}
+
+.ar-sidebar-footer {
+    margin-top: 32px;
+    font-size: 0.82rem;
+}
+
+.ar-sidebar-footer a {
+    color: var(--ar-gold);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ar-sidebar-close-btn {
+    display: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-top: -70px;
+    margin-right: -20px;
+}
+
+/* Mobile Sidebar (<1024px) */
+@media (max-width: 1023px) {
+    .ar-sidebar-column {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--ar-drawer-w);
+        height: 100vh;
+        height: 100dvh;
+        /* background: #250A26;
+        border-right: 1px solid var(--ar-border); */
+        padding: 32px 24px;
+        z-index: 130;
+        transform: translateX(-100%);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        will-change: transform;
+        /* box-shadow: 12px 0 36px rgba(0, 0, 0, 0.45); */
+    }
+
+    .ar-sidebar-column.open {
+        transform: translateX(0);
+    }
+
+    .ar-sidebar-column.smooth-transition {
+        transition: transform 0.45s var(--spring);
+    }
+
+    .ar-sidebar-close-btn {
+        display: flex;
+    }
+}
+
+/* Desktop Sidebar (>=1024px) */
+@media (min-width: 1024px) {
+    .ar-sidebar-column {
+        width: 20%;
+        min-width: 220px;
+        position: sticky;
+        top: 40px;
+        height: calc(100vh - 80px);
+        background: transparent;
+        transform: none;
+        box-shadow: none;
+        border-right: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+/* ==========================================================================
+   MOBILE TOP BAR TRIGGER (<1024px)
+   ========================================================================== */
+.ar-mobile-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+    .ar-mobile-top-bar {
+        display: none;
+    }
+}
+
+.btn-mobile-menu-fab {
+    background: var(--ar-surface);
+    border: 1px solid var(--ar-border);
+    color: #FFFFFF;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-mobile-menu-fab:hover {
+    background: var(--ar-surface-hover);
+}
+
+/* ==========================================================================
+   HEADER: GOVERNANCE & ACCOUNTABILITY STRIP
+   ========================================================================== */
+.ar-header-strip {
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    text-align: center;
+}
+
+.ar-section-tag {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ar-gold);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.ar-header-strip h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    font-weight: 700;
+    color: var(--ar-text-bright);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    margin-top: 1.5rem;
+}
+
+.ar-header-strip p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ar-text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.exec-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.exec-stat-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.exec-stat-pill .val {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--ar-gold);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.exec-stat-pill .lbl {
+    font-size: 0.8rem;
+    color: var(--ar-text-muted);
+    font-weight: 900;
+}
+
+.exec-meta-grid .dialog {
+    background-color: var(--ar-gold);
+    cursor: pointer;
+}
+
+.exec-meta-grid .dialog:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.exec-meta-grid .dialog .val,
+.exec-meta-grid .dialog .lbl {
+    color: var(--ar-bg) !important;
+    font-weight: 900;
+}
+
+/* ==========================================================================
+   BENTO GRID CARDS
+   ========================================================================== */
+.ar-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .ar-bento-grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.ar-card {
+    background: var(--ar-surface);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s var(--spring);
+}
+
+.ar-card:hover {
+    border-color: rgba(242, 201, 76, 0.4);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.col-span-12 {
+    grid-column: span 12;
+}
+
+.col-span-6 {
+    grid-column: span 12;
+}
+
+@media (min-width: 1024px) {
+    .col-span-6 {
+        grid-column: span 6;
+    }
+}
+
+.ar-card-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2vw, 1.85rem);
+    font-weight: 700;
+    color: var(--ar-text-bright);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-wrap: balance;
+}
+
+.ar-card-desc {
+    font-size: 1.0rem;
+    line-height: 1.55;
+    color: var(--ar-text-muted);
+}
+
+/* Impact Metrics */
+.impact-tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.impact-tile {
+    background: var(--ar-surface-hover);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    border-left: 3px solid var(--ar-gold);
+}
+
+.impact-tile .num {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.impact-tile .lbl {
+    font-size: 0.85rem;
+    color: var(--ar-text-muted);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   CARD #TOC: BACKGROUND IMAGE, BOTTOM GRADIENT & ACCORDIONS
+   ========================================================================== */
+#toc.ar-card {
+    background-image: url('../images/toc.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Anchors content to the bottom */
+    padding: 0;
+    min-height: 520px;
+}
+
+.toc-bottom-scrim {
+    width: 100%;
+    padding: 36px 32px 32px 32px;
+    background: linear-gradient(to bottom,
+            rgba(54, 16, 55, 0.0) 0%,
+            rgba(54, 16, 55, 0.65) 25%,
+            rgba(54, 16, 55, 0.94) 60%,
+            rgba(54, 16, 55, 0.99) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.toc-accordions-wrap {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toc-item {
+    background: rgba(66, 20, 68, 0.8);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+}
+
+.toc-summary {
+    list-style: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--ar-gold);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.toc-summary::-webkit-details-marker {
+    display: none;
+}
+
+.toc-summary-icon {
+    font-size: 0.85rem;
+    transition: transform 0.25s ease;
+}
+
+.toc-item[open] .toc-summary-icon {
+    transform: rotate(45deg);
+}
+
+.toc-content {
+    padding: 0 16px 14px 16px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ar-text-base);
+    will-change: height, opacity;
+}
+
+/* Highcharts Containers */
+.ar-chart-container {
+    width: 100%;
+    height: 380px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   DONOR PARTNERS & APPRECIATION
+   ========================================================================== */
+#partners.ar-card {
+    background: #f8f3e7;
+    border: 1px solid #E8E2D8;
+    color: var(--ar-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 5rem;
+}
+
+#partners.ar-card:hover {
+    border-color: #D1C7D3;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+#partners .ar-section-tag {
+    color: var(--ar-purple-primary);
+    background: rgba(91, 27, 93, 0.08);
+    border: 1px solid rgba(91, 27, 93, 0.15);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+#partners .ar-card-title {
+    color: var(--ar-bg);
+}
+
+#partners .ar-card-desc {
+    color: #554457;
+    text-wrap: balance;
+}
+
+.donor-logos-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+}
+
+@media (min-width: 600px) {
+    .donor-logos-strip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .donor-logos-strip {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.donor-logo-box {
+    /* background: #FFFFFF; */
+    mix-blend-mode: multiply;
+    border-radius: var(--radius-sm);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    transition: transform 0.25s var(--spring), box-shadow 0.25s ease;
+}
+
+.donor-logo-box:hover {
+    transform: translateY(-3px);
+}
+
+.donor-logo-box img {
+    max-width: 100%;
+    max-height: 152px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   GLOBAL TELEMETRY DRAWER, FAB & HIGHLIGHT SELECTION
+   ========================================================================== */
+.ar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 5, 16, 0.7);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 120;
+}
+
+.ar-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ar-telemetry-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--stats-w);
+    height: 100vh;
+    background: var(--ar-gold);
+    border-left: 1px solid var(--ar-border);
+    padding: 36px 28px;
+    z-index: 140;
+    transform: translateX(100%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: transform 0.45s var(--spring);
+    box-shadow: -12px 0 36px rgba(0, 0, 0, 0.45);
+}
+
+.ar-telemetry-drawer.open {
+    transform: translateX(0);
+}
+
+/* Targets all text inside the gold drawer for clean contrast highlight */
+#arTelemetry *::selection,
+#arTelemetry::selection {
+    background-color: var(--ar-bg) !important;
+    color: var(--ar-gold) !important;
+}
+
+.ar-fab-telemetry {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--ar-gold);
+    color: var(--ar-bg);
+    border: none;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 24px rgba(242, 201, 76, 0.3);
+    transition: transform 0.3s var(--spring);
+}
+
+.ar-fab-telemetry:hover {
+    transform: translateY(-2px);
+}
+
+.ar-fab-telemetry.shifted-left {
+    transform: translateX(calc(-1 * var(--stats-w)));
+}
+
+/* ==========================================================================
+   EXECUTIVE DIRECTOR VIDEO DIALOG MODAL
+   ========================================================================== */
+dialog.video-dialog-modal {
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-md);
+    background: var(--ar-surface);
+    padding: 24px;
+    color: #FFFFFF;
+    width: min(840px, 92vw);
+    max-width: 840px;
+    margin: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+dialog.video-dialog-modal::backdrop {
+    background: rgba(26, 8, 27, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.video-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.video-modal-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--ar-gold);
+}
+
+.video-modal-close-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.video-player-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background: #000000;
+}
+
+.video-player-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   #IMPACT CARD: ARCHITECTURAL / AUDIT GRAPH-PAPER GRID
+   ========================================================================== */
+#impact.ar-card {
+    position: relative;
+    background-color: var(--ar-surface);
+    /* 1px lines creating 20px fine grid & 100px major grid accents */
+    background-image:
+        linear-gradient(to right, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to right, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 201, 76, 0.04) 1px, transparent 1px);
+    background-size:
+        10px 10px,
+        10px 10px,
+        50px 100px,
+        100px 100px;
+    background-position: -1px -1px;
+}
+
+/* Give the impact tiles a slight glass-morphic backdrop so the grid peeks through cleanly */
+#impact .impact-tile {
+    background: rgba(34, 20, 36, 0.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   INVERTED FILLET CORNER TABS (TOP-RIGHT NOTCH)
+   ========================================================================== */
+
+/* Target the 4 specific cards */
+#impact.ar-card,
+#toc.ar-card,
+#financials.ar-card,
+#programs.ar-card {
+    position: relative;
+    overflow: hidden;
+    /* Clips the tab flush to the card's rounded top-right */
+}
+
+/* The Top-Right Notch Tab */
+.ar-card-corner-tab {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px 10px 18px;
+    background: rgba(34, 20, 36, 0.92);
+    border-bottom-left-radius: 16px;
+    border-left: 1px solid var(--ar-border);
+    border-bottom: 1px solid var(--ar-border);
+    color: var(--ar-gold);
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Inverted curve to the LEFT of the tab */
+.ar-card-corner-tab::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle at 0% 100%, transparent 16px, rgba(34, 20, 36, 0.92) 16.5px);
+    pointer-events: none;
+}
+
+/* Inverted curve BELOW the tab */
+.ar-card-corner-tab::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -16px;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle at 0% 100%, transparent 16px, rgba(34, 20, 36, 0.92) 16.5px);
+    pointer-events: none;
+}
+
+/* Hover & Focus Interactions */
+.ar-card-corner-tab:hover {
+    background: var(--ar-gold);
+    color: var(--ar-bg);
+    border-color: var(--ar-gold);
+}
+
+.ar-card-corner-tab:hover::before {
+    background: radial-gradient(circle at 0% 100%, transparent 16px, var(--ar-gold) 16.5px);
+}
+
+.ar-card-corner-tab:hover::after {
+    background: radial-gradient(circle at 0% 100%, transparent 16px, var(--ar-gold) 16.5px);
+}
+
+.ar-card-corner-tab i {
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.ar-card-corner-tab:hover i {
+    transform: translateX(3px);
+}

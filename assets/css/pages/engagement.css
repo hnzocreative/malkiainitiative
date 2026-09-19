@@ -1,0 +1,468 @@
+/* ==========================================================================
+   PAGE: ENGAGEMENT PATHS & PARTNERSHIPS
+   ========================================================================== */
+
+.engage-header-strip {
+    text-align: center;
+    padding: 24px 0 20px 0;
+}
+
+.engage-header-strip h1.hero-title {
+    text-align: center;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    margin-bottom: 16px;
+}
+
+.engage-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-accent-adaptive);
+    margin-bottom: 12px;
+}
+
+.engage-lead-text {
+    text-align: center;
+    max-width: 860px;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+}
+
+/* 1. Individual Sponsorship Split Card */
+.individual-sponsor-card {
+    padding: 40px;
+}
+
+.sponsor-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .sponsor-split {
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 48px;
+    }
+}
+
+.sponsor-copy h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+    color: var(--c-text-bright);
+    margin: 12px 0 16px 0;
+    line-height: 1.15;
+}
+
+.sponsor-copy p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--c-text-base);
+    margin-bottom: 24px;
+}
+
+.sponsor-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+@media (min-width: 600px) {
+    .sponsor-feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.feat-box {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.feat-box i {
+    font-size: 1.4rem;
+    color: var(--c-accent-adaptive);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.feat-box strong {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    color: var(--c-text-bright);
+    display: block;
+    line-height: 1.2;
+}
+
+.feat-box span {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    display: block;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+.sponsor-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Rate Card Visual Frame */
+.rate-card-frame {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.rate-tag {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-accent-adaptive);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.rate-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+
+.rate-display .currency {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--c-accent-adaptive);
+}
+
+.rate-display .figure {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--c-accent-adaptive);
+    line-height: 1;
+}
+
+.rate-display .term {
+    font-size: 0.85rem;
+    color: var(--c-text-muted);
+    text-transform: uppercase;
+}
+
+.rate-kes-display {
+    font-size: 0.95rem;
+    color: var(--c-text-bright);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.rate-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--c-border);
+    margin: 20px 0;
+}
+
+.rate-checklist {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rate-checklist li {
+    font-size: 0.88rem;
+    color: var(--c-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rate-checklist li i {
+    color: var(--c-accent-adaptive);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* 2 & 3. Institutional & Corporate Track Cards */
+.engage-track-card {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.track-header {
+    margin-bottom: 14px;
+}
+
+.track-pill {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: var(--c-accent-adaptive-soft);
+    color: var(--c-accent-adaptive);
+    border: 1px solid rgba(242, 201, 76, 0.25);
+    margin-bottom: 10px;
+}
+
+.track-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--c-text-bright);
+    line-height: 1.2;
+}
+
+.track-desc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+    margin-bottom: 24px;
+}
+
+.track-deliverables {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.deliv-item {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.deliv-item i {
+    font-size: 1.6rem;
+    color: var(--c-accent-adaptive);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.deliv-item strong {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    color: var(--c-text-bright);
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.deliv-item span {
+    font-size: 0.85rem;
+    color: var(--c-text-muted);
+    line-height: 1.45;
+    display: block;
+}
+
+.btn-track-cta {
+    width: 100%;
+    justify-content: center;
+}
+
+/* 4. Fellowship Card */
+.fellowship-card {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fellowship-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--c-text-bright);
+    margin: 8px 0 8px 0;
+}
+
+.fellowship-intro {
+    font-size: 0.98rem;
+    color: var(--c-text-muted);
+    margin-bottom: 28px;
+    max-width: 820px;
+}
+
+.fellowship-roles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 680px) {
+    .fellowship-roles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.f-role {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.25s var(--spring), border-color 0.25s ease;
+}
+
+.f-role:hover {
+    transform: translateY(-2px);
+    border-color: var(--c-accent-adaptive);
+}
+
+.f-role i {
+    font-size: 1.8rem;
+    color: var(--c-accent-adaptive);
+    margin-bottom: 4px;
+}
+
+.f-role h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--c-text-bright);
+}
+
+.f-role p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--c-text-muted);
+}
+
+/* 5. Safeguarding Guarantee Card */
+.safeguarding-guarantee-card {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.safeguarding-guarantee-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--c-text-bright);
+    margin: 8px 0 10px 0;
+}
+
+.safeguarding-guarantee-card p {
+    font-size: 0.92rem;
+    color: var(--c-text-muted);
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.safeguarding-points {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.sg-point {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sg-point i {
+    font-size: 1.4rem;
+    color: var(--c-accent-adaptive);
+    flex-shrink: 0;
+}
+
+.sg-point span {
+    font-size: 0.85rem;
+    color: var(--c-text-base);
+    line-height: 1.4;
+}
+
+.btn-read-policy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    color: var(--c-text-bright);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.btn-read-policy:hover {
+    background: var(--c-bg);
+    color: var(--c-accent-adaptive);
+    border-color: var(--c-accent-adaptive);
+}
+
+/* 6. Strategic Alliance Strip */
+.engage-cta-strip {
+    background: linear-gradient(135deg, var(--c-surface) 0%, var(--c-surface-hover) 100%);
+    border: 1px solid var(--c-border-light);
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.engage-cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.engage-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--c-text-bright);
+    margin-bottom: 14px;
+}
+
+.engage-cta-content p {
+    font-size: 1.05rem;
+    color: var(--c-text-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.engage-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}

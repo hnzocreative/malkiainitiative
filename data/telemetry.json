@@ -1,0 +1,610 @@
+{
+  "index": {
+    "stats": [
+      {
+        "title": "Cumulative Reach",
+        "number": "26,009",
+        "icon": "ph-users"
+      },
+      {
+        "title": "Frontline Efficiency",
+        "number": "81.4%",
+        "icon": "ph-chart-pie-slice"
+      },
+      {
+        "title": "Unit Cost / Year",
+        "number": "$75",
+        "icon": "ph-currency-dollar"
+      },
+      {
+        "title": "Target by 2027",
+        "number": "32,000",
+        "icon": "ph-target"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the 32,000 target by 2027?",
+        "answer": "It represents Malkia's strategic roadmap scaling proven pastoralist education pipelines across 7 wards in Kajiado County."
+      },
+      {
+        "question": "How are donor contributions audited?",
+        "answer": "All operational expenditures are independently audited under ISA standards, with an 81.4% direct frontline delivery efficiency."
+      },
+      {
+        "question": "What does the $75/year unit sponsorship cover?",
+        "answer": "It fully covers 12 months of boarding sanctuary access, menstrual hygiene dignity kits, foundational KUZA learning toolkits, and in-school mentoring."
+      }
+    ]
+  },
+  "why-our-work-matters": {
+    "stats": [
+      {
+        "title": "ToC Validation Rate",
+        "number": "91%",
+        "icon": "ph-medal"
+      },
+      {
+        "title": "Transition to Secondary",
+        "number": "100%",
+        "icon": "ph-graduation-cap"
+      },
+      {
+        "title": "TVET Mother Retention",
+        "number": "92%",
+        "icon": "ph-arrows-clockwise"
+      },
+      {
+        "title": "Grassroots Footprint",
+        "number": "10 Yrs",
+        "icon": "ph-hourglass-high"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the core areas of improvement to close the education gap?",
+        "answer": "Providing infant care support to returning adolescent mothers allows learners to remain in vocational tracks throughout the full year."
+      },
+      {
+        "question": "Why did traditional top-down interventions fail previously?",
+        "answer": "They treated symptoms rather than the root power dynamics of pastoralist homesteads and neglected safe boarding infrastructure."
+      },
+      {
+        "question": "How does Malkia prevent secondary school dropouts?",
+        "answer": "Through safe boarding sanctuary, legal protection escorts, and in-school Crown Club self-advocacy mentorship."
+      }
+    ]
+  },
+  "our-team": {
+    "stats": [
+      {
+        "title": "Native Speakers",
+        "number": "100%",
+        "icon": "ph-translate"
+      },
+      {
+        "title": "Community Mentors",
+        "number": "35+",
+        "icon": "ph-users-three"
+      },
+      {
+        "title": "Wards Represented",
+        "number": "7",
+        "icon": "ph-map-pin"
+      },
+      {
+        "title": "Frontline Leadership",
+        "number": "10+ Yrs",
+        "icon": "ph-shield-check"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who leads The Malkia Initiative?",
+        "answer": "Jedidah Lemaron serves as Founder & Executive Director, supported by local programmatic leads and an independent Advisory Board."
+      },
+      {
+        "question": "Are community mentors from the local area?",
+        "answer": "Yes, 100% of our grassroots mentors are native speakers embedded across rural pastoralist Manyattas in Kajiado County."
+      },
+      {
+        "question": "How is board oversight maintained?",
+        "answer": "The Advisory Board oversees fiduciary compliance, risk assessment, and ISA audit integrity on an independent basis."
+      }
+    ]
+  },
+  "strategic-plan": {
+    "stats": [
+      {
+        "title": "2027 Milestone",
+        "number": "32,000",
+        "icon": "ph-flag"
+      },
+      {
+        "title": "Strategic Horizon",
+        "number": "2025–2029",
+        "icon": "ph-calendar"
+      },
+      {
+        "title": "Frontline Efficiency",
+        "number": "81.4%",
+        "icon": "ph-chart-line-up"
+      },
+      {
+        "title": "Core Pillars",
+        "number": "3",
+        "icon": "ph-columns"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the three pillars of the 2025–2029 Strategic Plan?",
+        "answer": "Pillar 1: Girl-Centered Programming & Advocacy; Pillar 2: Building Evidence & Sharing; Pillar 3: Resourcing for Her."
+      },
+      {
+        "question": "What is the primary objective of Phase 2 (2026–2027)?",
+        "answer": "Full county-wide saturation across all 7 wards, reaching 32,000 adolescent girls with proven retention toolkits."
+      },
+      {
+        "question": "How does the plan align with national standards?",
+        "answer": "All curriculum and boarding indicators align directly with Kenya Ministry of Education and Children's Act directives."
+      }
+    ]
+  },
+  "kuza": {
+    "stats": [
+      {
+        "title": "Active Learners",
+        "number": "526",
+        "icon": "ph-student"
+      },
+      {
+        "title": "Partner Primaries",
+        "number": "7",
+        "icon": "ph-chalkboard-teacher"
+      },
+      {
+        "title": "Baseline Reading Lift",
+        "number": "+68%",
+        "icon": "ph-trend-up"
+      },
+      {
+        "title": "Grade 5 Progression",
+        "number": "91%",
+        "icon": "ph-check-circle"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does the KUZA remedial learning model work?",
+        "answer": "KUZA regroups children in Grades 2–4 by competency level rather than age, using mother-tongue decodable readers to accelerate fluency."
+      },
+      {
+        "question": "How long does it take for a non-reader to decode fluently?",
+        "answer": "Learners typically advance from non-readers to fluent decoders within 120 instructional days under community teaching facilitators."
+      },
+      {
+        "question": "What schools host the KUZA program?",
+        "answer": "The program is actively running across 7 rural primary partner schools located within Kajiado Central Sub-county."
+      }
+    ]
+  },
+  "voices-uncut": {
+    "stats": [
+      {
+        "title": "Girls Protected (2025)",
+        "number": "450+",
+        "icon": "ph-shield-check"
+      },
+      {
+        "title": "Rescue Success Rate",
+        "number": "94%",
+        "icon": "ph-heart-straight"
+      },
+      {
+        "title": "FGM-Free Manyattas",
+        "number": "18",
+        "icon": "ph-house-line"
+      },
+      {
+        "title": "Legal Accompaniment",
+        "number": "100%",
+        "icon": "ph-scales"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How are early marriage risks identified before they happen?",
+        "answer": "Adolescents alert in-school Crown Club mentors, who immediately coordinate protection orders with local area chiefs."
+      },
+      {
+        "question": "What is cross-border cut interception?",
+        "answer": "A coordinated rapid response system with border authorities to halt girls being transported into neighboring territories for FGM."
+      },
+      {
+        "question": "How do Manyattas declare themselves FGM-free?",
+        "answer": "Through structured intergenerational dialogue where pastoralist elders and Morans publicly denounce physical cutting."
+      }
+    ]
+  },
+  "she-rise": {
+    "stats": [
+      {
+        "title": "Formal Re-entries",
+        "number": "30+",
+        "icon": "ph-arrow-counter-clockwise"
+      },
+      {
+        "title": "Course Retention",
+        "number": "92%",
+        "icon": "ph-chart-line-up"
+      },
+      {
+        "title": "Income Transition",
+        "number": "86%",
+        "icon": "ph-briefcase"
+      },
+      {
+        "title": "Micro-Savings Clusters",
+        "number": "78%",
+        "icon": "ph-piggy-bank"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who qualifies for the SheRISE program?",
+        "answer": "Out-of-school adolescent dropouts and young teenage mothers seeking formal education re-entry or vocational trade skills."
+      },
+      {
+        "question": "How is childcare managed for learning mothers?",
+        "answer": "SheRISE centers integrate community-staffed child-minding stations, allowing nursing mothers to study without infant neglect risks."
+      },
+      {
+        "question": "What vocational skills are taught?",
+        "answer": "Tailoring, artisanal beadwork, contemporary garment fabrication, culinary trade basics, and micro-enterprise bookkeeping."
+      }
+    ]
+  },
+  "sauti-ya-dada": {
+    "stats": [
+      {
+        "title": "Form 1-to-2 Retention",
+        "number": "96%",
+        "icon": "ph-arrow-up-right"
+      },
+      {
+        "title": "Student Council Leaders",
+        "number": "64%",
+        "icon": "ph-megaphone"
+      },
+      {
+        "title": "Tertiary Transition",
+        "number": "89%",
+        "icon": "ph-bank"
+      },
+      {
+        "title": "Alumni Mentor Ratio",
+        "number": "1:1",
+        "icon": "ph-handshake"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is the Form 1 and 2 transition critical?",
+        "answer": "Transition shock and renewed early marriage pressures peak in the first two years of secondary school; Sauti Ya Dada stabilizes this gap."
+      },
+      {
+        "question": "What is the core focus of Sauti Ya Dada?",
+        "answer": "Building self-advocacy, critical thinking, STEM academic support, and leadership confidence inside secondary schools."
+      },
+      {
+        "question": "Who provides mentorship to the scholars?",
+        "answer": "Pastoralist university students and professionals who share identical cultural backgrounds and have navigated similar friction."
+      }
+    ]
+  },
+  "break-free": {
+    "stats": [
+      {
+        "title": "Teen Pregnancy Drop",
+        "number": "-42%",
+        "icon": "ph-trend-down"
+      },
+      {
+        "title": "Clinic Consultations",
+        "number": "+85%",
+        "icon": "ph-first-aid"
+      },
+      {
+        "title": "Youth Case Escalation",
+        "number": "92%",
+        "icon": "ph-bell-ringing"
+      },
+      {
+        "title": "Ward Footprint",
+        "number": "7",
+        "icon": "ph-map-pin"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Break Free involve boys and young men?",
+        "answer": "Yes, male youth advocates and Morans are trained as peer champions to de-stigmatize SRHR and end forced child marriage."
+      },
+      {
+        "question": "What are adolescent-friendly health links?",
+        "answer": "Dispensaries and health centers equipped to provide non-judgmental, confidential reproductive healthcare to teenagers."
+      },
+      {
+        "question": "How does Break Free engage in policy advocacy?",
+        "answer": "Youth peer leaders present field reports directly to County Assembly members to enforce child protection statutes."
+      }
+    ]
+  },
+  "for-her": {
+    "stats": [
+      {
+        "title": "Active Boarders",
+        "number": "587",
+        "icon": "ph-bed"
+      },
+      {
+        "title": "Commute Hazards Eliminated",
+        "number": "98%",
+        "icon": "ph-path"
+      },
+      {
+        "title": "Menstrual Absence Days",
+        "number": "0",
+        "icon": "ph-package"
+      },
+      {
+        "title": "Term Retention Rate",
+        "number": "94%",
+        "icon": "ph-calendar-check"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is boarding infrastructure necessary in Kajiado?",
+        "answer": "Daily 15-kilometer walks through wildlife corridors expose girls to exhaustion, predatory violence, and frequent dropouts."
+      },
+      {
+        "question": "How does the menstrual hygiene bank operate?",
+        "answer": "Primary schools are continuously stocked with dignity kits and sanitary supplies, eliminating menstruation-related absenteeism."
+      },
+      {
+        "question": "Where is the flagship boarding facility located?",
+        "answer": "At Olgulului Primary School, serving pastoralist girls across the Kajiado South ecosystem."
+      }
+    ]
+  },
+  "CDSC4YRB": {
+    "stats": [
+      {
+        "title": "Youth Certified",
+        "number": "70+",
+        "icon": "ph-certificate"
+      },
+      {
+        "title": "Core Technical Trades",
+        "number": "4",
+        "icon": "ph-wrench"
+      },
+      {
+        "title": "Livelihood Transition",
+        "number": "76%",
+        "icon": "ph-briefcase"
+      },
+      {
+        "title": "Local Residency",
+        "number": "92%",
+        "icon": "ph-house-line"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the purpose of CDSC4YRB?",
+        "answer": "It provides accredited vocational skills and community belonging for rural youth in areas lacking formal TVET colleges."
+      },
+      {
+        "question": "Where does practical workshop training take place?",
+        "answer": "At the Malkia Olgulului Youth Resource Center in Kajiado South."
+      },
+      {
+        "question": "What trades are offered at the center?",
+        "answer": "Garment tailoring, pottery, artisanal bead fabrication, digital computer literacy, and micro-business management."
+      }
+    ]
+  },
+  "publications": {
+    "stats": [
+      {
+        "title": "Frontline Efficiency",
+        "number": "81.4%",
+        "icon": "ph-chart-pie-slice"
+      },
+      {
+        "title": "Cumulative Proof",
+        "number": "26,009",
+        "icon": "ph-file-text"
+      },
+      {
+        "title": "Audit Standard",
+        "number": "ISA 700",
+        "icon": "ph-shield-check"
+      },
+      {
+        "title": "Annual Disclosures",
+        "number": "10 Yrs",
+        "icon": "ph-books"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are Malkia's financial statements independently audited?",
+        "answer": "Yes, our financial statements are audited independently by certified auditors under ISA 700 standards and filed with the NGO Board."
+      },
+      {
+        "question": "Can external researchers access field datasets?",
+        "answer": "Academic researchers and development institutes can request access under strict child safeguarding and data anonymization agreements."
+      },
+      {
+        "question": "Where can I read the 2025 Annual Impact Report?",
+        "answer": "It is available for immediate download as a PDF or as an interactive report in the Publications section."
+      }
+    ]
+  },
+  "engagement": {
+    "stats": [
+      {
+        "title": "Annual Sponsorship",
+        "number": "$75",
+        "icon": "ph-heart"
+      },
+      {
+        "title": "KES Equivalent",
+        "number": "9,750",
+        "icon": "ph-coins"
+      },
+      {
+        "title": "Direct School Allocation",
+        "number": "100%",
+        "icon": "ph-shield-check"
+      },
+      {
+        "title": "Active Pathways",
+        "number": "4",
+        "icon": "ph-path"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much does it cost to sponsor a pastoralist girl?",
+        "answer": "A gift of $75 (KES 9,750) fully secures boarding, menstrual hygiene, learning kits, and mentoring for an entire academic year."
+      },
+      {
+        "question": "What corporate partnership opportunities exist?",
+        "answer": "Corporates can co-fund boarding dormitories, donate in-kind sanitary supplies, or support renewable solar and clean water systems."
+      },
+      {
+        "question": "Are field volunteers vetted?",
+        "answer": "All volunteers and fellows must provide police clearance, references, and sign our mandatory Child Protection Code."
+      }
+    ]
+  },
+  "contacts": {
+    "stats": [
+      {
+        "title": "Inquiry Response Window",
+        "number": "24 Hrs",
+        "icon": "ph-clock"
+      },
+      {
+        "title": "Emergency Dispatch",
+        "number": "24/7",
+        "icon": "ph-phone-call"
+      },
+      {
+        "title": "Field Hubs",
+        "number": "2",
+        "icon": "ph-buildings"
+      },
+      {
+        "title": "Statutory Registration",
+        "number": "Verified",
+        "icon": "ph-certificate"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I report an urgent child safeguarding emergency?",
+        "answer": "Call our 24/7 Rapid Safeguarding Hotline directly at +254 (0) 700 000 000 or the national toll-free child helpline at 116."
+      },
+      {
+        "question": "Where are Malkia's physical operational offices located?",
+        "answer": "Our main field headquarters is in Kajiado Central, with our youth vocational hub at Olgulului in Kajiado South."
+      },
+      {
+        "question": "What is the typical response timeline for inquiries?",
+        "answer": "Official partnership and general contact inquiries are routed to the responsible department lead within 24 operational hours."
+      }
+    ]
+  },
+  "safeguarding-policy": {
+    "stats": [
+      {
+        "title": "Abuse Tolerance",
+        "number": "Zero",
+        "icon": "ph-shield-slash"
+      },
+      {
+        "title": "Incident Escalation Window",
+        "number": "12 Hrs",
+        "icon": "ph-bell-ringing"
+      },
+      {
+        "title": "Vetting Clearance",
+        "number": "100%",
+        "icon": "ph-user-check"
+      },
+      {
+        "title": "Statutory Law",
+        "number": "2022 Act",
+        "icon": "ph-scales"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who must comply with the Malkia Safeguarding Policy?",
+        "answer": "Every trustee, employee, community mentor, contractor, visiting researcher, and volunteer must sign and strictly obey the policy."
+      },
+      {
+        "question": "How quickly must suspected abuse be reported?",
+        "answer": "Any suspected abuse must be documented within 12 hours and reported to statutory authorities within 24 hours."
+      },
+      {
+        "question": "How are whistleblowers protected?",
+        "answer": "Whistleblowers are protected from any form of retaliation under Kenya's Witness Protection Act and internal governance bylaws."
+      }
+    ]
+  },
+  "privacy-policy": {
+    "stats": [
+      {
+        "title": "Data Breaches",
+        "number": "0",
+        "icon": "ph-lock"
+      },
+      {
+        "title": "Statutory Act",
+        "number": "2019 Act",
+        "icon": "ph-scales"
+      },
+      {
+        "title": "Commercial Trackers",
+        "number": "0",
+        "icon": "ph-eye-slash"
+      },
+      {
+        "title": "ODPC Registered",
+        "number": "Yes",
+        "icon": "ph-certificate"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you ensure staff, suppliers, and beneficiaries are never exposed?",
+        "answer": "Beyond legal protections, we refine onboarding checks to eliminate potential data leaks, encrypt minor records, and enforce strict accountability."
+      },
+      {
+        "question": "Do you sell donor or visitor information?",
+        "answer": "No. The Malkia Initiative never sells, rents, or trades donor or website visitor personal data to third parties."
+      },
+      {
+        "question": "How can I request that my records be erased?",
+        "answer": "You can contact our Data Protection Officer at dpo@malkiainitiative.org to exercise your statutory rights under the Kenya Data Protection Act."
+      }
+    ]
+  }
+}

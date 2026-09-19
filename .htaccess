@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteBase /mi/
+
+# Force HTTPS (Bypass for local MAMP development)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slash safely (without forcing absolute root)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ $1 [L,R=301]
+
+# Internally forward clean URLs to .php files (now handles deep paths like /programs/kuza)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Prevent direct access to partials
+RewriteRule ^partials/ - [F,L]

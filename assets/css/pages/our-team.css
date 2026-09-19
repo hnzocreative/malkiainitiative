@@ -1,0 +1,389 @@
+/* ==========================================================================
+   PAGE: OUR TEAM & GOVERNANCE
+   ========================================================================== */
+
+.team-header-strip {
+    text-align: center;
+    padding: 24px 0 20px 0;
+}
+
+.team-header-strip h1.hero-title {
+    text-align: center;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    margin-bottom: 16px;
+}
+
+.team-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-accent-adaptive);
+    margin-bottom: 12px;
+}
+
+.team-lead-text {
+    text-align: center;
+    max-width: 860px;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+}
+
+/* 1. Founder Spotlight */
+.founder-spotlight-card {
+    padding: 40px;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .founder-grid {
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 48px;
+    }
+}
+
+.founder-portrait-frame {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface-hover);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.founder-portrait-frame img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.portrait-scrim {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+    background: linear-gradient(to top, rgba(37, 10, 38, 0.95) 0%, rgba(37, 10, 38, 0) 100%);
+    padding: 24px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.leader-role {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-gold);
+}
+
+.founder-bio-copy h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    color: var(--c-text-bright);
+    margin: 12px 0 16px 0;
+    line-height: 1.15;
+}
+
+.founder-bio-copy .bio-intro {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--c-text-bright);
+    margin-bottom: 14px;
+}
+
+.founder-bio-copy p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--c-text-muted);
+    margin-bottom: 20px;
+}
+
+.leader-meta-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.leader-stat {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 14px 20px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.leader-stat strong {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--c-accent-adaptive);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.leader-stat span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--c-text-muted);
+}
+
+/* 2. Programmatic Leads Grid */
+.team-section-block .section-title-wrap {
+    margin-bottom: 28px;
+}
+
+.team-section-block h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    color: var(--c-text-bright);
+    margin: 8px 0 6px 0;
+}
+
+.team-section-block p {
+    font-size: 1rem;
+    color: var(--c-text-muted);
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 640px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .staff-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.staff-card {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s var(--spring), border-color 0.25s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--c-gold);
+}
+
+.staff-photo {
+    height: 220px;
+    width: 100%;
+    background: var(--c-surface);
+    overflow: hidden;
+}
+
+.staff-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover .staff-photo img {
+    transform: scale(1.04);
+}
+
+.staff-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.staff-details h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--c-text-bright);
+    line-height: 1.2;
+}
+
+.role-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-accent-adaptive);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: block;
+}
+
+.staff-details p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--c-text-muted);
+}
+
+/* 3. Mentors Highlight Card */
+.mentors-highlight-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.mentors-highlight-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--c-text-bright);
+    margin: 8px 0 12px 0;
+}
+
+.mentors-highlight-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+    margin-bottom: 24px;
+}
+
+.mentor-metric-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.metric-unit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+}
+
+.metric-unit i {
+    font-size: 1.8rem;
+    color: var(--c-accent-adaptive);
+    flex-shrink: 0;
+}
+
+.metric-unit strong {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--c-text-bright);
+    display: block;
+    line-height: 1.2;
+}
+
+.metric-unit span {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    display: block;
+    margin-top: 2px;
+}
+
+/* 4. Board & Governance Card */
+.board-governance-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.board-governance-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--c-text-bright);
+    margin: 8px 0 12px 0;
+}
+
+.board-governance-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+    margin-bottom: 20px;
+}
+
+.board-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.board-member-row {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member-meta h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--c-text-bright);
+    line-height: 1.2;
+}
+
+.member-meta span {
+    font-size: 0.8rem;
+    color: var(--c-accent-adaptive);
+    display: block;
+    margin-top: 2px;
+}
+
+/* 5. Team Conversion Strip */
+.team-cta-strip {
+    background: linear-gradient(135deg, var(--c-surface) 0%, var(--c-surface-hover) 100%);
+    border: 1px solid var(--c-border-light);
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.team-cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.team-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--c-text-bright);
+    margin-bottom: 14px;
+}
+
+.team-cta-content p {
+    font-size: 1.05rem;
+    color: var(--c-text-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.team-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,263 @@
+/* ==========================================================================
+   PAGE: THEORY OF CHANGE VALIDATION (WHY OUR WORK MATTERS)
+   ========================================================================== */
+
+/* Three-Column Insights / Lessons Learned Grid */
+.toc-insights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 860px) {
+    .toc-insights-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.toc-insight-card {
+    background: var(--ar-surface);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.toc-insight-card .insight-badge {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ar-gold);
+    background: var(--ar-gold-soft);
+    border: 1px solid rgba(242, 201, 76, 0.25);
+    padding: 4px 10px;
+    border-radius: 14px;
+    display: inline-block;
+    margin-bottom: 14px;
+    align-self: flex-start;
+}
+
+.toc-insight-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ar-text-bright);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.toc-insight-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ar-text-muted);
+}
+
+/* Systems Change 2-Column Banner */
+.systems-change-card {
+    background: linear-gradient(135deg, rgba(66, 20, 68, 0.95) 0%, rgba(34, 10, 35, 0.98) 100%);
+    border: 1px solid rgba(242, 201, 76, 0.3);
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+@media (min-width: 900px) {
+    .systems-change-card {
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+    }
+}
+
+.systems-pill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.systems-pill-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.systems-pill-item i {
+    font-size: 1.25rem;
+    color: var(--ar-gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.systems-pill-item strong {
+    color: #FFFFFF;
+    font-family: var(--font-display);
+    display: block;
+    font-size: 0.92rem;
+    margin-bottom: 2px;
+}
+
+.systems-pill-item span {
+    font-size: 0.82rem;
+    color: var(--ar-text-muted);
+    line-height: 1.45;
+}
+
+/* ToC Verification Matrix Table */
+.toc-matrix-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.toc-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 720px;
+}
+
+.toc-matrix-table th {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ar-gold);
+    border-bottom: 2px solid var(--ar-border);
+    padding: 14px 16px;
+}
+
+.toc-matrix-table td {
+    padding: 18px 16px;
+    border-bottom: 1px solid var(--ar-border);
+    font-size: 0.88rem;
+    vertical-align: middle;
+    color: var(--ar-text-base);
+}
+
+.toc-matrix-table tr:hover td {
+    background: rgba(242, 201, 76, 0.03);
+}
+
+.status-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--ar-mint);
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 4px 10px;
+    border-radius: 14px;
+}
+
+/* ==========================================================================
+   UPDATED: SYSTEMS CHANGE CARD (BACKGROUND IMAGE + OVERLAY SCRIM)
+   ========================================================================== */
+.systems-change-card {
+    position: relative;
+    border: 1px solid rgba(242, 201, 76, 0.3);
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    overflow: hidden;
+    /* Background Image with Deep Scrim Gradient */
+    background-image:
+        url('../images/systems-change.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 900px) {
+    .systems-change-card {
+        grid-template-columns: 1.2fr 1fr;
+        align-items: flex-end;
+    }
+}
+
+.systems-pill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.systems-pill-item {
+    background: rgba(34, 10, 35, 0.75);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.systems-pill-item i {
+    font-size: 1.25rem;
+    color: var(--ar-gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.systems-pill-item strong {
+    color: #FFFFFF;
+    font-family: var(--font-display);
+    display: block;
+    font-size: 0.92rem;
+    margin-bottom: 2px;
+}
+
+.systems-pill-item span {
+    font-size: 0.82rem;
+    color: var(--ar-text-muted);
+    line-height: 1.45;
+}
+
+/* ==========================================================================
+   UPDATED: TOC METRICS VERIFICATION CARD (GRAPH PAPER BACKGROUND)
+   ========================================================================== */
+.toc-verification-card {
+    position: relative;
+    background-color: var(--ar-surface);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    overflow: hidden;
+    /* Technical Graph Paper Grid */
+    background-image:
+        linear-gradient(to right, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to right, rgba(242, 201, 76, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 201, 76, 0.08) 1px, transparent 1px);
+    background-size: 10px 10px, 10px 10px, 40px 40px, 40px 40px;
+    background-position: -1px -1px;
+}
+
+/* Give the matrix table container a glass backdrop so rows pop over the graph paper */
+.toc-matrix-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    background: rgba(34, 10, 35, 0.7);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}

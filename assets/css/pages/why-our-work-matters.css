@@ -1,0 +1,325 @@
+/* ==========================================================================
+   PAGE: WHY OUR WORK MATTERS (THEORY OF CHANGE & PROOF)
+   ========================================================================== */
+
+.why-header-strip {
+    text-align: center;
+    padding: 24px 0 20px 0;
+}
+
+.why-header-strip h1.hero-title {
+    text-align: center;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    margin-bottom: 16px;
+}
+
+.toc-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-accent-adaptive);
+    margin-bottom: 12px;
+}
+
+.why-lead-text {
+    text-align: center;
+    max-width: 860px;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+}
+
+/* 1. Origin & Friction Bento Card */
+.systemic-origin-card {
+    padding: 40px;
+}
+
+.origin-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .origin-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+}
+
+.origin-copy h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+    color: var(--c-text-bright);
+    margin: 12px 0 16px 0;
+    line-height: 1.15;
+}
+
+.origin-copy p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--c-text-base);
+    margin-bottom: 16px;
+}
+
+.stat-callout-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.stat-pill {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    flex: 1;
+    min-width: 160px;
+}
+
+.stat-pill strong {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--c-accent-adaptive);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-pill span {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--c-text-muted);
+}
+
+.image-placeholder-frame {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface-hover);
+}
+
+.image-placeholder-frame img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-placeholder-frame .caption {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    padding: 24px 16px 12px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 2. Theory of Change Pipeline */
+.toc-pipeline-card h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    color: var(--c-text-bright);
+    margin: 8px 0 12px 0;
+}
+
+.toc-pipeline-card .section-intro {
+    max-width: 820px;
+    font-size: 1.05rem;
+    color: var(--c-text-muted);
+    margin-bottom: 32px;
+}
+
+.toc-steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 680px) {
+    .toc-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .toc-steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.toc-step {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.25s var(--spring), border-color 0.25s ease;
+}
+
+.toc-step:hover {
+    transform: translateY(-4px);
+    border-color: var(--c-accent-adaptive);
+}
+
+.step-num {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--c-accent-adaptive);
+    margin-bottom: 12px;
+}
+
+.toc-step h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--c-text-bright);
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+.toc-step p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--c-text-muted);
+}
+
+/* 3 & 4. Case Proof Cards (Success / Iteration) */
+.case-proof-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.case-header {
+    margin-bottom: 20px;
+}
+
+.case-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.case-tag.victory {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--c-mint);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.case-tag.learning {
+    background: var(--c-gold-soft);
+    color: var(--c-accent-adaptive);
+    border: 1px solid rgba(242, 201, 76, 0.25);
+}
+
+.case-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--c-text-bright);
+    line-height: 1.2;
+}
+
+.case-image-holder {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface-hover);
+}
+
+.case-image-holder img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.case-body p.case-lead {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--c-text-bright);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.case-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+    margin-bottom: 12px;
+}
+
+.verification-metric {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    margin-top: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--c-text-bright);
+}
+
+.verification-metric i {
+    font-size: 1.2rem;
+    color: var(--c-accent-adaptive);
+    flex-shrink: 0;
+}
+
+/* 5. Strategic Conversion Strip */
+.why-cta-strip {
+    background: linear-gradient(135deg, var(--c-surface) 0%, var(--c-surface-hover) 100%);
+    border: 1px solid var(--c-border-light);
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.why-cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.why-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--c-text-bright);
+    margin-bottom: 14px;
+}
+
+.why-cta-content p {
+    font-size: 1.05rem;
+    color: var(--c-text-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.why-cta-content .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}

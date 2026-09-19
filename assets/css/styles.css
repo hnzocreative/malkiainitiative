@@ -1,0 +1,26 @@
+/* ==========================================================================
+   MALKIA CORPORATE DESIGN SYSTEM - MASTER MANIFEST
+   ========================================================================== */
+
+/* 1. Base Layer */
+@import 'base/tokens.css';
+@import 'base/layout.css';
+
+/* 2. Global Components */
+@import 'components/sidebar.css';
+@import 'components/modals-drawers.css';
+
+/* 3. Page / Section Components */
+@import 'components/hero-montage.css';
+@import 'components/bento-cards.css';
+@import 'components/partners.css';
+
+/* 4. Subpages */
+@import 'pages/why-our-work-matters.css';
+@import 'pages/our-team.css';
+@import 'pages/strategic-plan.css';
+@import 'pages/program-detail.css';
+@import 'pages/publications.css';
+@import 'pages/engagement.css';
+@import 'pages/contacts.css';
+@import 'pages/policies.css';

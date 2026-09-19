@@ -1,0 +1,272 @@
+/* ==========================================================================
+   PAGE: IMPACT NUMBERS & 2025 AT A GLANCE
+   ========================================================================== */
+
+/* 2025 Metric Bento Grid */
+.glance-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 640px) {
+    .glance-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .glance-metrics-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.glance-metric-card {
+    background-color: var(--ar-surface);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    /* Technical Graph Paper Grid */
+    background-image:
+        linear-gradient(to right, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 201, 76, 0.04) 1px, transparent 1px),
+        linear-gradient(to right, rgba(242, 201, 76, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 201, 76, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px, 20px 20px, 80px 80px, 80px 80px;
+    background-position: -1px -1px;
+    transition: transform 0.25s var(--spring), border-color 0.25s ease;
+}
+
+.glance-metric-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(242, 201, 76, 0.4);
+}
+
+.metric-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(242, 201, 76, 0.12);
+    border: 1px solid rgba(242, 201, 76, 0.25);
+    color: var(--ar-gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.glance-metric-card .num {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 2.8vw, 2.6rem);
+    font-weight: 700;
+    color: var(--ar-text-bright);
+    line-height: 1.05;
+    margin-bottom: 6px;
+}
+
+.glance-metric-card .title {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--ar-gold);
+    margin-bottom: 6px;
+}
+
+.glance-metric-card .desc {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    color: var(--ar-text-muted);
+}
+
+/* ==========================================================================
+   50/50 SPLIT BENEFICIARY SHOWCASE CAROUSEL
+   ========================================================================== */
+.beneficiary-carousel-card {
+    background: var(--ar-surface);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-stage {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 520px;
+}
+
+@media (min-width: 960px) {
+    .carousel-stage {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Left Half: Full bleed photograph */
+.carousel-image-pane {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 320px;
+    transition: background-image 0.4s ease;
+}
+
+.carousel-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(34, 10, 35, 0.85) 0%, rgba(34, 10, 35, 0.1) 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px 28px;
+}
+
+.carousel-image-overlay .hero-badge {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ar-gold);
+    background: rgba(54, 16, 55, 0.85);
+    border: 1px solid var(--ar-gold);
+    padding: 4px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+/* Right Half: Metadata, Quote & Trajectory Hook */
+.carousel-content-pane {
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--ar-surface);
+}
+
+.carousel-meta-header .program-tag {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ar-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.carousel-meta-header h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+    font-weight: 700;
+    color: var(--ar-text-bright);
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.carousel-tagline {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--ar-text-base);
+    margin-bottom: 24px;
+}
+
+.carousel-quote-box {
+    background: rgba(34, 20, 36, 0.6);
+    border-left: 3px solid var(--ar-gold);
+    padding: 16px 20px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ar-text-muted);
+    margin-bottom: 28px;
+}
+
+.carousel-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.carousel-metric-mini {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--ar-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+}
+
+.carousel-metric-mini .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--ar-text-muted);
+    margin-bottom: 2px;
+}
+
+.carousel-metric-mini .val {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ar-gold);
+}
+
+.carousel-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-top: 1px solid var(--ar-border);
+    padding-top: 24px;
+}
+
+.carousel-nav-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-carousel-ctrl {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--ar-border);
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-carousel-ctrl:hover {
+    background: var(--ar-gold);
+    color: var(--ar-bg);
+    border-color: var(--ar-gold);
+}
+
+.btn-view-dossier {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--ar-gold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(242, 201, 76, 0.1);
+    border: 1px solid rgba(242, 201, 76, 0.25);
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-view-dossier:hover {
+    background: var(--ar-gold);
+    color: var(--ar-bg);
+    transform: translateX(3px);
+}

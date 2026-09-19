@@ -1,0 +1,539 @@
+/* ==========================================================================
+   TELEMETRY DRAWER & PLEDGE DIALOG MODAL
+   ========================================================================== */
+.corporate-backdrop {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 120;
+    background: rgba(13, 5, 16, 0.35);
+}
+
+.corporate-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Telemetry Drawer */
+.corporate-telemetry-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--drawer-w);
+    height: 100vh;
+    background: var(--c-surface);
+    border-left: 1px solid var(--c-border);
+    padding: 36px 28px;
+    z-index: 140;
+    transform: translateX(100%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: transform 0.45s var(--spring);
+    box-shadow: -12px 0 36px rgba(0, 0, 0, 0.35);
+}
+
+.corporate-telemetry-drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.telemetry-counters-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.fab-telemetry-trigger {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--c-gold);
+    color: #361037;
+    border: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 8px 24px rgba(242, 201, 76, 0.35);
+    transition: transform 0.3s var(--spring);
+}
+
+.fab-telemetry-trigger:hover {
+    transform: scale(1.08);
+}
+
+/* Pledge Modal */
+dialog.pledge-dialog {
+    border: 1px solid var(--c-border-light);
+    border-radius: var(--radius-md);
+    background: var(--c-surface);
+    color: var(--c-text-base);
+    padding: 0;
+    width: min(560px, 94vw);
+    max-width: 560px;
+    margin: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    outline: none;
+    overflow: hidden;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+}
+
+dialog.pledge-dialog::backdrop {
+    background: rgba(13, 5, 16, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.pledge-dialog-header {
+    background: var(--c-surface-hover);
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--c-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pledge-dialog-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--c-text-bright);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.pledge-dialog-header h3 span {
+    color: var(--c-accent-adaptive);
+}
+
+.btn-dialog-close {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--c-border);
+    color: var(--c-text-bright);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-dialog-close:hover {
+    background: var(--c-surface);
+    color: var(--c-gold);
+    transform: scale(1.05);
+}
+
+.pledge-dialog-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.unit-calc-box {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.unit-calc-box .label span {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--c-text-muted);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.unit-calc-box .label strong {
+    color: var(--c-text-bright);
+    display: block;
+    font-size: 0.95rem;
+    font-family: var(--font-display);
+}
+
+.unit-stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-step {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface);
+    color: var(--c-text-bright);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-step:hover {
+    background: var(--c-gold);
+    color: #361037;
+    border-color: var(--c-gold);
+}
+
+.step-count {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--c-gold);
+    min-width: 28px;
+    text-align: center;
+}
+
+.gateway-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: var(--c-surface-hover);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid var(--c-border);
+}
+
+.gateway-tab-btn {
+    border: none;
+    background: transparent;
+    color: var(--c-text-muted);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.gateway-tab-btn.active {
+    background: var(--c-gold);
+    color: #361037;
+}
+
+.payment-panel {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.payment-panel.active {
+    display: flex;
+}
+
+.mpesa-details-box {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    text-align: center;
+}
+
+.mpesa-details-box .val {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--c-text-bright);
+}
+
+.mpesa-details-box .lbl {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--c-mint);
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+.pledge-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pledge-input-group label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--c-text-muted);
+}
+
+.pledge-input {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    color: var(--c-text-bright);
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.pledge-input:focus {
+    border-color: var(--c-gold);
+}
+
+.pledge-submit-btn {
+    background: var(--c-gold);
+    color: #361037;
+    border: none;
+    border-radius: 24px;
+    padding: 14px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+    transition: all 0.2s ease;
+}
+
+.pledge-submit-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(242, 201, 76, 0.3);
+}
+
+/* Drawer Header & Close Button */
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.drawer-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--c-text-bright);
+}
+
+.btn-drawer-close {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--c-border);
+    color: var(--c-text-bright);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-drawer-close:hover {
+    background: var(--c-surface-hover);
+    color: var(--c-gold);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   TELEMETRY DRAWER: FAQ & DYNAMIC COUNTERS
+   ========================================================================== */
+
+/* FAQ Section Layout */
+.telemetry-faq-section {
+    margin-top: 8px;
+}
+
+.faq-title {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--c-accent-adaptive);
+}
+
+.faq-accordion-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Override default bento padding for tighter drawer fit */
+.bento-card.faq-details {
+    padding: 14px;
+}
+
+.faq-summary {
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--c-text-bright);
+}
+
+.faq-text {
+    font-size: 0.82rem;
+    margin-top: 8px;
+    color: var(--c-text-muted);
+    line-height: 1.5;
+}
+
+/* Dynamic Counter Cards (Hydrated via JS) */
+.bento-card.telemetry-metric-card {
+    padding: 14px;
+    text-align: center;
+}
+
+.telemetry-metric-val {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--c-gold);
+}
+
+.telemetry-metric-lbl {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--c-text-muted);
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+}
+
+/* Telemetry Counter Item with Dynamic Icon */
+.telemetry-counters-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.telemetry-counter-item {
+    background: var(--c-surface-hover);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.telemetry-counter-item .counter-icon {
+    font-size: 1.5rem;
+    color: var(--c-accent-adaptive);
+    flex-shrink: 0;
+}
+
+.counter-text-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.telemetry-counter-item .counter-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--c-text-muted);
+    line-height: 1.2;
+}
+
+.telemetry-counter-item .counter-value {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--c-text-bright);
+    line-height: 1.1;
+    margin-top: 2px;
+}
+
+dialog.pledge-dialog.omprakash-dialog {
+    width: min(720px, 94vw);
+    max-width: 720px;
+    height: 85vh;
+    max-height: 850px;
+}
+
+.embed-dialog-body {
+    padding: 0;
+    height: calc(100% - 64px);
+    overflow: hidden;
+}
+
+.omprakash-embed-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.omprakash-embed-frame iframe {
+    width: 100%;
+    min-height: 1250px;
+    border: none;
+    display: block;
+}
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: color 0.25s ease;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Fluid spring expansion on details content */
+details[open] summary~* {
+    animation: bounceInContent 0.45s var(--spring) forwards;
+}
+
+@keyframes bounceInContent {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
