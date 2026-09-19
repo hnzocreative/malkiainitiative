@@ -606,5 +606,47 @@
         "answer": "You can contact our Data Protection Officer at dpo@malkiainitiative.org to exercise your statutory rights under the Kenya Data Protection Act."
       }
     ]
+  },
+  "unga": {
+    "stats": [
+      {
+        "title": "Year Founded",
+        "number": "2015",
+        "icon": "ph-calendar-check"
+      },
+      {
+        "title": "Cumulative Reach",
+        "number": "26,009",
+        "icon": "ph-users-three"
+      },
+      {
+        "title": "Direct Efficiency",
+        "number": "81.4%",
+        "icon": "ph-chart-pie-slice"
+      },
+      {
+        "title": "Target 1,000 Days",
+        "number": "12,000",
+        "icon": "ph-target"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the 1,000-Day Goal presented at UNGA?",
+        "answer": "It is an intentional catalytic campaign to enhance the agency of 12,000 more adolescent girls in rural Kajiado through a $900,000 USD investment need ($75/girl/year)."
+      },
+      {
+        "question": "What was the inspiration behind The Malkia Initiative?",
+        "answer": "Founded in 2015 by Jedidah Lemaron after witnessing peers disappear from school due to FGM and early marriage, turning education into an inheritance for pastoralist girls."
+      },
+      {
+        "question": "How can diplomatic and institutional partners champion Malkia?",
+        "answer": "By connecting our executive leadership with bilateral grant desks, co-designing programmatic interventions, and hosting learning dialogues during UNGA."
+      },
+      {
+        "question": "Where does capital investment go?",
+        "answer": "Over 81.4% of every dollar goes directly into frontline programs: primary boarding sanctuaries, campus pad banks, and KUZA foundational literacy toolkits."
+      }
+    ]
   }
 }

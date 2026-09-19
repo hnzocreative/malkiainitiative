@@ -1,8 +1,8 @@
 <?php
 if (!defined('BASE_URL')) {
     // Detects local MAMP subdirectory automatically or defaults to root on production
-    $is_local_mi = (strpos($_SERVER['REQUEST_URI'], '/mi/') === 0 || strpos($_SERVER['SCRIPT_NAME'], '/mi/') === 0);
-    define('BASE_URL', $is_local_mi ? '/mi/' : '/');
+    $is_local_mi = (strpos($_SERVER['REQUEST_URI'], '/malkiainitiative/') === 0 || strpos($_SERVER['SCRIPT_NAME'], '/malkiainitiative/') === 0);
+    define('BASE_URL', $is_local_mi ? '/malkiainitiative/' : '/');
 }
 ?>
 <meta charset="UTF-8">

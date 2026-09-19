@@ -191,7 +191,7 @@
                         <p>Our youth resilience tracks complement school-based leadership development and re-entry pipelines.</p>
                     </div>
                     <div class="related-nav-grid">
-                        <a href="<?= BASE_URL ?>programs/economic-resiilience/she-rise" class="related-nav-link">
+                        <a href="<?= BASE_URL ?>programs/economic-resilience/she-rise" class="related-nav-link">
                             <div>
                                 <span class="rel-tag">Re-Entry Track</span>
                                 <h4>SheRISE (TVET Agency)</h4>
