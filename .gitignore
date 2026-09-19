@@ -1,0 +1,53 @@
+# ==========================================
+# Operating System & IDE Metadata
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# Environment & Server Local Overrides
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.local
+*.log
+
+# MAMP / Local Server state
+.mamp/
+
+# ==========================================
+# Sensitive Data, Backups & Temporary Files
+# ==========================================
+*.bak
+*.swp
+*.tmp
+*~
+dump.rdb
+*.sql
+*.tar.gz
+*.zip
+
+# Private Keys & Auth
+*.pem
+*.key
+credentials.json
+
+# ==========================================
+# Large Media & Raw Assets
+# (Keep compressed webp/svg in repo)
+# ==========================================
+*.mov
+*.mp4
+*.raw
