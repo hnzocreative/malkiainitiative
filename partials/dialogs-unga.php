@@ -1,6 +1,6 @@
 <!-- DIALOG 1: Champion -->
 <dialog class="pledge-dialog action-dialog-styled" id="dialogChampion" onclick="if(event.target===this) this.close()">
-    <img src="<?= BASE_URL ?>assets/images/projects/02-sauti-ya-dada.webp" alt="Champion Girls" class="action-dialog-bg">
+    <img src="<?= BASE_URL ?>assets/images/unga/networking.webp" alt="Champion Girls" class="action-dialog-bg">
     <div class="action-dialog-scrim"></div>
     <div class="action-dialog-container">
         <div class="action-dialog-header-row">
@@ -21,7 +21,7 @@
 
 <!-- DIALOG 2: Invite -->
 <dialog class="pledge-dialog action-dialog-styled" id="dialogInvite" onclick="if(event.target===this) this.close()">
-    <img src="<?= BASE_URL ?>assets/images/projects/05-break-free.webp" alt="Invite Delegation" class="action-dialog-bg">
+    <img src="<?= BASE_URL ?>assets/images/unga/invite.webp" alt="Invite Delegation" class="action-dialog-bg">
     <div class="action-dialog-scrim"></div>
     <div class="action-dialog-container">
         <div class="action-dialog-header-row">
@@ -42,7 +42,7 @@
 
 <!-- DIALOG 3: Invest -->
 <dialog class="pledge-dialog action-dialog-styled" id="dialogInvest" onclick="if(event.target===this) this.close()">
-    <img src="<?= BASE_URL ?>assets/images/projects/06-for-her.webp" alt="Invest Catalytic Capital" class="action-dialog-bg">
+    <img src="<?= BASE_URL ?>assets/images/unga/invest.webp" alt="Invest Catalytic Capital" class="action-dialog-bg">
     <div class="action-dialog-scrim"></div>
     <div class="action-dialog-container">
         <div class="action-dialog-header-row">

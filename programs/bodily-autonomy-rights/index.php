@@ -39,7 +39,7 @@ require_once '../../partials/head.php';
             <div class="mobile-only mobile-top-bar" style="margin-bottom: 24px;">
                 <span class="ar-badge-pill">
                     <img src="<?= BASE_URL ?>assets/images/identity.png" class="identity" alt="Identity">
-                    Bodily Autonomy &amp; Rights
+                    SRHR & Gender
                 </span>
             </div>
 
@@ -64,7 +64,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/03-voices-uncut.webp" alt="Voices Uncut Anti-FGM Safe Spaces" class="pillar-bento-bg" loading="eager">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">Anti-FGM &amp; Protection</span>
+                        <span class="calc-badge goldy">Anti-FGM &amp; Protection</span>
                         <h3>Voices Uncut</h3>
                         <p>
                             Survivor-led community safe spaces, in-school Crown Club alert networks, and administrative legal accompaniment halting cross-border cut migration routes before harm occurs.
@@ -81,7 +81,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/02-sauti-ya-dada.webp" alt="Sauti Ya Dada Leadership Circle" class="pillar-bento-bg" loading="eager">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">Secondary Leadership</span>
+                        <span class="calc-badge goldy">Secondary Leadership</span>
                         <h3>Sauti Ya Dada</h3>
                         <p>
                             Securing the vulnerable Form 1 and Form 2 secondary school transition cliff with critical thinking, debate skills, and pastoralist sister circles.
@@ -98,7 +98,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/05-break-free.webp" alt="Break Free SRHR Advocacy Forum" class="pillar-bento-bg" loading="lazy">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">SRHR Advocacy</span>
+                        <span class="calc-badge goldy">SRHR Advocacy</span>
                         <h3>Break Free Strategy</h3>
                         <p>
                             Youth-led bodily autonomy education, teenage pregnancy reduction pipelines, and county-level legislative advocacy linking schools to adolescent-friendly clinics across 7 wards.

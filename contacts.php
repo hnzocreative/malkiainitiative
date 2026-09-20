@@ -13,24 +13,24 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
 
     <!-- Structured Data: ContactPage & LocalBusiness/NGO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "The Malkia Initiative Contacts & Field Headquarters",
-      "description": "Frontline communication channels, physical office locations in Kajiado County, and safeguarding emergency contacts.",
-      "mainEntity": {
-        "@type": "NGO",
-        "name": "The Malkia Initiative",
-        "telephone": "+254700000000",
-        "email": "info@malkiainitiative.org",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Kajiado",
-          "addressRegion": "Kajiado County",
-          "addressCountry": "KE"
+        {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "The Malkia Initiative Contacts & Field Headquarters",
+        "description": "Frontline communication channels, physical office locations in Kajiado County, and safeguarding emergency contacts.",
+        "mainEntity": {
+            "@type": "NGO",
+            "name": "The Malkia Initiative",
+            "telephone": "+254700000000",
+            "email": "info@malkiainitiative.org",
+            "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kajiado",
+            "addressRegion": "Kajiado County",
+            "addressCountry": "KE"
+            }
         }
-      }
-    }
+        }
     </script>
 </head>
 <body>
@@ -64,7 +64,7 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
             <section class="corporate-bento">
 
                 <!-- 1. Primary Inquiries Dispatcher Form (Col-8) -->
-                <article class="bento-card col-8 contact-form-card">
+                <!-- <article class="bento-card col-8 contact-form-card">
                     <span class="tag">Direct Communication</span>
                     <h2>Send a Message</h2>
                     <p class="form-lead">
@@ -114,30 +114,7 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
                             <span>Dispatch Inquiry</span>
                         </button>
                     </form>
-                </article>
-
-                <!-- 2. Emergency Safeguarding & Hotline (Col-4) -->
-                <article class="bento-card col-4 emergency-hotline-card">
-                    <div class="hotline-badge">
-                        <i class="ph-bold ph-shield-warning"></i>
-                        <span>Urgent Protection</span>
-                    </div>
-                    <h2>Safeguarding Hotline</h2>
-                    <p>
-                        For emergency intervention, cross-border FGM interception alerts, or immediate child betrothal reporting across Kajiado County:
-                    </p>
-
-                    <div class="hotline-action-box">
-                        <span class="hotline-lbl">Emergency Frontline Dispatch</span>
-                        <a href="tel:+254700000000" class="hotline-tel">+254 (0) 700 000 000</a>
-                        <span class="hotline-note">24/7 Community Escalation Desk</span>
-                    </div>
-
-                    <div class="safeguard-liaison-note">
-                        <i class="ph-bold ph-lock-key"></i>
-                        <span>Direct coordination with sub-county Children's Officers and local administrative chiefs.</span>
-                    </div>
-                </article>
+                </article> -->
 
                 <!-- 3. Field Footprint & Physical Locations (Col-8) -->
                 <article class="bento-card col-8 locations-card">
@@ -178,7 +155,7 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
                             <i class="ph-bold ph-whatsapp-logo"></i>
                             <div>
                                 <span class="ch-lbl">WhatsApp Business Desk</span>
-                                <a href="https://wa.me/254700000000" target="_blank" rel="noopener" class="ch-val">+254 700 000 000</a>
+                                <a href="https://wa.me/254717864726" target="_blank" rel="noopener" class="ch-val">+254 717 864 726</a>
                             </div>
                         </div>
 
@@ -186,14 +163,37 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
                             <i class="ph-bold ph-linkedin-logo"></i>
                             <div>
                                 <span class="ch-lbl">Institutional Updates</span>
-                                <a href="https://linkedin.com/company/malkiainitiative" target="_blank" rel="noopener" class="ch-val">The Malkia Initiative</a>
+                                <a href="https://www.linkedin.com/company/the-malkia-initiative/home/" target="_blank" rel="noopener" class="ch-val">The Malkia Initiative</a>
                             </div>
                         </div>
                     </div>
                 </article>
 
+                <!-- 2. Emergency Safeguarding & Hotline (Col-4) -->
+                <article class="bento-card col-6 emergency-hotline-card">
+                    <div class="hotline-badge">
+                        <i class="ph-bold ph-shield-warning"></i>
+                        <span>Urgent Protection</span>
+                    </div>
+                    <h2>Safeguarding Hotline</h2>
+                    <p>
+                        For emergency intervention, cross-border FGM interception alerts, or immediate child betrothal reporting across Kajiado County:
+                    </p>
+
+                    <div class="hotline-action-box">
+                        <span class="hotline-lbl">Emergency Frontline Dispatch</span>
+                        <a href="tel:+254700000000" class="hotline-tel">+254 (0) 717 864 726</a>
+                        <span class="hotline-note">24/7 Community Escalation Desk</span>
+                    </div>
+
+                    <div class="safeguard-liaison-note">
+                        <i class="ph-bold ph-lock-key"></i>
+                        <span>Direct coordination with sub-county Children's Officers and local administrative chiefs.</span>
+                    </div>
+                </article>
+
                 <!-- 5. Verification & Governance Strip (Col-12) -->
-                <article class="bento-card col-12 contact-fiduciary-strip">
+                <article class="bento-card col-6 contact-fiduciary-strip no-bgbr">
                     <div class="fiduciary-row">
                         <div class="fiduciary-badge">
                             <i class="ph-bold ph-certificate"></i>

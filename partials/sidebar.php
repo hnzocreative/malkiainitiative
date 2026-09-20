@@ -96,11 +96,12 @@ $is_about_active = in_array($current_page, $about_pages);
 
     <div class="sidebar-footer">
         <div class="sidebar-socials">
-            <a href="https://linkedin.com/company/malkiainitiative" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
+            <a href="https://www.linkedin.com/company/the-malkia-initiative/home/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
             <a href="https://wa.me/254717864726" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ph-bold ph-whatsapp-logo"></i></a>
             <a href="tel:+254717864726" aria-label="Phone"><i class="ph-bold ph-phone"></i></a>
             <a href="mailto:info@malkiainitiative.org" aria-label="Mail"><i class="ph-bold ph-envelope-simple-open"></i></a>
             <a href="https://maps.app.goo.gl/3y8ppcyS5hgsWhC28" aria-label="Map" target="_blank"><i class="ph-bold ph-map-pin"></i></a>
+            <a href="https://www.facebook.com/malkia.initiative/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph-bold ph-facebook-logo"></i></a>
         </div>
         <div class="sidebar-legal">
             <a href="<?= BASE_URL ?>safeguarding-policy">Safe Guarding Policy</a>

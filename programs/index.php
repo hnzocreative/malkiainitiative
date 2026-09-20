@@ -20,18 +20,21 @@ require_once '../partials/head.php';
             <section class="corporate-bento">
                 <article class="bento-card col-4 program-summary-card">
                     <span class="calc-badge">Pillar 01</span>
+                    <img src="<?= BASE_URL ?>assets/images/programs/education.webp" alt="Education">
                     <h3>Education for Girls</h3>
                     <p>Foundational literacy (KUZA), remedial pedagogy, and secondary retention pipelines keeping pastoralist girls in learning.</p>
                     <a href="<?= BASE_URL ?>programs/education-for-girls" class="btn-cta secondary">Explore Pillar</a>
                 </article>
                 <article class="bento-card col-4 program-summary-card">
                     <span class="calc-badge">Pillar 02</span>
+                    <img src="<?= BASE_URL ?>assets/images/programs/bodily.webp" alt="Education">
                     <h3>Bodily Autonomy &amp; Rights</h3>
                     <p>Survivor-led FGM interdiction (Voices Uncut), youth SRHR advocacy, and secondary school self-efficacy (Sauti Ya Dada).</p>
                     <a href="<?= BASE_URL ?>programs/bodily-autonomy-rights" class="btn-cta secondary">Explore Pillar</a>
                 </article>
                 <article class="bento-card col-4 program-summary-card">
                     <span class="calc-badge">Pillar 03</span>
+                    <img src="<?= BASE_URL ?>assets/images/programs/economic.webp" alt="Education">
                     <h3>Economic Resilience</h3>
                     <p>Accredited TVET trades, infant care stations for learning mothers, and market cooperatives at Olgulului Youth Hub.</p>
                     <a href="<?= BASE_URL ?>programs/economic-resilience" class="btn-cta secondary">Explore Pillar</a>

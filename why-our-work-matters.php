@@ -80,7 +80,7 @@
                         </div>
                         <div class="origin-visual">
                             <div class="image-placeholder-frame">
-                                <img src="./assets/images/why/systemic-context.webp" alt="Pastoralist landscape context in Kajiado" loading="lazy">
+                                <img src="./assets/images/why/01.webp" alt="Pastoralist landscape context in Kajiado" loading="lazy">
                                 <span class="caption">Rural Kajiado Central • Landscape of Operations</span>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                         <h3>Nasieku's Path: Defying Early Betrothal</h3>
                     </div>
                     <div class="case-image-holder">
-                        <img src="./assets/images/why/case-success.webp" alt="Nasieku studying at Olgulului Secondary" loading="lazy">
+                        <img src="./assets/images/why/02.webp" alt="Nasieku studying at Olgulului Secondary" loading="lazy">
                     </div>
                     <div class="case-body">
                         <p class="case-lead">
@@ -152,7 +152,7 @@
                         <h3>Teen Mother Re-entry: Overcoming Day-Care Blockers</h3>
                     </div>
                     <div class="case-image-holder">
-                        <img src="./assets/images/why/case-improvement.webp" alt="SheRISE vocational technical cohort" loading="lazy">
+                        <img src="./assets/images/why/03.webp" alt="SheRISE vocational technical cohort" loading="lazy">
                     </div>
                     <div class="case-body">
                         <p class="case-lead">

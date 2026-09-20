@@ -64,7 +64,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/01-KUZA.webp" alt="KUZA Literacy Classroom" class="pillar-bento-bg" loading="eager">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">Foundational Literacy</span>
+                        <span class="calc-badge goldy">Foundational Literacy</span>
                         <h3>KUZA Remedial Learning</h3>
                         <p>
                             Addressing foundational literacy and numeracy blockages for learners in Grades 2–4 across 7 rural primary partner schools using level-based teaching methods.
@@ -81,7 +81,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/06-for-her.webp" alt="For Her Safe Boarding Sanctuary" class="pillar-bento-bg" loading="eager">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">Safe Sanctuary</span>
+                        <span class="calc-badge goldy">Safe Sanctuary</span>
                         <h3>For Her Infrastructure &amp; Dignity</h3>
                         <p>
                             Eliminating 15-kilometer hazardous school commutes through safe boarding dormitory modernizations, solar clean water, and year-round pad banks.

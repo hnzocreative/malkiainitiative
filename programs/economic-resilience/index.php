@@ -39,7 +39,7 @@ require_once '../../partials/head.php';
             <div class="mobile-only mobile-top-bar" style="margin-bottom: 24px;">
                 <span class="ar-badge-pill">
                     <img src="<?= BASE_URL ?>assets/images/identity.png" class="identity" alt="Identity">
-                    Economic Resilience
+                    Resourcing For Her
                 </span>
             </div>
 
@@ -64,7 +64,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/04-she-rise.webp" alt="SheRISE Vocational Cohort" class="pillar-bento-bg" loading="eager">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">Maternal Reintegration</span>
+                        <span class="calc-badge goldy">Maternal Reintegration</span>
                         <h3>SheRISE Vocational Agency</h3>
                         <p>
                             Restoring academic and vocational trajectories for adolescent mothers by coupling certified TVET trades with on-site infant nursing and childcare stations.
@@ -81,7 +81,7 @@ require_once '../../partials/head.php';
                     <img src="<?= BASE_URL ?>assets/images/projects/07-youth-resilience.webp" alt="CDSC4YRB Youth Enterprise Hub" class="pillar-bento-bg" loading="eager">
                     <div class="pillar-bento-scrim"></div>
                     <div class="pillar-bento-content">
-                        <span class="calc-badge">Enterprise &amp; Belonging</span>
+                        <span class="calc-badge goldy">Enterprise &amp; Belonging</span>
                         <h3>CDSC4YRB Youth Hub</h3>
                         <p>
                             Operating the Malkia Olgulului Youth Resource Center across tailoring, pottery, digital ICT skills, and heritage Maasai bead craft enterprise.

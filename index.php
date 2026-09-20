@@ -36,7 +36,7 @@
                         <i class="ph-bold ph-heart"></i>
                         <span>Sponsor a Girl</span>
                     </button>
-                    <a href="./ar2025/" class="btn-cta secondary">
+                    <a href="./annual-reports/2025/" class="btn-cta secondary" target="_blank">
                         <span>Explore 2025 Annual Report</span>
                         <i class="ph-bold ph-arrow-up-right"></i>
                     </a>
@@ -301,7 +301,7 @@
                                     <button type="button" class="calc-chip" onclick="setCalcPledge(10)">10 Queens</button>
                                     <button type="button" class="calc-chip" onclick="setCalcPledge(20)">Classroom (20)</button>
                                 </div>
-                                <button type="button" class="btn-launch-pledge" onclick="launchPledgeFromCalc()">
+                                <button type="button" class="btn-launch-pledge" onclick="openPledgeModal()">
                                     <span>Complete Sponsorship</span><i class="ph-bold ph-heart"></i>
                                 </button>
                             </div>
@@ -324,8 +324,8 @@
     <?php include_once 'partials/pledge-modal.php'; ?>
 
     <!-- Global App Engine -->
-    <script src="assets/js/app.js"></script>
+    <script src="<?= BASE_URL ?>assets/js/app.js"></script>
     <!-- Page Specific Engine -->
-    <script src="assets/js/pages/home.js"></script>
+    <script src="<?= BASE_URL ?>assets/js/pages/home.js"></script>
 </body>
 </html>

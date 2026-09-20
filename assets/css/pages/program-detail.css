@@ -526,3 +526,14 @@
         min-height: 540px;
     }
 }
+
+.goldy {
+    color: var(--c-gold) !important;
+}
+
+.program-summary-card img {
+    object-fit: cover;
+    width: 120%;
+    margin-left: -10%;
+    padding: 1rem 0;
+}

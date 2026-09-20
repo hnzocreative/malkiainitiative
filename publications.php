@@ -82,7 +82,7 @@
                                 </a>
                                 <a href="<?= BASE_URL ?>assets/docs/Malkia-Annual-Report-2025.pdf" download class="btn-cta secondary">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>Download PDF (8.4 MB)</span>
+                                    <span>Download PDF (0.4 MB)</span>
                                 </a>
                             </div>
                         </div>
@@ -98,16 +98,16 @@
                 </article>
 
                 <!-- 2. Policy Briefs & Field Whitepapers (Col-8) -->
-                <article class="bento-card col-8 policy-briefs-card">
+                <!-- <article class="bento-card col-8 policy-briefs-card">
                     <span class="tag">Legislative Advocacy</span>
                     <h2>Policy Whitepapers &amp; Field Studies</h2>
                     <p class="section-sub">
                         Research briefs produced for county assemblies, education taskforces, and child protection stakeholders.
                     </p>
 
-                    <div class="pub-document-list">
+                    <div class="pub-document-list"> -->
                         <!-- Brief 1 -->
-                        <div class="pub-doc-item">
+                        <!-- <div class="pub-doc-item">
                             <div class="doc-icon"><i class="ph-bold ph-article"></i></div>
                             <div class="doc-meta">
                                 <h4>Cross-Border FGM Interception in Pastoralist Corridors</h4>
@@ -121,10 +121,10 @@
                             <a href="<?= BASE_URL ?>assets/docs/Malkia-Cross-Border-FGM-Brief-2025.pdf" download class="btn-doc-download" aria-label="Download Cross-Border FGM Brief">
                                 <i class="ph-bold ph-download-simple"></i>
                             </a>
-                        </div>
+                        </div> -->
 
                         <!-- Brief 2 -->
-                        <div class="pub-doc-item">
+                        <!-- <div class="pub-doc-item">
                             <div class="doc-icon"><i class="ph-bold ph-article"></i></div>
                             <div class="doc-meta">
                                 <h4>Closing Foundational Literacy Gaps: The KUZA Remedial Model</h4>
@@ -138,10 +138,10 @@
                             <a href="<?= BASE_URL ?>assets/docs/Malkia-KUZA-Pedagogical-Evaluation-2025.pdf" download class="btn-doc-download" aria-label="Download KUZA Evaluation Study">
                                 <i class="ph-bold ph-download-simple"></i>
                             </a>
-                        </div>
+                        </div> -->
 
                         <!-- Brief 3 -->
-                        <div class="pub-doc-item">
+                        <!-- <div class="pub-doc-item">
                             <div class="doc-icon"><i class="ph-bold ph-article"></i></div>
                             <div class="doc-meta">
                                 <h4>Maternal Support as an Educational Prerequisite for Teen Mothers</h4>
@@ -157,10 +157,10 @@
                             </a>
                         </div>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- 3. Fiduciary Disclosures & Audited Financials (Col-4) -->
-                <article class="bento-card col-4 pub-audit-card">
+                <!-- <article class="bento-card col-4 pub-audit-card">
                     <span class="tag">Fiduciary Rigor</span>
                     <h2>Audited Financials</h2>
                     <p>
@@ -203,7 +203,7 @@
                         <i class="ph-bold ph-shield-check"></i>
                         <span>Compliant with Kenya NGO Coordination Board statutory filings.</span>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- 4. Research Collaboration Strip (Col-12) -->
                 <article class="bento-card col-12 pub-cta-strip">

@@ -385,3 +385,9 @@
     display: block;
     margin-top: 2px;
 }
+
+.no-bgbr, .no-bgbr:hover {
+    background: none !important;
+    border: none !important;
+    box-shadow: none;
+}

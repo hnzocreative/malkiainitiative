@@ -64,7 +64,7 @@
                         <div class="unga-card-overlay">
                             <span class="card-stat-badge">Est. 2015</span>
                             <h4>Our Roots</h4>
-                            <span class="card-cta-label">Telemetry Brief <i class="ph-bold ph-chart-line-up"></i></span>
+                            <span class="card-cta-label">The Inspiration <i class="ph-bold ph-chart-line-up"></i></span>
                         </div>
                     </div>
 
@@ -74,17 +74,17 @@
                         <div class="unga-card-overlay">
                             <span class="card-stat-badge highlight">26,009 Girls</span>
                             <h4>Impact To Date</h4>
-                            <span class="card-cta-label">Telemetry Brief <i class="ph-bold ph-chart-line-up"></i></span>
+                            <span class="card-cta-label">Verified Numbers <i class="ph-bold ph-chart-line-up"></i></span>
                         </div>
                     </div>
 
                     <!-- Card 3: Founder's Voice -->
                     <div class="unga-montage-card card-right" onclick="toggleTelemetry(true)">
-                        <img src="<?= BASE_URL ?>assets/images/footer/founder.webp" alt="Jedidah Lemaron" class="unga-montage-img">
+                        <img src="<?= BASE_URL ?>assets/images/team/jedidah-lemaron.webp" alt="Jedidah Lemaron" class="unga-montage-img">
                         <div class="unga-card-overlay">
                             <span class="card-stat-badge">Executive View</span>
                             <h4>Founder's Voice</h4>
-                            <span class="card-cta-label">Telemetry Brief <i class="ph-bold ph-chart-line-up"></i></span>
+                            <span class="card-cta-label">Why We Do It <i class="ph-bold ph-chart-line-up"></i></span>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                         
                         <!-- Card A: Our Focus -->
                         <div class="what-card focus-card">
-                            <img src="<?= BASE_URL ?>assets/images/projects/01-KUZA.webp" alt="Our Focus" class="what-card-bg">
+                            <img src="<?= BASE_URL ?>assets/images/unga/focus.webp" alt="Our Focus" class="what-card-bg">
                             <div class="what-card-scrim"></div>
                             <div class="what-card-body">
                                 <span class="calc-badge goldy">Strategic Direction</span>
@@ -148,7 +148,7 @@
 
                         <!-- Card B: Key Achievements -->
                         <div class="what-card achievements-card">
-                            <img src="<?= BASE_URL ?>assets/images/projects/03-voices-uncut.webp" alt="Key Achievements" class="what-card-bg">
+                            <img src="<?= BASE_URL ?>assets/images/unga/achievements.webp" alt="Key Achievements" class="what-card-bg">
                             <div class="what-card-scrim"></div>
                             <div class="what-card-body">
                                 <span class="calc-badge goldy">Documented Evidence</span>
@@ -190,7 +190,7 @@
 
                         <!-- Card C: Future Plans -->
                         <div class="what-card future-card">
-                            <img src="<?= BASE_URL ?>assets/images/projects/04-she-rise.webp" alt="Future Plans" class="what-card-bg">
+                            <img src="<?= BASE_URL ?>assets/images/unga/plans.webp" alt="Future Plans" class="what-card-bg">
                             <div class="what-card-scrim"></div>
                             <div class="what-card-body">
                                 <span class="calc-badge goldy">2025–2029 Horizon</span>
