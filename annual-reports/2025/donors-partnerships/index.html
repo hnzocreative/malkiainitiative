@@ -25,6 +25,17 @@
     <!-- Shared Corporate Dark Stylesheet -->
     <link rel="stylesheet" href="../assets/css/ar-corporate.css">
     <link rel="stylesheet" href="../assets/css/donors.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NW5PG8B0DK');
+    </script>
+    
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
@@ -91,7 +102,7 @@
 
             <div class="ar-sidebar-footer">
                 <p style="color: var(--ar-text-muted); margin-bottom: 8px;">Malkia Initiative 2025 Annual Report</p>
-                <a href="../../">&larr; Corporate Website</a>
+                <a href="../../../">&larr; Corporate Website</a>
             </div>
         </aside>
 
@@ -142,7 +153,7 @@
                             <li><i class="ph-bold ph-check"></i> Co-branding on county policy releases</li>
                         </ul>
                     </div>
-                    <a href="mailto:partners@malkiainitiative.org?subject=Institutional%20Anchor%20Inquiry"
+                    <a href="mailto:gautama@malkiainitiative.org?subject=Institutional%20Anchor%20Inquiry"
                         class="btn-partner-action btn-partner-primary">
                         <span>Initiate Dialogue</span>
                         <i class="ph-bold ph-arrow-right"></i>
@@ -168,7 +179,7 @@
                             <li><i class="ph-bold ph-check"></i> Direct field immersion briefings</li>
                         </ul>
                     </div>
-                    <a href="mailto:partners@malkiainitiative.org?subject=Pipeline%20Underwriting%20Inquiry"
+                    <a href="mailto:gautama@malkiainitiative.org?subject=Pipeline%20Underwriting%20Inquiry"
                         class="btn-partner-action btn-partner-secondary">
                         <span>Inquire on Tracks</span>
                         <i class="ph-bold ph-arrow-right"></i>
@@ -182,10 +193,10 @@
                             <span class="tier-badge solidarity">Solidarity Champion</span>
                             <i class="ph-bold ph-hands-clapping" style="color: var(--ar-mint); font-size: 1.3rem;"></i>
                         </div>
-                        <div class="tier-price-point">$75 / Year</div>
+                        <div class="tier-price-point">$75 / Month</div>
                         <div class="tier-price-sub">Direct Girl Support (Unit Economic Model)</div>
                         <p style="font-size: 0.88rem; color: var(--ar-text-muted);">
-                            Directly sponsor one pastoralist girl for 12 months, covering emergency protection, school sanitary dignity,
+                            Directly sponsor one pastoralist girl for 1 month, covering emergency protection, school sanitary dignity,
                             and mentorship.
                         </p>
                         <ul class="tier-feature-list">
@@ -214,6 +225,9 @@
 
                 <div class="donor-logos-strip">
                     <div class="donor-logo-box">
+                        <img src="../assets/images/donors/06.webp" alt="Donor Partner 06" loading="lazy" onerror="this.style.opacity='0.2'">
+                    </div>
+                    <div class="donor-logo-box">
                         <img src="../assets/images/donors/01.webp" alt="Donor Partner 01" loading="lazy"
                             onerror="this.style.opacity='0.2'">
                     </div>
@@ -234,8 +248,7 @@
                             onerror="this.style.opacity='0.2'">
                     </div>
                     <div class="donor-logo-box">
-                        <img src="../assets/images/donors/06.webp" alt="Donor Partner 06" loading="lazy"
-                            onerror="this.style.opacity='0.2'">
+                        <img src="../assets/images/donors/06.webp" alt="Donor Partner 06" loading="lazy" onerror="this.style.opacity='0.2'">
                     </div>
                     <div class="donor-logo-box">
                         <img src="../assets/images/donors/07.webp" alt="Donor Partner 07" loading="lazy"
@@ -314,80 +327,11 @@
             <button class="btn-dialog-close" onclick="closePledgeModal()" aria-label="Close dialog">✕</button>
         </div>
     
-        <div class="pledge-dialog-body">
-            <!-- Stepper Calculation -->
-            <div class="unit-calc-box">
-                <div class="label">
-                    <span>Adolescent Girls Supported</span>
-                    <strong id="pledgeSummaryText">1 Girl • $75 USD (~KES 9,750)</strong>
-                </div>
-                <div class="unit-stepper">
-                    <button type="button" class="btn-step" onclick="adjustPledgeQty(-1)">−</button>
-                    <span class="step-count" id="pledgeQtyDisplay">1</span>
-                    <button type="button" class="btn-step" onclick="adjustPledgeQty(1)">+</button>
-                </div>
-            </div>
-    
-            <!-- Payment Gateways Tabs -->
-            <div class="gateway-tabs">
-                <button type="button" class="gateway-tab-btn active" id="tabMpesa" onclick="switchGatewayTab('mpesa')">
-                    <i class="ph-bold ph-device-mobile"></i> M-PESA (Direct)
-                </button>
-                <button type="button" class="gateway-tab-btn" id="tabCard" onclick="switchGatewayTab('card')">
-                    <i class="ph-bold ph-credit-card"></i> Card (Visa / MC)
-                </button>
-            </div>
-    
-            <!-- Panel 1: M-PESA Paybill -->
-            <div class="payment-panel active" id="panelMpesa">
-                <div class="mpesa-details-box">
-                    <div>
-                        <div class="val">400200</div>
-                        <div class="lbl">Business No.</div>
-                    </div>
-                    <div>
-                        <div class="val">MALKIA</div>
-                        <div class="lbl">Account No.</div>
-                    </div>
-                    <div>
-                        <div class="val" id="mpesaKesTotal">KES 9,750</div>
-                        <div class="lbl">Total Due</div>
-                    </div>
-                </div>
-                <div class="pledge-input-group">
-                    <label>Your Phone Number (For M-PESA Prompt / Receipt)</label>
-                    <input type="tel" class="pledge-input" placeholder="e.g. 0712 345 678" required>
-                </div>
-                <button type="button" class="pledge-submit-btn">
-                    <span>Send M-PESA STK Push</span>
-                    <i class="ph-bold ph-paper-plane-tilt"></i>
-                </button>
-            </div>
-    
-            <!-- Panel 2: Visa / Mastercard -->
-            <div class="payment-panel" id="panelCard">
-                <div class="pledge-input-group">
-                    <label>Full Name</label>
-                    <input type="text" class="pledge-input" placeholder="First and Last Name">
-                </div>
-                <div class="pledge-input-group">
-                    <label>Card Number</label>
-                    <input type="text" class="pledge-input" placeholder="•••• •••• •••• ••••">
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                    <div class="pledge-input-group">
-                        <label>Expiry (MM/YY)</label>
-                        <input type="text" class="pledge-input" placeholder="MM/YY">
-                    </div>
-                    <div class="pledge-input-group">
-                        <label>CVV</label>
-                        <input type="password" class="pledge-input" maxlength="4" placeholder="123">
-                    </div>
-                </div>
-                <button type="button" class="pledge-submit-btn">
-                    <span id="btnCardSubmitText">Complete $75 USD Pledge</span>
-                    <i class="ph-bold ph-lock-key"></i>
-                </button>
+        <div class="pledge-dialog-body embed-dialog-body">
+            <div class="omprakash-embed-frame">
+                <iframe src="https://www.omprakash.org/global/malkia-initiative/donate/embed" title="Support The Malkia Initiative"
+                    allowfullscreen loading="lazy">
+                </iframe>
             </div>
         </div>
     </dialog>

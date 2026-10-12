@@ -1,8 +1,8 @@
 <?php
 if (!defined('BASE_URL')) {
     // Detects local MAMP subdirectory automatically or defaults to root on production
-    $is_local_mi = (strpos($_SERVER['REQUEST_URI'], '/malkiainitiative/') === 0 || strpos($_SERVER['SCRIPT_NAME'], '/malkiainitiative/') === 0);
-    define('BASE_URL', $is_local_mi ? '/malkiainitiative/' : '/');
+    $is_local_mi = (strpos($_SERVER['REQUEST_URI'], '/') === 0 || strpos($_SERVER['SCRIPT_NAME'], '/malkiainitiative/') === 0);
+    define('BASE_URL', $is_local_mi ? '/' : '/');
 }
 ?>
 <meta charset="UTF-8">
@@ -19,3 +19,13 @@ if (!defined('BASE_URL')) {
 
 <!-- Corporate Adaptive Stylesheet -->
 <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/styles.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NW5PG8B0DK');
+</script>

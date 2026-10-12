@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficiary Dossier | The Malkia Initiative @ 10</title>
+    <meta name="description"
+        content="Verified impact dossier and Theory of Change transformation record from The Malkia Initiative.">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+    <!-- Shared Global Base Styles + Page-Specific Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/impact.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NW5PG8B0DK');
+    </script>
+    
+</head>
+
+<body>
+
+    <!-- Top Fixed Bar with State-Switching Menu FAB -->
+    <header class="top-nav">
+        <button class="btn-fab-menu" id="menuFab" onclick="toggleNavDrawer()" aria-label="Open Navigation">
+            <i class="ph ph-list"></i>
+            <span>Menu</span>
+        </button>
+    </header>
+
+    <!-- Dynamic Content Container -->
+    <main class="beneficiary-shell" id="mainBento">
+        <div id="beneficiaryShellRoot">
+            <!-- Injected dynamically via impact.js based on ?id= -->
+        </div>
+    </main>
+
+    <!-- Bottom-Right Grouped Expandable FAB Dock -->
+    <aside class="fab-dock-bottom" aria-label="Quick Actions">
+        <button class="fab-trigger fab-telemetry" onclick="toggleStatsDrawer()"
+            aria-label="Total Impact Numbers and FAQs">
+            <i class="ph-bold ph-scales"></i>
+            <span class="fab-text">Total Impact Numbers</span>
+        </button>
+        <button class="fab-trigger fab-bigidea" onclick="openBigIdeaModal()" aria-label="The Big Idea Manifesto">
+            <i class="ph-bold ph-lightbulb"></i>
+            <span class="fab-text">The Big Idea</span>
+        </button>
+    </aside>
+
+    <!-- Shared Drawer Backdrop -->
+    <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeAllDrawers()"></div>
+
+    <!-- Shared Slide-out Navigation Drawer (Left to Right) -->
+    <nav class="nav-drawer smooth-transition" id="navDrawer" aria-label="Primary Directory">
+        <div>
+            <div class="nav-drawer-header">
+                <img src="../assets/images/logo.png" alt="The Malkia Initiative Logo" class="nav-drawer-logo"
+                    onerror="this.src='../assets/images/logo.png'; this.onerror=null;" />
+            </div>
+            <div class="drawer-nav-links">
+                <a href="../">
+                    <span>Overview</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="index.html" class="active">
+                    <span>Impact Dossiers</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="../../annual-reports/2025/" target="_blank">
+                    <span>2025 Audited Report</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="../vision2029/">
+                    <span>Strategic Vision 2029</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="../program/">
+                    <span>Event Experience</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--m-text-muted);">
+            ACK Tenebo House, Kajiado Central<br>
+            <a href="../../"
+                style="color: var(--m-purple); text-decoration: none; font-weight: 700;">&larr; Back To Main Site</a>
+        </div>
+    </nav>
+
+    <!-- Slide-out Telemetry & FAQ Drawer (Total Impact Numbers) -->
+    <aside class="stats-drawer smooth-transition" id="statsDrawer" aria-label="Total Impact Details">
+        <div class="stats-drawer-header">
+            <h3><i class="ph-bold ph-scales"></i> Total Impact Numbers</h3>
+            <button onclick="toggleStatsDrawer()" class="btn-stats-close"
+                aria-label="Close Total Impact Drawer">✕</button>
+        </div>
+
+        <div class="telemetry-grid">
+            <div class="telemetry-stat-card bead-accent-top">
+                <div class="stat-card-badge">Direct Beneficiaries Reached</div>
+                <div class="stat-card-value-row">
+                    <span class="stat-card-metric">26,009</span>
+                    <i class="ph-bold ph-users-three stat-card-trend-icon"></i>
+                </div>
+                <p class="stat-card-desc">
+                    Cumulative adolescent girls and young women supported across education re-entry, SRHR, and
+                    mentorship since 2015.
+                </p>
+            </div>
+
+            <div class="telemetry-stat-card">
+                <div class="stat-card-badge">Educational Institutions</div>
+                <div class="stat-card-value-row">
+                    <span class="stat-card-metric">22+</span>
+                    <i class="ph-bold ph-chalkboard-teacher stat-card-trend-icon"></i>
+                </div>
+                <p class="stat-card-desc">
+                    Partner primary and secondary institutions anchored by 7 KUZA literacy hubs and 15 Girls Assembly
+                    campuses.
+                </p>
+            </div>
+
+            <div class="telemetry-stat-card">
+                <div class="stat-card-badge">Operational Coverage</div>
+                <div class="stat-card-value-row">
+                    <span class="stat-card-metric">5 Wards</span>
+                    <i class="ph-bold ph-map-pin stat-card-trend-icon" style="color: var(--m-cyan);"></i>
+                </div>
+                <p class="stat-card-desc">
+                    Deep geographic concentration across Kajiado Central, South, and West (Ildamat, Dalalekutuk,
+                    Olgulului, Iloodokilani, and Matapato).
+                </p>
+            </div>
+        </div>
+
+        <h4 class="faq-section-title">Dossier Inquiries</h4>
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <span>How are these transformation stories audited?</span>
+                <span class="faq-indicator">+</span>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    Each dossier is validated against school enrollment registries, national polytechnic certification
+                    records, and field monitoring visits overseen by our MERL department.
+                </p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <span>How does a $75 contribution support one profile?</span>
+                <span class="faq-indicator">+</span>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    A $75 unit investment delivers 12 months of sanitary towels (Pad Bank), academic transition fees,
+                    comprehensive sexuality education, and bi-monthly mentorship.
+                </p>
+            </div>
+        </details>
+    </aside>
+
+    <!-- Big Idea Dialog Element -->
+    <dialog class="modal-bigidea" id="bigIdeaDialog">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="ph-fill ph-crown" style="font-size: 1.5rem; color: var(--m-gold);"></i>
+                <h3 style="font-family: var(--font-display); color: var(--m-purple);">The Big Idea</h3>
+            </div>
+            <button onclick="closeBigIdeaModal()"
+                style="background:none; border:none; font-size: 1.3rem; cursor:pointer;"
+                aria-label="Close Big Idea Dialog">✕</button>
+        </div>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--m-text-dark); margin-bottom: 16px;">
+            "If the solution does not reach her, it is not a solution yet."
+        </p>
+        <p style="font-size: 0.88rem; color: var(--m-text-muted); line-height: 1.6; margin-bottom: 24px;">
+            Conventional aid treats adolescent girls as passive recipients. Over the next decade, Malkia
+            positions them as <strong>co-designers, researchers, and economic owners</strong>.
+        </p>
+        <button class="btn-pill btn-pill-purple" style="width: 100%; justify-content: center;"
+            onclick="closeBigIdeaModal()">
+            Join Her Next Ten Years
+        </button>
+    </dialog>
+
+    <!-- Core Global Engine & Page Controller -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/impact.js"></script>
+</body>
+
+</html>

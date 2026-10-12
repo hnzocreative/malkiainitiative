@@ -1,0 +1,175 @@
+[
+  {
+    "chapterId": "ch-arrival",
+    "chapterNumber": "01",
+    "chapterTitle": "ARRIVAL EXPERIENCE - WALK INTO THE STORY",
+    "chapterTagline": "Arrive & Discover",
+    "timeSpan": "1:00 PM – 2:53 PM",
+    "items": [
+      {
+        "time": "1:00 – 2:30 PM",
+        "activity": "Arrival, Registration, Lunch + Walk Through 10 Years",
+        "description": "Guests enter through a curated 10-year journey: photographs, milestone moments, programme objects, short story cards and selected QR/audio reflections from girls, mothers, teachers or staff. Each guest receives a Future Card: 'For her next ten years, I will...' to keep until later in the programme.",
+        "responsible": "Secretariat / Experience Team",
+        "isDivider": false
+      },
+      {
+        "time": "2:30 – 2:35 PM",
+        "activity": "National Anthem",
+        "description": "National Anthem.",
+        "responsible": "MC",
+        "isDivider": false
+      },
+      {
+        "time": "2:35 – 2:43 PM",
+        "activity": "Welcome - The Journey We Are About to Experience",
+        "description": "The Board Chair welcomes guests, acknowledges the room and frames the celebration as a journey through where Malkia came from, what the crown has meant, and what the next decade must make possible.",
+        "responsible": "Board Chair",
+        "isDivider": false
+      },
+      {
+        "time": "2:43 – 2:53 PM",
+        "activity": "Our Malkia Connection",
+        "description": "A short table-based connection moment. Guests share how they first encountered Malkia and one word that captures what Malkia means to them. The MC links selected responses back to the 10-year journey.",
+        "responsible": "MC",
+        "isDivider": true,
+        "interactivePrompt": "Submit your table's response: 1) How you first encountered Malkia, and 2) One word that captures what Malkia means to you."
+      }
+    ]
+  },
+  {
+    "chapterId": "ch-1",
+    "chapterNumber": "02",
+    "chapterTitle": "CHAPTER I - WHERE WE CAME FROM",
+    "chapterTagline": "Remember & Feel",
+    "timeSpan": "2:53 PM – 3:10 PM",
+    "items": [
+      {
+        "time": "2:53 – 3:05 PM",
+        "activity": "10 Years in 12 Minutes - The Origin Story",
+        "description": "An image-led story of Malkia's beginnings, turning points, growth, learning and impact. Minimal slides, focused on strong photographs, dates and moments. Concludes with: 'What became possible because we began?'",
+        "responsible": "Executive Director",
+        "isDivider": false
+      },
+      {
+        "time": "3:05 – 3:10 PM",
+        "activity": "Maa Cultural Moment",
+        "description": "A short cultural performance celebrating the communities at the heart of Malkia's work and creating a natural transition from the organisation's origin story to the girls and women whose lives give the journey meaning.",
+        "responsible": "Adolescent Girls",
+        "isDivider": false
+      }
+    ]
+  },
+  {
+    "chapterId": "ch-2",
+    "chapterNumber": "03",
+    "chapterTitle": "CHAPTER II - WHAT THE CROWN HAS MEANT: AGENCY. VOICE. CHOICE.",
+    "chapterTagline": "Reflect & Experience",
+    "timeSpan": "3:10 PM – 4:06 PM",
+    "items": [
+      {
+        "time": "3:10 – 3:26 PM",
+        "activity": "Her Story, Her Crown - Agency. Voice. Choice.",
+        "description": "Three short, distinct voices bring Malkia's rallying call to life: a girl, a teen mother/young woman and another programme alumna or participant. Each shares one defining moment of agency, voice or choice. Closes with a collective declaration: 'My voice matters because...'",
+        "responsible": "Girls / Young Women",
+        "isDivider": false
+      },
+      {
+        "time": "3:26 – 3:36 PM",
+        "activity": "Malkia Through the Years - Documentary Reveal",
+        "description": "Lights down. The film begins with a voice before the screen comes alive, carrying the human story of the decade through girls, community, staff and programme footage. Ends on: 'The crown still belongs to her.'",
+        "responsible": "AV Team / Executive Director",
+        "isDivider": false
+      },
+      {
+        "time": "3:36 – 3:56 PM",
+        "activity": "Ten Years Around the Malkia Table",
+        "description": "A warm, moderated conversation instead of a succession of speeches. Voices: girl/young woman, community representative, staff, County Government and partner/funder. Three prompts: What have you seen change? What has Malkia taught us? What must the next ten years make possible?",
+        "responsible": "Moderator + 5 Voices",
+        "isDivider": false
+      },
+      {
+        "time": "3:56 – 4:06 PM",
+        "activity": "Anniversary Reflection",
+        "description": "One concise guest reflection connecting Malkia's decade to the wider importance of investing in girls, communities, locally led solutions and long-term change.",
+        "responsible": "Guest Speaker",
+        "isDivider": false
+      }
+    ]
+  },
+  {
+    "chapterId": "ch-3",
+    "chapterNumber": "04",
+    "chapterTitle": "CHAPTER III - A FUTURE OF POSSIBILITIES",
+    "chapterTagline": "Imagine & Commit",
+    "timeSpan": "4:06 PM – 4:30 PM",
+    "items": [
+      {
+        "time": "4:06 – 4:20 PM",
+        "activity": "The Next Ten Years - A Future of Possibilities",
+        "description": "Founder/ED presentation on lessons learned and three concrete commitments for the next decade. Strong, clear language ending with an invitation for the room to partner in shaping the future.",
+        "responsible": "Executive Director",
+        "isDivider": false
+      },
+      {
+        "time": "4:20 – 4:30 PM",
+        "activity": "For Her Next Ten Years, I Will... - Future Wall",
+        "description": "Guests return to the Future Card received on arrival and complete one personal or institutional commitment. Cards are pinned to the physical Future Wall / Crown Wall while selected pledges are read aloud.",
+        "responsible": "MC / All Guests",
+        "isDivider": true,
+        "interactivePrompt": "Submit your commitment for the digital wall: 'For her next ten years, I will...'"
+      }
+    ]
+  },
+  {
+    "chapterId": "ch-celebrate",
+    "chapterNumber": "05",
+    "chapterTitle": "HONOUR, SYMBOLISE & CELEBRATE",
+    "chapterTagline": "Celebrate & Launch",
+    "timeSpan": "4:30 PM – 5:30 PM",
+    "items": [
+      {
+        "time": "4:30 – 4:42 PM",
+        "activity": "Celebrating Our Champions",
+        "description": "Recognition of selected girls, community champions, staff, Board members, government collaborators, partners and donors who have shaped the journey. Concise, story-led citations.",
+        "responsible": "Malkia Team",
+        "isDivider": false
+      },
+      {
+        "time": "4:42 – 4:52 PM",
+        "activity": "Passing of the Crown",
+        "description": "An intergenerational moment: an early community/girl representative passes the crown to the youngest girl present, symbolizing that the next decade belongs to her.",
+        "responsible": "Malkia Leadership + Girls",
+        "isDivider": false
+      },
+      {
+        "time": "4:52 – 5:00 PM",
+        "activity": "10th Anniversary Cake Cutting",
+        "description": "Cake cutting with representatives of girls, community, staff, Board, partners, government and leadership to symbolize the collective impact of the journey.",
+        "responsible": "Chief Guest + Malkia Leadership",
+        "isDivider": false
+      },
+      {
+        "time": "5:00 – 5:08 PM",
+        "activity": "Closing Reflection & Vote of Thanks",
+        "description": "Gratitude to all contributors, returning to the Future Wall commitments and reaffirming that the next decade has begun.",
+        "responsible": "Executive Director / MC",
+        "isDivider": false
+      },
+      {
+        "time": "5:08 – 5:30 PM",
+        "activity": "Final Entertainment, Photos & Networking",
+        "description": "Music, photos, informal networking and open access to the 10-Year exhibition space and Future Wall.",
+        "responsible": "MC / Entertainment Team",
+        "isDivider": false
+      },
+      {
+        "time": "5:30 PM",
+        "activity": "Event Close",
+        "description": "Formal close of the Malkia @10 celebration.",
+        "responsible": "MC",
+        "isDivider": false
+      }
+    ]
+  }
+]

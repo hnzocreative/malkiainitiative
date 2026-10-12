@@ -1,20 +1,73 @@
+Options -MultiViews +FollowSymLinks
 RewriteEngine On
-RewriteBase /malkiainitiative/
+RewriteBase /
 
-# Force HTTPS (Bypass for local MAMP development)
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ------------------------------------------------------------------------------
 
-# Remove trailing slash safely (without forcing absolute root)
+# 1. STATUS CODE & ERROR HANDLING
+
+# ------------------------------------------------------------------------------
+
+ErrorDocument 403 /
+ErrorDocument 404 /
+
+# ------------------------------------------------------------------------------
+
+# 2. EXPLICIT BROWSER REDIRECTS FOR PROTECTED DIRECTORIES
+
+# ------------------------------------------------------------------------------
+
+# Forces a visible browser redirect to the root domain (/)
+
+RewriteRule ^(corporate|data|partials)(/.\*)?$ / [R=302,L]
+
+# ------------------------------------------------------------------------------
+
+# 3. EXPLICIT BYPASS FOR PHYSICAL ASSETS
+
+# ------------------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ------------------------------------------------------------------------------
+
+# 4. DYNAMIC TRACKING ROUTES (ROOT-ANCHORED TO /corporate/redirect.php)
+
+# ------------------------------------------------------------------------------
+
+RewriteRule ^qrcode/([^/]+)/([^/]+)/?$ /corporate/redirect.php?type=qrcode&function=$1&name=$2 [L,QSA]
+RewriteRule ^go/([^/]+)/?$ /corporate/redirect.php?type=shortlink&slug=$1 [L,QSA]
+
+# ------------------------------------------------------------------------------
+
+# 5. REMOVE TRAILING SLASHES (Non-directories)
+
+# ------------------------------------------------------------------------------
+
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ $1 [L,R=301]
+RewriteCond %{REQUEST_URI} /(.\*)/$
+RewriteRule ^ /%1 [L,R=301]
 
-# Internally forward clean URLs to .php files (now handles deep paths like /programs/kuza)
-RewriteCond %{REQUEST_FILENAME} !-d
+# ------------------------------------------------------------------------------
+
+# 6. CLEAN URL ROUTING (Map /page to /page.php or /corporate/page.php)
+
+# ------------------------------------------------------------------------------
+
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.*)$ /$1.php [L]
+
+RewriteCond %{DOCUMENT_ROOT}/corporate/$1.php -f
+RewriteRule ^(.*)$ /corporate/$1.php [L]
+
+# ------------------------------------------------------------------------------
+
+# 7. 404 CATCH-ALL (REWRITES TO ROOT WITHOUT /index.php)
+
+# ------------------------------------------------------------------------------
+
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
-
-# Prevent direct access to partials
-RewriteRule ^partials/ - [F,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ / [L,R=302]

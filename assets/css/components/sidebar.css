@@ -335,3 +335,14 @@ details[open] summary~* {
         transform: translateY(0);
     }
 }
+
+/* Allow touch-scrolling while shifted */
+.corporate-main.shifted-left,
+.corporate-main.shifted-right {
+    pointer-events: auto !important;
+}
+
+/* Ensure backdrop catches clicks to close without eating vertical touch drags */
+.corporate-backdrop.active {
+    touch-action: pan-y;
+}

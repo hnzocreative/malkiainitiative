@@ -59,6 +59,16 @@
 
     <!-- Corporate Dark Stylesheet -->
     <link rel="stylesheet" href="assets/css/ar-corporate.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NW5PG8B0DK');
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -204,7 +214,7 @@
         
             <div class="ar-sidebar-footer">
                 <p style="color: var(--ar-text-muted); margin-bottom: 8px;">Malkia Initiative 2025 Annual Report</p>
-                <a href="../">&larr; Corporate Website</a>
+                <a href="../../">&larr; Corporate Website</a>
             </div>
         </aside>
 
@@ -251,7 +261,7 @@
                     </div>
                     <!-- Trigger for the Video Modal -->
                     <div class="exec-stat-pill dialog" onclick="openVideoModal()">
-                        <div class="val"><i class="ph-fill ph-play"></i></div>
+                        <div class="val"><i class="ph-fill ph-pencil-simple-line"></i></div>
                         <div class="lbl">Executive Director's Message</div>
                     </div>
                 </div>
@@ -379,7 +389,7 @@
                 
                     <div class="donor-logos-strip">
                         <div class="donor-logo-box">
-                            <img src="assets/images/donors/01.webp" alt="Donor Partner 01" loading="lazy" onerror="this.style.opacity='0.2'">
+                            <img src="assets/images/donors/06.webp" alt="Donor Partner 01" loading="lazy" onerror="this.style.opacity='0.2'">
                         </div>
                         <div class="donor-logo-box">
                             <img src="assets/images/donors/02.webp" alt="Donor Partner 02" loading="lazy" onerror="this.style.opacity='0.2'">
@@ -394,7 +404,7 @@
                             <img src="assets/images/donors/05.webp" alt="Donor Partner 05" loading="lazy" onerror="this.style.opacity='0.2'">
                         </div>
                         <div class="donor-logo-box">
-                            <img src="assets/images/donors/06.webp" alt="Donor Partner 06" loading="lazy" onerror="this.style.opacity='0.2'">
+                            <img src="assets/images/donors/01.webp" alt="Donor Partner 06" loading="lazy" onerror="this.style.opacity='0.2'">
                         </div>
                         <div class="donor-logo-box">
                             <img src="assets/images/donors/07.webp" alt="Donor Partner 07" loading="lazy" onerror="this.style.opacity='0.2'">
@@ -452,17 +462,55 @@
         <span>Audited Telemetry</span>
     </button>
 
-    <!-- EXECUTIVE DIRECTOR YOUTUBE VIDEO DIALOG -->
-    <dialog class="video-dialog-modal" id="execVideoDialog" onclick="closeVideoModalOnBackdrop(event)">
-        <div class="video-modal-header">
-            <h3><i class="ph-fill ph-video-camera" style="color: var(--ar-gold);"></i> Executive Director's Message</h3>
-            <button class="video-modal-close-btn" onclick="closeVideoModal()" aria-label="Close Video">✕</button>
-        </div>
-        <div class="video-player-wrap">
-            <iframe id="execVideoIframe" src="" title="Executive Director Annual Message"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+    <!-- EXECUTIVE DIRECTOR MESSAGE DIALOG -->
+    <dialog class="video-dialog-modal exec-message-modal" id="execVideoDialog" onclick="closeVideoModalOnBackdrop(event)">
+        <button class="video-modal-close-btn" onclick="closeVideoModal()" aria-label="Close Message">✕</button>
+        <div class="exec-message-layout">
+            <div class="exec-profile-col">
+                <div class="exec-avatar-frame">
+                    <img src="assets/images/founder.webp" alt="Jedidah Lemaron — Founder & Executive Director">
+                </div>
+                <h3>Executive Director's Message</h3>
+            </div>
+            <div class="exec-quote-col">
+                <blockquote class="exec-quote-body">
+                    "Dear friends, partners and champions of girls,
+                    <br><br>
+                    2025 was a year that reminded us why Malkia exists. It was a year of rebuilding, stretching, listening
+                    and choosing to
+                    stay close to the girls and communities at the heart of our work. In Kajiado, the barriers facing girls
+                    are still real:
+                    teenage pregnancy, FGM, child marriage, school dropout, poverty, long distances to school and systems
+                    that too often respond
+                    late. But this year also showed us something equally true: when girls are supported with safety,
+                    education, mentorship
+                    and voice, they do not only survive these barriers - they begin to shift them.
+                    <br><br>
+                    We saw teen mothers return to school. We saw girls stand before peers, parents, community members and
+                    leaders to
+                    speak about what affects their education and safety. We saw a school environment transformed so girls
+                    can learn with
+                    dignity. We saw women, youth, frontline actors and local systems come together around one simple truth:
+                    protection is
+                    not the work of one organization; it is the responsibility of a whole community.
+                    <br><br>
+                    This report is not a list of perfect wins. It is a record of courage, learning and movement. It carries
+                    the stories of
+                    girls who found their way back to class, staff who gave deeply and still chose to care for their own
+                    wellbeing, communities
+                    that opened harder conversations, and partners who believed that grassroots leadership deserves trust
+                    and resources.
+                    As we look ahead, our commitment is clear. We will continue to build a Malkia where girls are not
+                    treated as passive
+                    beneficiaries, but as knowledge holders, advocates and leaders of the change they deserve. If the
+                    solution does not
+                    reach her, it is not a solution yet.
+                    <br><br>
+                    With gratitude"<br><br>
+                    <span class="title">Jedidah "Jeddy" Lemaron<br>
+                        Founder and Executive Director, The Malkia Initiative</span>
+                </blockquote>
+            </div>
         </div>
     </dialog>
 

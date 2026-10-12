@@ -169,7 +169,7 @@
 
                     <div class="invest-unit-box">
                         <span class="unit-rate">$75</span>
-                        <span class="unit-sub">Sponsors 1 Child for a Full Year</span>
+                        <span class="unit-sub">Sponsors 1 Child for a Full Month</span>
                     </div>
 
                     <button class="btn-cta primary btn-invest-full" onclick="openPledgeModal()">
@@ -190,21 +190,21 @@
                         <p>Our education framework connects directly to holistic child protection and vocational re-entry.</p>
                     </div>
                     <div class="related-nav-grid">
-                        <a href="<?= BASE_URL ?>programs/voices-uncut" class="related-nav-link">
+                        <a href="<?= BASE_URL ?>programs/bodily-autonomy-rights/voices-uncut" class="related-nav-link">
                             <div>
                                 <span class="rel-tag">Protection Strategy</span>
                                 <h4>Voices Uncut (SRHR)</h4>
                             </div>
                             <i class="ph-bold ph-arrow-right"></i>
                         </a>
-                        <a href="<?= BASE_URL ?>programs/she-rise" class="related-nav-link">
+                        <a href="<?= BASE_URL ?>programs/economic-resilience/she-rise" class="related-nav-link">
                             <div>
                                 <span class="rel-tag">Re-Entry Track</span>
                                 <h4>SheRISE (TVET Agency)</h4>
                             </div>
                             <i class="ph-bold ph-arrow-right"></i>
                         </a>
-                        <a href="<?= BASE_URL ?>programs/for-her" class="related-nav-link">
+                        <a href="<?= BASE_URL ?>programs/education-for-girls/for-her" class="related-nav-link">
                             <div>
                                 <span class="rel-tag">Infrastructure</span>
                                 <h4>For Her (Boarding &amp; Dignity)</h4>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "sanaipei",
+    "status": "live",
+    "releaseDate": "Live",
+    "name": "Sanaipei",
+    "program": "SheRISE",
+    "tagline": "From Child Marriage Survivor at 10<br>to Independent Salon Entrepreneur",
+    "cardImage": "../assets/images/impact-stories/sanaipei-card.webp",
+    "heroImage": "../assets/images/impact-stories/sanaipei-hero.webp",
+    "theReality": "Married off at age 10 to a 62-year-old man in Kajiado, enduring severe domestic violence. Became pregnant at 12 and gave birth to her daughter Zawadi after nearly miscarrying from physical abuse.",
+    "theTurningPoint": "Encountered Malkia's SheRISE initiative at age 15. Malkia facilitated trauma therapy, psychosocial rehabilitation, and enrolled her at Maasai National Polytechnic for vocational cosmetology training.",
+    "theOutcome": "Now 17, Sanaipei operates her own salon in Kajiado, independently funding her household and securing Zawadi's education.",
+    "metrics": [
+      { "label": "Enterprise Status", "value": "Salon Owner & Stylist" },
+      { "label": "Vocational Track", "value": "MNP Cosmetology" },
+      { "label": "Daughter Safeguarded", "value": "Zawadi in School" }
+    ],
+    "tocAlignment": {
+      "pillar": "Girl-Centered Programming & Advocacy (SheRISE)",
+      "outcomeArea": "Outcome 1.4: Education Re-entry & Livelihood",
+      "sroiUnitCost": "$75/month"
+    },
+    "directQuote": "My daughter Zawadi will never know what it means to be exchanged for cows. She will hold a pencil before anything else."
+  },
+  {
+    "id": "namunyak",
+    "status": "live",
+    "releaseDate": "Live",
+    "name": "Namunyak",
+    "program": "Voices Uncut",
+    "tagline": "A Young Mother Reclaiming Her Future<br>and Defending Girl-Child Agency",
+    "cardImage": "../assets/images/impact-stories/namunyak-card.webp",
+    "heroImage": "../assets/images/impact-stories/namunyak-hero.webp",
+    "theReality": "Became a mother at 15 in a conservative pastoralist boma. Abandoned by her spouse upon learning of her 2-year-old daughter Naishorua, facing deep community stigma.",
+    "theTurningPoint": "Joined the Voices Uncut peer mentorship circles, accessing trauma counseling, community mediation, and peer childcare networks.",
+    "theOutcome": "Re-enrolled into secondary school, balancing education with motherhood while serving as a peer speaker at community barazas.",
+    "metrics": [
+      { "label": "Academic Status", "value": "Secondary Re-enrolled" },
+      { "label": "Community Reach", "value": "15 Girls Assemblies" },
+      { "label": "Next Step", "value": "KCSE Candidate" }
+    ],
+    "tocAlignment": {
+      "pillar": "Girl-Centered Programming & Advocacy (Voices Uncut)",
+      "outcomeArea": "Outcome 1.1 & 1.3: SRHR Uptake & Agency",
+      "sroiUnitCost": "$75/month"
+    },
+    "directQuote": "Being a teen mother does not mean my life has ended. My mind is sharp, and my seat in the classroom is mine."
+  },
+  {
+    "id": "salome",
+    "status": "live",
+    "releaseDate": "Live",
+    "name": "Salome Seeman",
+    "program": "KUZA (TaRL)",
+    "tagline": "Unlocking Classroom Fluency<br>at Moipei Comprehensive School",
+    "cardImage": "../assets/images/impact-stories/salome-card.webp",
+    "heroImage": "../assets/images/impact-stories/salome-hero.webp",
+    "theReality": "Struggled with foundational letter recognition in Grade 3 due to overcrowded classrooms and lack of early-grade remedial support.",
+    "theTurningPoint": "Enrolled in Malkia’s KUZA Teaching at the Right Level (TaRL) cohorts across 7 schools, receiving level-based phonetic instruction.",
+    "theOutcome": "Progressed from non-reader to confidently reading and comprehending paragraphs and stories, lifting self-esteem and attendance.",
+    "metrics": [
+      { "label": "Reading Mastery", "value": "Story Level Reader" },
+      { "label": "Institution", "value": "Moipei Comprehensive" },
+      { "label": "TaRL Impact", "value": "324 Learners Advanced" }
+    ],
+    "tocAlignment": {
+      "pillar": "Building Evidence & Sharing (KUZA)",
+      "outcomeArea": "Outcome 1.4: Foundational Learning Transition",
+      "sroiUnitCost": "$75/month"
+    },
+    "directQuote": "When you know how to read, the words in the book stop feeling like locked doors."
+  }
+]

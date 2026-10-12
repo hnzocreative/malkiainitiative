@@ -1,0 +1,1182 @@
+:root {
+    --m-purple: #4A154B;
+    --m-purple-deep: #2A092B;
+    --m-gold: #F2C94C;
+    --m-gold-soft: #FFF8E7;
+    --m-bone: #F7F5F0;
+    --m-surface: #FFFFFF;
+    --m-text-dark: #1E1A1D;
+    --m-text-muted: #5C555E;
+    --m-red: #D34836;
+    --m-cyan: #0E8E89;
+    --m-border: #E8E2D8;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --drawer-width: min(340px, 80vw);
+    --stats-drawer-width: min(440px, 88vw);
+    --transition-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::selection {
+    background-color: var(--m-purple);
+    color: var(--m-gold);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--m-bone);
+    color: var(--m-text-dark);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* Traditional Bead Strip Accent */
+.bead-accent-top {
+    position: relative;
+}
+
+.bead-accent-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: repeating-linear-gradient(90deg,
+            var(--m-red) 0px, var(--m-red) 10px,
+            #FFFFFF 10px, #FFFFFF 20px,
+            var(--m-cyan) 20px, var(--m-cyan) 30px,
+            var(--m-gold) 30px, var(--m-gold) 40px);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    z-index: 2;
+}
+
+/* Fixed Transparent Top Bar */
+header.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent !important;
+    border-bottom: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 110;
+    pointer-events: none;
+}
+
+/* Top-Right State-Switching Menu/Close FAB */
+.btn-fab-menu {
+    pointer-events: auto;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 30px;
+    background: var(--m-purple);
+    color: #FFFFFF;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(74, 21, 75, 0.25);
+    /* Transition transform in sync with the canvas and bottom dock */
+    transition: transform 0.45s var(--transition-spring), background-color 0.2s ease;
+    z-index: 120;
+    will-change: transform;
+}
+
+/* Shift menu button left when telemetry drawer is active */
+.btn-fab-menu.menu-shifted-left {
+    transform: translateX(calc(-1 * var(--stats-drawer-width)));
+}
+
+.btn-fab-menu i {
+    font-size: 1.25rem;
+}
+
+.btn-fab-menu:hover {
+    transform: scale(1.04);
+    background: var(--m-purple-deep);
+}
+
+/* Preserve the leftward shift while scaling on hover */
+.btn-fab-menu.menu-shifted-left:hover {
+    transform: translateX(calc(-1 * var(--stats-drawer-width))) scale(1.04);
+}
+
+/* ==========================================================================
+   MAIN BENTO CANVAS & BIDIRECTIONAL PERSPECTIVE SHIFT
+   ========================================================================== */
+.bento-wrapper {
+    max-width: 1400px;
+    margin: 90px auto 120px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    transform-origin: center center;
+    transition: transform 0.45s var(--transition-spring), filter 0.45s var(--transition-spring);
+}
+
+/* Navigation Perspective Shift (Pushed Right with Blur) */
+.bento-wrapper.canvas-shifted {
+    transform: translateX(var(--drawer-width)) scale(0.96);
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Telemetry Perspective Shift (Pushed Left with 50% Grayscale) */
+.bento-wrapper.canvas-shifted-left {
+    transform: translateX(calc(-1 * var(--stats-drawer-width))) scale(0.96);
+    filter: sepia(70%) blur(0.5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (min-width: 1024px) {
+    .bento-wrapper {
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(180px, auto);
+    }
+
+    .box-hero {
+        grid-column: span 8;
+        grid-row: span 3;
+    }
+
+    .box-numbers {
+        grid-column: span 4;
+        grid-row: span 3;
+    }
+
+    .box-stories {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+
+    .box-strategy {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+
+    .box-event {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+}
+
+.bento-card {
+    background: var(--m-surface);
+    border: 1px solid var(--m-border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s var(--transition-spring), box-shadow 0.3s var(--transition-spring);
+}
+
+.box-hero {
+    background: linear-gradient(135deg, var(--m-purple-deep) 0%, var(--m-purple) 100%);
+    color: #FFFFFF;
+}
+
+.hero-pretitle {
+    font-family: var(--font-display);
+    color: var(--m-gold);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero-narrative {
+    font-size: 1.05rem;
+    color: #F1EBF2;
+    max-width: 620px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.hero-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.box-numbers {
+    background: var(--m-surface);
+    border-top: 5px solid var(--m-gold);
+}
+
+.metric-hero-val {
+    font-family: var(--font-display);
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: var(--m-purple);
+    line-height: 0.95;
+    margin-bottom: 6px;
+}
+
+.metric-hero-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--m-text-muted);
+    margin-bottom: 20px;
+}
+
+.data-substrip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--m-border);
+}
+
+.substrip-val {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--m-purple);
+}
+
+.substrip-lbl {
+    font-size: 0.75rem;
+    color: var(--m-text-muted);
+}
+
+.story-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+}
+
+.story-track::-webkit-scrollbar {
+    display: none;
+}
+
+.story-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.story-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--m-gold-soft);
+    color: var(--m-purple);
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-start;
+    /* Prevents flex cross-axis stretching */
+    width: fit-content;
+    /* Wraps strictly to text width */
+    margin-bottom: 8px;
+}
+
+.story-headline {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--m-purple);
+}
+
+.story-quote {
+    font-size: 0.88rem;
+    color: var(--m-text-muted);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.box-strategy {
+    background: var(--m-gold-soft);
+    border-color: var(--m-gold);
+}
+
+.strategy-chip {
+    background: var(--m-gold);
+    color: var(--m-purple);
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-start;
+    /* Prevents flex cross-axis stretching */
+    width: fit-content;
+    /* Wraps strictly to text width */
+}
+
+.box-event {
+    background: var(--m-purple);
+    color: #FFF;
+}
+
+.event-calendar-badge {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--m-gold);
+    line-height: 1;
+}
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-pill-gold {
+    background: var(--m-gold);
+    color: var(--m-purple);
+}
+
+.btn-pill-purple {
+    background: var(--m-purple);
+    color: #FFF;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* ==========================================================================
+   BOTTOM-RIGHT FLOATING ACTION CONTROLS (FABS)
+   ========================================================================== */
+.fab-dock-bottom {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 95;
+    pointer-events: none;
+    transition: transform 0.45s var(--transition-spring), opacity 0.45s ease;
+}
+
+/* Pushes FAB dock left when Telemetry drawer opens */
+.fab-dock-bottom.dock-shifted-left {
+    transform: translateX(calc(-1 * var(--stats-drawer-width)));
+}
+
+.fab-trigger {
+    pointer-events: auto;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 24px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    transition: all 0.35s var(--transition-spring);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.fab-trigger i {
+    font-size: 1.65rem;
+    flex-shrink: 0;
+}
+
+.fab-trigger .fab-text {
+    max-width: 0;
+    opacity: 0;
+    margin-left: 0;
+    overflow: hidden;
+    transition: max-width 0.35s var(--transition-spring), opacity 0.25s ease, margin-left 0.25s ease;
+}
+
+.fab-trigger:hover,
+.fab-trigger:focus-visible {
+    min-width: auto;
+    padding: 0 20px;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(74, 21, 75, 0.3);
+}
+
+.fab-trigger:hover .fab-text,
+.fab-trigger:focus-visible .fab-text {
+    max-width: 200px;
+    opacity: 1;
+    margin-left: 8px;
+}
+
+.fab-telemetry {
+    background: #FFFFFF;
+    color: var(--m-purple);
+    border: 1px solid var(--m-border);
+}
+
+.fab-bigidea {
+    background: var(--m-purple);
+    color: var(--m-gold);
+}
+
+/* ==========================================================================
+   LEFT NAVIGATION DRAWER
+   ========================================================================== */
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--drawer-width);
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 100;
+    transform: translateX(-100%);
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    will-change: transform;
+}
+
+.nav-drawer.open {
+    transform: translateX(0);
+}
+
+.nav-drawer.smooth-transition {
+    transition: transform 0.45s var(--transition-spring);
+}
+
+.nav-drawer-header {
+    margin-bottom: 28px;
+}
+
+.nav-drawer-logo {
+    height: 300px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.drawer-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.drawer-nav-links a {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--m-purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none !important;
+    padding: 4px 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.drawer-nav-links a:hover {
+    color: var(--m-purple-deep);
+    transform: translateX(4px);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 98;
+    pointer-events: none;
+}
+
+.drawer-backdrop.active {
+    pointer-events: auto;
+}
+
+/* ==========================================================================
+   RIGHT TELEMETRY & FAQS DRAWER (PURPLE & GOLD SYSTEM)
+   ========================================================================== */
+.stats-drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: var(--stats-drawer-width);
+    background: var(--m-purple);
+    color: #FFFFFF;
+    z-index: 105;
+    box-shadow: inset 18px 0 35px -12px rgba(0, 0, 0, 0.45);
+    transform: translateX(100%);
+    padding: 36px 28px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    will-change: transform;
+}
+
+.stats-drawer.open {
+    transform: translateX(0);
+}
+
+.stats-drawer.smooth-transition {
+    transition: transform 0.45s var(--transition-spring);
+}
+
+.stats-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(242, 201, 76, 0.3);
+}
+
+.stats-drawer-header h3 {
+    font-family: var(--font-display);
+    color: var(--m-gold);
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-stats-close {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--m-gold);
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-stats-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Infographic Stat Blocks */
+.telemetry-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.telemetry-stat-card {
+    background: rgba(42, 9, 43, 0.6);
+    border: 1px solid rgba(242, 201, 76, 0.25);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card-badge {
+    font-size: 0.75rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--m-gold);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-card-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.stat-card-metric {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.stat-card-trend-icon {
+    font-size: 1.6rem;
+    color: var(--m-gold);
+}
+
+.stat-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #E6D9E7;
+}
+
+/* FAQ Details/Summary Accordion (Spring Animated) */
+.faq-section-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--m-gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.stats-drawer details.faq-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(242, 201, 76, 0.2);
+    border-radius: var(--radius-sm);
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.stats-drawer summary.faq-summary {
+    list-style: none;
+    padding: 14px 16px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--m-gold);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.stats-drawer summary.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-indicator {
+    font-size: 1.1rem;
+    color: var(--m-gold);
+    transition: transform 0.25s ease;
+    line-height: 1;
+}
+
+.stats-drawer details[open] .faq-indicator {
+    transform: rotate(45deg);
+}
+
+.faq-content {
+    padding: 0 16px 16px 16px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: #F7EDF8;
+    border-top: 1px dashed rgba(242, 201, 76, 0.25);
+    margin-top: 4px;
+    padding-top: 10px;
+    will-change: height, opacity;
+}
+
+/* Big Idea Modal */
+dialog.modal-bigidea {
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 32px;
+    width: min(540px, 90vw);
+    margin: auto;
+    background: #FFFFFF;
+    color: var(--m-text-dark);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 125;
+}
+
+dialog.modal-bigidea::backdrop {
+    background: rgba(42, 9, 43, 0.65);
+    backdrop-filter: blur(8px);
+}
+
+/* ==========================================================================
+   BENTO CARDS: BACKGROUND IMAGES, SCRIM GRADIENTS & BOTTOM ALIGNMENT
+   ========================================================================== */
+
+.bento-card {
+    border: 1px solid var(--m-border);
+    border-radius: var(--radius-md);
+    padding: 0;
+    /* Padding moves into the inner overlay */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Anchors all content & CTAs to the bottom */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s var(--transition-spring), box-shadow 0.3s var(--transition-spring);
+    background-size: cover;
+    background-position: top center;
+    /* Preserves focal point on upper half */
+    background-repeat: no-repeat;
+    min-height: 380px;
+    /* Ensures sufficient headroom for top image visuals */
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(74, 21, 75, 0.12);
+}
+
+/* Card Background Image Slots */
+.box-hero {
+    background-image: url('../images/cards/card-hero.webp');
+}
+
+.box-numbers {
+    background-image: url('../images/cards/card-numbers.webp');
+}
+
+/* .box-stories {
+    background-image: url('../images/cards/card-stories.webp');
+} */
+
+.box-strategy {
+    background-image: url('../images/cards/card-strategy.webp');
+}
+
+.box-event {
+    background-image: url('../images/cards/card-event.webp');
+}
+
+/* Scrim Gradient: Fades from transparent at top to dense backing at bottom */
+.card-scrim-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    background: linear-gradient(to bottom,
+            rgba(26, 8, 27, 0.0) 0%,
+            rgba(26, 8, 27, 0.25) 35%,
+            rgba(26, 8, 27, 0.85) 70%,
+            rgba(26, 8, 27, 0.98) 100%);
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific Adjustments for Card Typography on Scrim */
+.card-scrim-overlay .hero-narrative,
+.card-scrim-overlay .metric-hero-label,
+.card-scrim-overlay .substrip-lbl,
+.card-scrim-overlay .story-quote,
+.card-scrim-overlay p {
+    color: #F1EBF2;
+}
+
+.card-scrim-overlay .metric-hero-val,
+.card-scrim-overlay .substrip-val {
+    color: #FFFFFF;
+}
+
+.card-scrim-overlay .data-substrip {
+    border-top: 1px dashed rgba(242, 201, 76, 0.35);
+}
+
+/* ==========================================================================
+   CAROUSEL ENGINE FOR VERIFIED IMPACT STORIES
+   ========================================================================== */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.carousel-slide .story-headline {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--m-gold);
+}
+
+.carousel-slide .story-quote {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #F1EBF2;
+    padding-bottom: 15px;
+}
+
+/* Carousel Navigation Indicator Dots */
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    width: 24px;
+    border-radius: 12px;
+    background: var(--m-gold);
+}
+
+/* 1. Clear static background from the parent stories card */
+.box-stories {
+    background-image: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 2. Full-bleed carousel container filling the entire card */
+.box-stories .carousel-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.box-stories .carousel-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 3. Each slide carries its own image, scrim, and bottom layout */
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Anchors text to bottom */
+}
+
+/* Slide-specific background images */
+.slide-sanaipei {
+    background-image: url('../images/cards/story-sanaipei.webp');
+}
+
+.slide-namunyak {
+    background-image: url('../images/cards/story-namunyak.webp');
+}
+
+.slide-salome {
+    background-image: url('../images/cards/story-salome.webp');
+}
+
+/* Scrim gradient specific to each individual sliding frame */
+.carousel-slide .slide-scrim-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    background: linear-gradient(to bottom,
+            rgba(26, 8, 27, 0.0) 0%,
+            rgba(26, 8, 27, 0.25) 30%,
+            rgba(26, 8, 27, 0.85) 65%,
+            rgba(26, 8, 27, 0.98) 100%);
+    color: #FFFFFF;
+}
+
+/* 4. Controls overlay (Dots + All Dossiers Link) pinned over the slider */
+.stories-controls-overlay {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    right: 28px;
+    z-index: 5;
+    pointer-events: none;
+    /* Allows text selection underneath */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stories-controls-overlay .carousel-dots,
+.stories-controls-overlay a {
+    pointer-events: auto;
+    /* Re-enables clicks for dots and CTA */
+}
+
+/* ==========================================================================
+   ANNIVERSARY MILESTONE HERO (CONSTRAINED TO <= 50VH)
+   ========================================================================== */
+.anniversary-hero {
+    position: relative;
+    width: 100%;
+    min-height: 38vh;
+    max-height: 50vh;
+    margin-top: 80px;
+    /* Clears fixed top nav */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Optional background image hook (commented out until asset is ready):
+       background-image: url('../images/hero-milestone-bg.jpg'); */
+    overflow: hidden;
+}
+
+/* Scrim protection for future background images */
+.anniversary-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(247, 245, 240, 0.85) 0%,
+            rgba(247, 245, 240, 0.98) 100%);
+    z-index: 1;
+}
+
+.hero-inner-content {
+    position: relative;
+    z-index: 2;
+    max-width: min(960px, 90vw);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* Event Logo Lockup */
+.anniversary-logo-slot {
+    height: clamp(152px, 25vh, 176px);
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anniversary-logo-slot img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Tagline: Spread cleanly over two lines */
+.anniversary-tagline {
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 4.2vw, 3.1rem);
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--m-purple);
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.anniversary-tagline .line-sub {
+    color: var(--m-purple-deep);
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* Subtle Milestone Chip */
+.milestone-year-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--m-purple);
+    background: rgba(74, 21, 75, 0.08);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(74, 21, 75, 0.15);
+}
+
+/* Reduce top spacing on main Bento grid since hero sits above it */
+.bento-wrapper {
+    margin: 24px auto 120px auto;
+    /* Scaled down from 90px */
+}
+
+/* ==========================================================================
+   CANVAS & HERO PERSPECTIVE SHIFT ENGINE
+   ========================================================================== */
+
+/* Shared motion smoothing */
+.anniversary-hero {
+    transform-origin: center center;
+    transition: transform 0.45s var(--transition-spring), filter 0.45s var(--transition-spring);
+    will-change: transform, filter;
+}
+
+/* 1. Navigation Open: Push Right with Blur */
+.anniversary-hero.canvas-shifted {
+    transform: translateX(var(--drawer-width)) scale(0.96);
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* 2. Telemetry Open: Push Left with 50% Opacity */
+.anniversary-hero.canvas-shifted-left {
+    transform: translateX(calc(-1 * var(--stats-drawer-width))) scale(0.96);
+    /* opacity: 0.5; */
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT HEIGHTS (PRESERVING VISUAL HEADROOM)
+   ========================================================================== */
+@media (max-width: 1023px) {
+
+    /* Hero Card: 75vh to 80vh ensures the visual subject remains prominent above text */
+    .bento-card {
+        min-height: 80vh !important;
+    }
+
+}
+
+/* ==========================================================================
+   NAVIGATION DRAWER ACTIVE LINK & CIRCLED ARROW BADGE
+   ========================================================================== */
+
+.drawer-nav-links a {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--m-purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none !important;
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Circled arrow token */
+.drawer-nav-links a .nav-arrow-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(74, 21, 75, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--m-purple);
+    transition: all 0.2s ease;
+}
+
+.drawer-nav-links a:hover {
+    background-color: rgba(74, 21, 75, 0.04);
+    transform: translateX(4px);
+}
+
+.drawer-nav-links a:hover .nav-arrow-circle {
+    background: var(--m-purple);
+    color: #FFFFFF;
+}
+
+/* Active Page State */
+.drawer-nav-links a.active {
+    background-color: var(--m-purple);
+    color: var(--m-gold) !important;
+}
+
+.drawer-nav-links a.active .nav-arrow-circle {
+    background: var(--m-gold);
+    color: var(--m-purple);
+    transform: rotate(0deg);
+}

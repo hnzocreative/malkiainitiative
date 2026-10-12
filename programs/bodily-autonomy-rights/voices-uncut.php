@@ -171,7 +171,7 @@
 
                     <div class="invest-unit-box">
                         <span class="unit-rate">$75</span>
-                        <span class="unit-sub">Funds 1 Year of Complete Protection</span>
+                        <span class="unit-sub">Funds 1 Month of Complete Protection</span>
                     </div>
 
                     <button class="btn-cta primary btn-invest-full" onclick="openPledgeModal()">

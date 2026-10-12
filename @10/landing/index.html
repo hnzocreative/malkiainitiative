@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malkia @10 — Event Navigation Page</title>
+  <meta name="description"
+    content="A Decade of Malkia. A Future of Possibilities. 16 October 2026 at Tamarind Tree Hotel, Nairobi.">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+
+  <!-- Production Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NW5PG8B0DK');
+  </script>
+</head>
+
+<body>
+
+  <div class="program-wrapper">
+    <!-- Header with Identity Slot -->
+    <header class="program-brand-header">
+      <div class="brand-logo-container">
+        <img src="assets/images/logo.png" alt="The Malkia Initiative Logo" class="brand-logo"
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="tagline-bar">A Decade of Malkia</div>
+      <h1>A Future of Possibilities</h1>
+      <div class="venue-meta">16 October 2026 • Tamarind Tree Hotel, Nairobi</div>
+    </header>
+
+    <!-- Navigation Hub -->
+    <main class="event-navigation" id="eventNav">
+      <!-- Nav Item 1: Event Program Link -->
+      <a href="../program" class="nav-action-link">
+        <span class="nav-title">Event Program</span>
+        <i class="ph-bold ph-arrow-up-right nav-icon"></i>
+      </a>
+
+      <!-- Nav Item 2: Village Name History Accordion Group -->
+      <details class="chapter-group village-accordion-group" id="villageAccordion">
+        <summary class="chapter-summary village-nav-summary">
+          <span class="nav-title">Village Name History</span>
+          <i class="ph-bold ph-caret-down nav-icon chapter-toggle-icon"></i>
+        </summary>
+        <div class="chapter-content-body">
+          <div class="villages-grid" id="villagesListContainer">
+            <div class="village-loading">Loading village registries...</div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Nav Item 3: Milestone Website Link -->
+      <a href="../" class="nav-action-link">
+        <span class="nav-title">Milestone Website</span>
+        <i class="ph-bold ph-arrow-up-right nav-icon"></i>
+      </a>
+    </main>
+  </div>
+
+  <!-- Dynamic Village Detail Dialog -->
+  <dialog class="interactive-modal village-detail-modal" id="villageModal">
+    <div class="modal-header">
+      <div class="modal-title-wrap">
+        <span class="village-sub-badge" id="vMeaning">Maasai Cultural Origin</span>
+        <h3 id="vName">Village Name</h3>
+      </div>
+      <button class="close-btn" onclick="closeVillageModal()" aria-label="Close dialog">✕</button>
+    </div>
+
+    <div class="village-modal-body">
+      <!-- Media Gallery -->
+      <div class="village-image-frame" id="vImageFrame">
+        <img id="vImage" src="" alt="Village Landmark" />
+      </div>
+
+      <!-- Description & History -->
+      <p class="village-modal-desc" id="vDescription"></p>
+
+      <!-- Impact Beneficiary Banner -->
+      <div class="village-impact-box">
+        <div class="impact-stat">
+          <i class="ph-fill ph-users-three"></i>
+          <div>
+            <strong id="vBeneficiaries">0</strong>
+            <span>Active Malkia Beneficiaries</span>
+          </div>
+        </div>
+        <a id="vMapLink" href="#" target="_blank" rel="noopener" class="village-map-btn">
+          <i class="ph-bold ph-map-pin"></i>
+          <span>View on Maps</span>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Execution Engine -->
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

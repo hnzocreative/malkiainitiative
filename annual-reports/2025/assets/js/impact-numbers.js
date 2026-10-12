@@ -5,7 +5,7 @@ const carouselData = [
     name: "Sanaipei",
     program: "Program: SheRISE Vocational",
     badge: "Verified Outcome • SheRISE",
-    image: "../../assets/images/impact-stories/sanaipei-card.webp",
+    image: "../assets/images/impact-stories/sanaipei-card.webp",
     tagline: "From child marriage survivor at 10 to independent salon enterprise owner in Kajiado Central.",
     quote: "\"My daughter Zawadi will never know what it means to be exchanged for cows. She will hold a pencil before anything else.\"",
     metrics: [
@@ -19,7 +19,7 @@ const carouselData = [
     name: "Namunyak",
     program: "Program: Voices Uncut",
     badge: "Verified Outcome • Voices Uncut",
-    image: "../../assets/images/impact-stories/namunyak-card.webp",
+    image: "../assets/images/impact-stories/namunyak-card.webp",
     tagline: "A young mother reclaiming her future, re-enrolling in school, and advocating for girl-child agency.",
     quote: "\"Being a teen mother does not mean my life has ended. My mind is sharp, and my seat in the classroom is mine.\"",
     metrics: [
@@ -33,7 +33,7 @@ const carouselData = [
     name: "Salome Seeman",
     program: "Program: KUZA (TaRL Literacy)",
     badge: "Verified Outcome • KUZA",
-    image: "../../assets/images/impact-stories/salome-card.webp",
+    image: "../assets/images/impact-stories/salome-card.webp",
     tagline: "Unlocking foundational fluency and story-level reading comprehension at Moipei Comprehensive.",
     quote: "\"When you know how to read, the words in the book stop feeling like locked doors.\"",
     metrics: [
@@ -64,7 +64,7 @@ function renderBeneficiarySlide(index) {
     document.getElementById('carouselName').textContent = item.name;
     document.getElementById('carouselTagline').textContent = item.tagline;
     document.getElementById('carouselQuote').textContent = item.quote;
-    document.getElementById('carouselLink').href = `../../impact-stories/beneficiary.html?id=${item.id}`;
+    document.getElementById('carouselLink').href = `../../2025/impact-numbers/beneficiary.html?id=${item.id}`;
 
     const metricsWrap = document.getElementById('carouselMetrics');
     metricsWrap.innerHTML = item.metrics.map(m => `

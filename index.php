@@ -267,10 +267,10 @@
                     <div class="commitments-grid">
                         <div class="commit-col">
                             <div class="founder-profile-row">
-                                <div class="founder-avatar"><img src="assets/images/footer/founder.webp" alt=""></div>
+                                <div class="founder-avatar"><img src="assets/images/footer/founder.webp?v=1" alt=""></div>
                                 <div class="founder-quote">
                                     <p>"The crown still belongs to her. Walk with us as we build a future where every girl in Kajiado is safe, educated, heard, and completely free to choose the life she wants."</p>
-                                    <span class="name">Jedidah Lemaron — Founder &amp; Executive Director</span>
+                                    <span class="name">Jedidah Lemaron - Founder &amp; Executive Director</span>
                                 </div>
                             </div>
                         </div>
@@ -278,9 +278,9 @@
                             <div class="bento-card col-12 sponsor-calc-card">
                                 <div class="calc-header-row">
                                     <div><span class="calc-badge">Unit Economic Model</span><h3 class="calc-title">Sponsor a Queen</h3></div>
-                                    <div class="calc-rate-pill"><span class="rate-val">$75</span><span class="rate-lbl">/ girl / year</span></div>
+                                    <div class="calc-rate-pill"><span class="rate-val">$75</span><span class="rate-lbl">/ girl / month</span></div>
                                 </div>
-                                <p class="calc-desc">Under our validated 1,000-Day Framework, $75 covers 12 months of emergency protection, sanitary dignity kits, and academic mentorship.</p>
+                                <p class="calc-desc">Under our validated 1,000-Day Framework, $75 covers 1 month of emergency protection, sanitary dignity kits, and academic mentorship.</p>
                                 <div class="calc-interactive-box">
                                     <div class="calc-stepper-wrap">
                                         <span class="stepper-label">Number of Girls</span>

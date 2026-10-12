@@ -181,7 +181,7 @@
                         <div class="cta-actions">
                             <button class="btn-cta primary" onclick="openPledgeModal()">
                                 <i class="ph-bold ph-heart"></i>
-                                <span>Sponsor a Girl ($75/yr)</span>
+                                <span>Sponsor a Girl ($75/month)</span>
                             </button>
                             <a href="./strategic-plan" class="btn-cta secondary">
                                 <span>Explore 2025–2029 Strategic Plan</span>

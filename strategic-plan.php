@@ -231,7 +231,7 @@
                         <div class="strat-actions">
                             <button class="btn-cta primary" onclick="openPledgeModal()">
                                 <i class="ph-bold ph-heart"></i>
-                                <span>Sponsor a Girl ($75/yr)</span>
+                                <span>Sponsor a Girl ($75/month)</span>
                             </button>
                             <a href="./engagement" class="btn-cta secondary">
                                 <span>Institutional Partner Paths</span>

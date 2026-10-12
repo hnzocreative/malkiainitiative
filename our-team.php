@@ -91,7 +91,7 @@
                 <article class="bento-card col-12 team-section-block">
                     <div class="section-title-wrap">
                         <span class="tag">Operational Architecture</span>
-                        <h2>Programmatic Leads</h2>
+                        <h2>Core Team</h2>
                         <p>Specialists directing field interventions, child safeguarding, and TVET economic integration.</p>
                     </div>
 
@@ -99,50 +99,111 @@
                         <!-- Lead 1: KUZA Literacy -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/lead-kuza.webp" alt="KUZA Literacy Lead" loading="lazy">
+                                <img src="./assets/images/team/lewis.webp" alt="KUZA Literacy Lead" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Faith Nairisho</h4>
-                                <span class="role-pill">Head of Foundational Learning (KUZA)</span>
-                                <p>Oversees remedial numeracy and literacy tracks across 7 partner primary schools in Kajiado Central.</p>
+                                <h4>Lewis Gautama</h4>
+                                <span class="role-pill">Finance Manager</span>
                             </div>
                         </div>
 
                         <!-- Lead 2: Voices Uncut (SRHR & Protection) -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/lead-protection.webp" alt="Child Protection Lead" loading="lazy">
+                                <img src="./assets/images/team/joyce.webp" alt="Child Protection Lead" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Mercy Simante</h4>
-                                <span class="role-pill">Lead Advocate, Voices Uncut</span>
-                                <p>Coordinates in-school Crown Clubs, safe-space protection escorts, and rapid response anti-FGM rescues.</p>
+                                <h4>Joyce Muriithi</h4>
+                                <span class="role-pill">Programs Manager</span>
                             </div>
                         </div>
 
                         <!-- Lead 3: SheRISE (TVET & Economic Agency) -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/lead-tvet.webp" alt="Vocational Programs Lead" loading="lazy">
+                                <img src="./assets/images/team/amon.webp" alt="Vocational Programs Lead" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Esther Sintalo</h4>
-                                <span class="role-pill">Lead, SheRISE &amp; TVET Hubs</span>
-                                <p>Designs modular vocational curricula, market linkages, and enterprise clusters for adolescent mothers.</p>
+                                <h4>Amon Name</h4>
+                                <span class="role-pill">Operational Title</span>
                             </div>
                         </div>
 
                         <!-- Lead 4: Finance & Compliance -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/lead-finance.webp" alt="Finance & Compliance Lead" loading="lazy">
+                                <img src="./assets/images/team/anita.webp" alt="Finance & Compliance Lead" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Daniel Kiptoo</h4>
-                                <span class="role-pill">Director of Finance &amp; Grants</span>
-                                <p>Maintains ISA audit compliance, institutional reporting rigor, and multilateral donor grant stewardship.</p>
+                                <h4>Anita Ikua</h4>
+                                <span class="role-pill">Operational Title</span>
                             </div>
                         </div>
+
+                        <!-- Lead 5: Finance & Compliance -->
+                        <div class="staff-card">
+                            <div class="staff-photo">
+                                <img src="./assets/images/team/agnes.webp" alt="Finance & Compliance Lead" loading="lazy">
+                            </div>
+                            <div class="staff-details">
+                                <h4>Agnes Name</h4>
+                                <span class="role-pill">Operational Title</span>
+                            </div>
+                        </div>
+
+                        <!-- Lead 5: Finance & Compliance -->
+                        <div class="staff-card">
+                            <div class="staff-photo">
+                                <img src="./assets/images/team/amina.webp" alt="Finance & Compliance Lead" loading="lazy">
+                            </div>
+                            <div class="staff-details">
+                                <h4>Amina Name</h4>
+                                <span class="role-pill">Operational Title</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <div class="section-title-wrap">
+                        <span class="tag">Advisory & Governance</span>
+                        <h2>Board of Directors</h2>
+                        <p>Ensuring fiduciary compliance, safeguarding checks, and policy alignment with national educational standards.</p>
+                    </div>
+
+                    <div class="staff-grid">
+                        <!-- Lead 1: KUZA Literacy -->
+                        <div class="staff-card">
+                            <div class="staff-photo">
+                                <img src="./assets/images/team/hermes.webp" alt="KUZA Literacy Lead" loading="lazy">
+                            </div>
+                            <div class="staff-details">
+                                <h4>Dr. Hermes Gichane</h4>
+                                <span class="role-pill">Chairperson</span>
+                            </div>
+                        </div>
+
+                        <!-- Lead 2: Voices Uncut (SRHR & Protection) -->
+                        <div class="staff-card">
+                            <div class="staff-photo">
+                                <img src="./assets/images/team/okari.webp" alt="Child Protection Lead" loading="lazy">
+                            </div>
+                            <div class="staff-details">
+                                <h4>Okari Magati</h4>
+                                <span class="role-pill">Board Member</span>
+                            </div>
+                        </div>
+
+                        <!-- Lead 3: SheRISE (TVET & Economic Agency) -->
+                        <div class="staff-card">
+                            <div class="staff-photo">
+                                <img src="./assets/images/team/eva.webp" alt="Vocational Programs Lead" loading="lazy">
+                            </div>
+                            <div class="staff-details">
+                                <h4>Everlyne Ngare</h4>
+                                <span class="role-pill">Board Member</span>
+                            </div>
+                        </div>
+
                     </div>
                 </article>
 
@@ -172,9 +233,9 @@
                 </article>
 
                 <!-- 4. Advisory Board & Governance (Col-6) -->
-                <article class="bento-card col-6 board-governance-card">
+                <!-- <article class="bento-card col-6 board-governance-card">
                     <span class="tag">Independent Oversight</span>
-                    <h2>Advisory Board</h2>
+                    <h2>Board of Directors</h2>
                     <p>
                         Ensuring fiduciary compliance, safeguarding checks, and policy alignment with national educational standards.
                     </p>
@@ -182,7 +243,7 @@
                         <div class="board-member-row">
                             <div class="member-meta">
                                 <h4>Dr. Catherine Soi</h4>
-                                <span>Chairperson • Gender Policy &amp; Public Health</span>
+                                <span>Chairperson</span>
                             </div>
                         </div>
                         <div class="board-member-row">
@@ -198,10 +259,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- 5. Conversion Strip: Alliance & Collaboration (Col-12) -->
-                <article class="bento-card col-12 team-cta-strip">
+                <article class="bento-card col-6 team-cta-strip">
                     <div class="team-cta-content">
                         <h2>Collaborate with Our Field Leads</h2>
                         <p>

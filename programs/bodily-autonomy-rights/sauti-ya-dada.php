@@ -169,7 +169,7 @@
 
                     <div class="invest-unit-box">
                         <span class="unit-rate">$75</span>
-                        <span class="unit-sub">Sponsors 1 Leader for a Full Year</span>
+                        <span class="unit-sub">Sponsors 1 Leader for a Full Month</span>
                     </div>
 
                     <button class="btn-cta primary btn-invest-full" onclick="openPledgeModal()">

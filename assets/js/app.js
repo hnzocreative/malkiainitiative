@@ -42,39 +42,44 @@ function applyTheme(theme) {
 function toggleNavDrawer(forceState = null) {
   if (window.innerWidth >= 1024) return;
   isNavOpen = forceState !== null ? forceState : !isNavOpen;
+  
   if (sidebar) sidebar.classList.toggle("open", isNavOpen);
   if (mainColumn) mainColumn.classList.toggle("shifted-right", isNavOpen);
-  if (isNavOpen && isTelemetryOpen) toggleTelemetry(false);
-  if (backdrop)
+  
+  if (isNavOpen && isTelemetryOpen) {
+    toggleTelemetry(false);
+  }
+  
+  if (backdrop) {
     backdrop.classList.toggle("active", isNavOpen || isTelemetryOpen);
+  }
+  // Body scrolling remains active
 }
 
 function toggleTelemetry(forceState) {
   const drawer = document.getElementById("corporateTelemetryDrawer");
   const mainStage = document.getElementById("corporateMain");
   const sidebarEl = document.getElementById("corporateSidebar");
-  const backdrop = document.getElementById("corporateBackdrop");
-  if (!drawer || !backdrop) return;
+  const backdropEl = document.getElementById("corporateBackdrop");
+  if (!drawer || !backdropEl) return;
 
   const isOpen = drawer.classList.contains("open");
   const nextState = typeof forceState === "boolean" ? forceState : !isOpen;
 
   drawer.classList.toggle("open", nextState);
-  backdrop.classList.toggle("active", nextState);
+  backdropEl.classList.toggle("active", nextState || isNavOpen);
 
-  // Push both the main column and the aside navigation off-canvas to the left
   if (mainStage) mainStage.classList.toggle("shifted-left", nextState);
   if (sidebarEl) sidebarEl.classList.toggle("shifted-left", nextState);
 
-  document.body.style.overflow = nextState ? "hidden" : "";
   isTelemetryOpen = nextState;
+  // Body scrolling remains active
 }
 
 function closeAllDrawers() {
   if (isNavOpen) toggleNavDrawer(false);
   if (isTelemetryOpen) toggleTelemetry(false);
 }
-
 // -----------------------------------------------------------------------------
 // 3. TELEMETRY HYDRATION
 // -----------------------------------------------------------------------------
@@ -130,6 +135,12 @@ function switchGatewayTab(type) {
     .classList.toggle("active", type === "card");
 }
 
+function syncBodyScrollLock() {
+  const hasActiveDialog = Boolean(document.querySelector("dialog[open]"));
+  const shouldLock = isNavOpen || isTelemetryOpen || hasActiveDialog;
+  document.body.style.overflow = shouldLock ? "hidden" : "";
+}
+
 // -----------------------------------------------------------------------------
 // 5. MOBILE GESTURE SWIPE CONTROLLERS (PHYSICS & 60% RULE)
 // -----------------------------------------------------------------------------
@@ -180,16 +191,16 @@ document.addEventListener(
     const diffX = currentX - dragStartX;
     const diffY = currentY - dragStartY;
 
-    // Detect intentional horizontal swipe vs vertical scrolling
+    // Detect horizontal drawer drag vs natural vertical scroll
     if (!isDragging) {
       if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
         isDragging = true;
-        // Disable CSS transitions for 1:1 instantaneous finger tracking
         [sidebar, telemetry, mainColumn, backdrop].forEach((el) => {
           if (el) el.style.transition = "none";
         });
-      } else if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 10) {
-        activeDragTarget = null; // Abort: user is scrolling vertically
+      } else if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 5) {
+        // Abort swipe detection: user is scrolling the page vertically
+        activeDragTarget = null;
         return;
       }
     }
@@ -266,14 +277,12 @@ document.addEventListener("touchend", (e) => {
 
   // 60% Rule Evaluation
   if (dragPercentage > 0.6) {
-    // Toggle to new state if threshold met
     if (activeDragTarget === "sidebar") {
       toggleNavDrawer(!isNavOpen);
     } else if (activeDragTarget === "telemetry") {
       toggleTelemetry(!isTelemetryOpen);
     }
   } else {
-    // Snap back to original state if threshold failed
     if (activeDragTarget === "sidebar") {
       toggleNavDrawer(isNavOpen);
     } else if (activeDragTarget === "telemetry") {
@@ -283,6 +292,8 @@ document.addEventListener("touchend", (e) => {
 
   isDragging = false;
   activeDragTarget = null;
+  syncBodyScrollLock(); // Ensures overflow cleanup on gesture releases
+
 });
 
 // =============================================================================

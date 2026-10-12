@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malkia @10 — Immersive Event Programme</title>
+  <meta name="description"
+    content="A Decade of Malkia. A Future of Possibilities. 16 October 2026 at Tamarind Tree Hotel, Nairobi.">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Production Modular Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NW5PG8B0DK');
+  </script>
+  
+</head>
+
+<body>
+
+  <div class="program-wrapper">
+    <!-- Header with Identity Slot -->
+    <header class="program-brand-header">
+      <div class="brand-logo-container">
+        <!-- Replace src with your official vector or raster asset -->
+        <img src="assets/images/logo.png" alt="The Malkia Initiative Logo" class="brand-logo"
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="tagline-bar">A Decade of Malkia</div>
+      <h1>A Future of Possibilities</h1>
+      <div class="venue-meta">16 October 2026 • Tamarind Tree Hotel, Nairobi</div>
+    </header>
+
+    
+
+    <!-- Master Dynamic Chapter Mount -->
+    <main class="chapters-container" id="chaptersRoot">
+      <!-- Injected via assets/js/app.js -->
+    </main>
+  </div>
+
+  <!-- Interactive Engagement Modal -->
+  <dialog class="interactive-modal" id="interactiveModal">
+    <div class="modal-header">
+      <h3 id="modalTitle">Session Interaction</h3>
+      <button class="close-btn" onclick="closeModal()" aria-label="Close dialog">✕</button>
+    </div>
+    <form class="modal-form" id="sessionForm" onsubmit="handleFormSubmit(event)">
+      <p id="modalPrompt" style="font-size: 0.85rem; color: var(--text-muted);"></p>
+      <label>
+        Table Number or Name:
+        <input type="text" required placeholder="e.g. Table 3 / Jane Doe" />
+      </label>
+      <label>
+        Your Input / Pledge:
+        <textarea rows="4" required placeholder="Enter response..."></textarea>
+      </label>
+      <button type="submit" class="modal-submit-btn">Submit Contribution</button>
+    </form>
+  </dialog>
+
+  <!-- Execution Engine -->
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

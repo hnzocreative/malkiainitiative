@@ -1,0 +1,26 @@
+:root {
+  /* Primitives */
+  --malkia-purple: #4A154B;
+  --malkia-purple-light: #5e1c5f;
+  --malkia-gold: #F2C94C;
+  --malkia-gold-soft: #FFF7DC;
+  --malkia-white: #FFFFFF;
+  --malkia-slate: #2C3E50;
+  --malkia-border: #E8E2D5;
+
+  /* Component Tokens (Theme-ready defaults) */
+  --comp-bg-surface: var(--malkia-white);
+  --comp-text-primary: var(--malkia-purple);
+  --comp-text-secondary: #5A5A6A;
+  
+  /* Details/Summary: Yellow-One Treatment */
+  --summary-bg: var(--malkia-gold-soft);
+  --summary-text: var(--malkia-purple);
+  --summary-border: var(--malkia-gold);
+  --summary-radius: 0.5rem;
+  
+  /* Interactive Divider: Maasai Bead Pattern Treatment */
+  --divider-bg: var(--malkia-purple);
+  --divider-text: var(--malkia-white);
+  --divider-border: var(--malkia-gold);
+}

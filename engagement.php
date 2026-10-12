@@ -80,7 +80,7 @@
                             <div class="sponsor-actions">
                                 <button class="btn-cta primary" onclick="openPledgeModal()">
                                     <i class="ph-bold ph-heart"></i>
-                                    <span>Sponsor a Girl ($75/yr)</span>
+                                    <span>Sponsor a Girl ($75/month)</span>
                                 </button>
                                 <a href="<?= BASE_URL ?>#pillars" class="btn-cta secondary">
                                     <span>Review 1,000-Day Model</span>
@@ -94,7 +94,7 @@
                                 <div class="rate-display">
                                     <span class="currency">$</span>
                                     <span class="figure">75</span>
-                                    <span class="term">/ girl / year</span>
+                                    <span class="term">/ girl / month</span>
                                 </div>
                                 <div class="rate-kes-display">~KES 9,750</div>
                                 <hr class="rate-divider">

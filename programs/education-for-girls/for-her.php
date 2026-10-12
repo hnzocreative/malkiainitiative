@@ -171,7 +171,7 @@
 
                     <div class="invest-unit-box">
                         <span class="unit-rate">$75</span>
-                        <span class="unit-sub">Sponsors 1 Girl's Dignity &amp; Boarding</span>
+                        <span class="unit-sub">Sponsors 1 Girl's Dignity &amp; Boarding For A Month</span>
                     </div>
 
                     <button class="btn-cta primary btn-invest-full" onclick="openPledgeModal()">

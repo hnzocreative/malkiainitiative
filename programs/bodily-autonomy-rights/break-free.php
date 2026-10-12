@@ -171,7 +171,7 @@
 
                     <div class="invest-unit-box">
                         <span class="unit-rate">$75</span>
-                        <span class="unit-sub">Funds 1 Year of Youth Peer Advocacy</span>
+                        <span class="unit-sub">Funds 1 Month of Youth Peer Advocacy</span>
                     </div>
 
                     <button class="btn-cta primary btn-invest-full" onclick="openPledgeModal()">

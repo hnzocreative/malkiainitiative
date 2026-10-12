@@ -102,25 +102,24 @@ function closeAllDrawers() {
 // -----------------------------------------------------------------------------
 // 3. EXECUTIVE DIRECTOR VIDEO DIALOG
 // -----------------------------------------------------------------------------
-const videoDialog = document.getElementById('execVideoDialog');
-const videoIframe = document.getElementById('execVideoIframe');
-// Placeholder YouTube embed (replace with actual video ID as needed)
-const YOUTUBE_VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&enablejsapi=1";
+const execVideoDialog = document.getElementById('execVideoDialog');
 
 function openVideoModal() {
-    if (!videoDialog || !videoIframe) return;
-    videoIframe.src = YOUTUBE_VIDEO_URL;
-    videoDialog.showModal();
+    if (execVideoDialog && typeof execVideoDialog.showModal === 'function') {
+        execVideoDialog.showModal();
+    }
 }
 
 function closeVideoModal() {
-    if (!videoDialog || !videoIframe) return;
-    videoIframe.src = ""; // Stops playback immediately
-    videoDialog.close();
+    if (execVideoDialog && typeof execVideoDialog.close === 'function') {
+        execVideoDialog.close();
+    }
 }
 
 function closeVideoModalOnBackdrop(e) {
-    if (e.target === videoDialog) closeVideoModal();
+    if (e.target === execVideoDialog) {
+        closeVideoModal();
+    }
 }
 
 // -----------------------------------------------------------------------------

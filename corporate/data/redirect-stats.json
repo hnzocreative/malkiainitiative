@@ -1,0 +1,62 @@
+{
+    "qrcode:unga:delegate-pack": {
+        "total_hits": 2,
+        "first_scanned": null,
+        "last_scanned": "2026-10-09 09:19:16",
+        "target_url": "/2026?utm_source=qr&utm_medium=print&utm_campaign=unga2026_pack"
+    },
+    "qrcode:unga:pledge-flyer": {
+        "total_hits": 0,
+        "first_scanned": null,
+        "last_scanned": null,
+        "target_url": "/2026#tierEngine?utm_source=qr&utm_medium=flyer&utm_campaign=unga2026_pledge"
+    },
+    "qrcode:unga:jedidah-card": {
+        "total_hits": 1,
+        "first_scanned": "2026-10-09 08:38:39",
+        "last_scanned": "2026-10-09 08:38:39",
+        "target_url": "/contacts?utm_source=qr&utm_medium=card&utm_campaign=unga2026_executive"
+    },
+    "qrcode:events:gala2026": {
+        "total_hits": 2,
+        "first_scanned": "2026-10-09 08:38:48",
+        "last_scanned": "2026-10-09 09:02:29",
+        "target_url": "/@10?utm_source=qr&utm_medium=banner&utm_campaign=malkia_at_10"
+    },
+    "qrcode:events:youth-hub": {
+        "total_hits": 1,
+        "first_scanned": "2026-10-09 08:39:00",
+        "last_scanned": "2026-10-09 08:39:00",
+        "target_url": "/programs/economic-resilience/cdsc4yrb?utm_source=qr&utm_medium=poster"
+    },
+    "shortlink:unga": {
+        "total_hits": 3,
+        "first_scanned": "2026-10-09 08:49:04",
+        "last_scanned": "2026-10-09 09:27:59",
+        "target_url": "/2026?utm_source=shortlink&utm_medium=social"
+    },
+    "shortlink:donate": {
+        "total_hits": 3,
+        "first_scanned": "2026-10-09 08:50:26",
+        "last_scanned": "2026-10-09 08:50:49",
+        "target_url": "/engagement?utm_source=shortlink&utm_medium=direct#pledge"
+    },
+    "qrcode:site-visit:2026": {
+        "total_hits": 1,
+        "first_scanned": "2026-10-09 11:48:53",
+        "last_scanned": "2026-10-09 11:48:53",
+        "target_url": "/2026?utm_source=qr&utm_medium=print&utm_campaign=enchidna-issrof-visit"
+    },
+    "shortlink:echidna-issrof-visit": {
+        "total_hits": 1,
+        "first_scanned": "2026-10-09 11:50:30",
+        "last_scanned": "2026-10-09 11:50:30",
+        "target_url": "/2026?utm_source=shortlink&utm_medium=social"
+    },
+    "qrcode:@10:table-card": {
+        "total_hits": 5,
+        "first_scanned": "2026-10-09 18:20:03",
+        "last_scanned": "2026-10-09 18:57:08",
+        "target_url": "/@10/landing/?utm_source=qr&utm_medium=banner&utm_campaign=malkia_at_10"
+    }
+}

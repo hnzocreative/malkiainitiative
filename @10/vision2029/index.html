@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Vision 2029 | The Malkia Initiative</title>
+    <meta name="description"
+        content="The 2025–2029 Strategic Blueprint of The Malkia Initiative: Unleashing $2,000,000 in catalytic capital to empower 32,000 adolescent girls across pastoralist Kenya.">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+    <!-- Shared Global Base Styles + Vision Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/vision.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW5PG8B0DK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NW5PG8B0DK');
+    </script>
+    
+    <!-- Structured Data: Strategic Prospectus (AEO / SEO Engine) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "PlanAction",
+            "@id": "https://malkiainitiative.org/@10/vision2029/#strategy",
+            "name": "The Malkia Initiative Strategic Plan 2025–2029",
+            "url": "https://malkiainitiative.org/@10/vision2029/",
+            "description": "Five-year roadmap scaling catalytic community interventions across Kajiado, targeting $2,000,000 USD to reach 32,000 adolescent girls and young women.",
+            "agent": {
+            "@type": "NGO",
+            "name": "The Malkia Initiative",
+            "url": "https://malkiainitiative.org"
+            },
+            "target": {
+            "@type": "EntryPoint",
+            "actionPlatform": "https://schema.org/DesktopWebPlatform"
+            }
+        }
+        ]
+    }
+    </script>
+    <!-- Highcharts Core & Drilldown Engines -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Fixed Bar with State-Switching Menu FAB -->
+    <header class="top-nav">
+        <button class="btn-fab-menu" id="menuFab" onclick="toggleNavDrawer()" aria-label="Open Navigation">
+            <i class="ph ph-list"></i>
+            <span>Menu</span>
+        </button>
+    </header>
+
+    <!-- Main Content Shell (Pushed & Shifted by Drawers) -->
+    <main class="vision-shell" id="mainBento">
+
+        <!-- Hero Title & Vision Thesis -->
+        <header class="vision-hero">
+            <span class="milestone-year-badge">
+                <i class="ph-fill ph-crown" style="color: var(--m-gold);"></i> Strategic Horizon 2025-2029
+            </span>
+            <h1>A Crown for Every African Girl.</h1>
+            <p>
+                Over the next five years, The Malkia Initiative transitions from a verified grassroots proof-of-concept
+                into a regional powerhouse for adolescent girl sovereignty. Our 2025–2029 Strategic Plan charts
+                the deployment of $2,000,000 in catalytic capital.
+            </p>
+        </header>
+
+        <!-- 1. Canopy Dashboard -->
+        <section class="canopy-grid" aria-label="Strategic Targets">
+            <div class="canopy-card primary bead-accent-top">
+                <div class="label">Total Capital Target</div>
+                <div class="big-metric">$2,000,000</div>
+                <div class="sub-text">Five-year strategic funding envelope scaling programs, research, and institutional
+                    sustainability.</div>
+            </div>
+
+            <div class="canopy-card">
+                <div class="label">The 1,000-Day Sprint</div>
+                <div class="big-metric">$900,000</div>
+                <div class="sub-text">Immediate catalytic phase to unlock agency, voice, and choice for 12,000
+                    additional girls.</div>
+            </div>
+
+            <div class="canopy-card">
+                <div class="label">Calibrated Unit Cost</div>
+                <div class="big-metric">$75 <span style="font-size: 1.2rem; font-weight: 500;">/ month</span></div>
+                <div class="sub-text">Delivers comprehensive annual support: hygiene kits, school retention fees, and
+                    weekly mentorship.</div>
+            </div>
+        </section>
+
+        <!-- 2. Multi-Year Funding Scaling Ramp -->
+        <section class="funding-ramp-card" aria-label="Funding Ramp">
+            <div class="funding-ramp-header">
+                <div>
+                    <h3>Multi-Year Capital Ramp (2025–2029)</h3>
+                    <p style="font-size: 0.88rem; color: var(--m-text-muted);">Predictable scaling trajectory to meet
+                        expanding geographic demand across pastoralist Kajiado.</p>
+                </div>
+                <span class="strategy-chip">Compound Growth</span>
+            </div>
+
+            <!-- Interactive Highcharts Visual Ramp -->
+            <div class="ramp-chart-shell">
+                <!-- Interactive Mode Switchers -->
+                <div class="ramp-chart-controls">
+                    <div class="chart-type-selector">
+                        <button class="btn-chart-mode active" data-mode="stacked" onclick="switchChartMode('stacked')">
+                            <i class="ph-bold ph-chart-bar"></i> Pillar Breakdown
+                        </button>
+                        <button class="btn-chart-mode" data-mode="cumulative" onclick="switchChartMode('cumulative')">
+                            <i class="ph-bold ph-chart-line-up"></i> Cumulative Capital ($2.0M)
+                        </button>
+                        <button class="btn-chart-mode" data-mode="girls" onclick="switchChartMode('girls')">
+                            <i class="ph-bold ph-users-three"></i> Girls Reached (Target: 32k)
+                        </button>
+                    </div>
+                    <span class="chart-drilldown-hint">
+                        <i class="ph-bold ph-cursor-click"></i> Click bars for programmatic breakdown
+                    </span>
+                </div>
+            
+                <!-- Chart DOM Mount -->
+                <div id="fundingRampChartContainer" class="funding-ramp-chart"></div>
+            </div>
+
+            <div class="ramp-steps-grid">
+                <div class="ramp-step-box">
+                    <span class="ramp-step-year">Year 1 • 2025</span>
+                    <div class="ramp-step-val">$200k</div>
+                    <p class="ramp-step-desc">Establish baseline systems, MERL automation, and KUZA expansion.
+                    </p>
+                </div>
+
+                <div class="ramp-step-box">
+                    <span class="ramp-step-year">Year 2 • 2026</span>
+                    <div class="ramp-step-val">$300k</div>
+                    <p class="ramp-step-desc">Malkia@10 milestone mobilization & institutional donor accords.
+                    </p>
+                </div>
+
+                <div class="ramp-step-box">
+                    <span class="ramp-step-year">Year 3 • 2027</span>
+                    <div class="ramp-step-val">$400k</div>
+                    <p class="ramp-step-desc">Mid-term evaluation, Knowledge Hub launch, and cross-county pilot.</p>
+                </div>
+
+                <div class="ramp-step-box">
+                    <span class="ramp-step-year">Year 4 • 2028</span>
+                    <div class="ramp-step-val">$500k</div>
+                    <p class="ramp-step-desc">Scale Olgulului Youth Resource Center and regional TVET tracks.</p>
+                </div>
+
+                <div class="ramp-step-box">
+                    <span class="ramp-step-year">Year 5 • 2029</span>
+                    <div class="ramp-step-val">$600k</div>
+                    <p class="ramp-step-desc">Full pan-pastoral movement sustainability and policy transitions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Tri-Pillar Strategic Allocation Bento -->
+        <section class="pillars-grid" aria-label="Strategic Pillars">
+        
+            <!-- Pillar 1 -->
+            <article class="pillar-card featured">
+                <div>
+                    <div class="pillar-badge-strip">
+                        <span class="pillar-num">Pillar 01</span>
+                        <span class="pillar-allocation">$1,440,000 (72%)</span>
+                    </div>
+                    <h2 class="pillar-title">Girl-Centered Programming & Advocacy</h2>
+                    <p class="pillar-body">
+                        Direct mission execution addressing the structural drivers of disenfranchisement: adolescent health,
+                        harmful cultural norms, and secondary transition.
+                    </p>
+        
+                    <div class="pillar-accordion-wrap">
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span class="funding-amount-pill">$450k</span> Adolescent SRHR</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Scale YouthWyze digital hubs, production of age-appropriate IEC materials, and clinic referrals
+                                for 15,000 girls.
+                            </div>
+                        </details>
+        
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span
+                                        class="funding-amount-pill">$300k</span> Menstrual Health</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Expand Pad Banks and provide quarterly dignity kit distributions for 12,000 pastoralist
+                                schoolgirls.
+                            </div>
+                        </details>
+        
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span class="funding-amount-pill">$300k</span> Gender Justice</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Survivor psychosocial rehabilitation, rescue response, and alternative rites of passage
+                                community dialogues.
+                            </div>
+                        </details>
+        
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span
+                                        class="funding-amount-pill">$350k</span> Education Transition</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Secondary school tuition aid, remedial TaRL cohorts, and TVET vocational tracks at Maasai
+                                National Polytechnic.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+        
+            <!-- Pillar 2 -->
+            <article class="pillar-card">
+                <div>
+                    <div class="pillar-badge-strip">
+                        <span class="pillar-num">Pillar 02</span>
+                        <span class="pillar-allocation">$300,000 (15%)</span>
+                    </div>
+                    <h2 class="pillar-title">Building Evidence <br>& Sharing</h2>
+                    <p class="pillar-body">
+                        Positioning Malkia as the definitive insights hub on pastoralist adolescent realities through girl-led
+                        participatory research.
+                    </p>
+        
+                    <div class="pillar-accordion-wrap">
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span class="funding-amount-pill">$250k</span> Knowledge Hub</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Train 5,000 girl researchers, document lived experience field dossiers, and publish
+                                community-validated case studies.
+                            </div>
+                        </details>
+        
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span class="funding-amount-pill">$50k</span> Policy Influence</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Participate in Technical Working Groups and submit annual grassroots shadow reports on
+                                adolescent welfare.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+        
+            <!-- Pillar 3 -->
+            <article class="pillar-card">
+                <div>
+                    <div class="pillar-badge-strip">
+                        <span class="pillar-num">Pillar 03</span>
+                        <span class="pillar-allocation">$260,000 (13%)</span>
+                    </div>
+                    <h2 class="pillar-title">Resourcing <br>& Governance</h2>
+                    <p class="pillar-body">
+                        Strengthening institutional capacity, compliance systems, donor management infrastructure, and staff
+                        wellness.
+                    </p>
+        
+                    <div class="pillar-accordion-wrap">
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span class="funding-amount-pill">$75k</span> Partnerships</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Strategic brand positioning, peer NGO collaborations, and multi-sector corporate alliances.
+                            </div>
+                        </details>
+        
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span class="funding-amount-pill">$80k</span> Governance</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Independent external audits, board advisory retreats, and staff professional development
+                                certifications.
+                            </div>
+                        </details>
+        
+                        <details class="pillar-deliverable-item">
+                            <summary class="pillar-deliverable-summary">
+                                <span class="summary-meta"><span
+                                        class="funding-amount-pill">$105k</span> Resource Mobilization</span>
+                                <span class="pillar-accordion-icon">+</span>
+                            </summary>
+                            <div class="pillar-deliverable-desc">
+                                Pipeline tracking CRM tools, bilateral funding proposals, and endowment fund modeling.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+        
+        </section>
+
+        <!-- 4. Interactive Unit Investment Calculator -->
+        <section class="calc-card bead-accent-top" aria-label="Investment Calculator">
+            <div class="calc-header">
+                <span class="milestone-year-badge"
+                    style="background: rgba(242, 201, 76, 0.2); color: var(--m-gold); border-color: rgba(242, 201, 76, 0.4);">
+                    Sponsorship Engine
+                </span>
+                <h3 style="margin-top: 12px;">Sponsor Her Agency at Scale</h3>
+                <p>Every $75 directly underwrites one month of schooling, sanitary kits, and mentorship for a girl in
+                    Kajiado.</p>
+            </div>
+
+            <div class="calc-stepper-wrap">
+                <div class="calc-presets">
+                    <button class="btn-preset active" data-count="1">1 Girl ($75)</button>
+                    <button class="btn-preset" data-count="10">10 Girls ($750)</button>
+                    <button class="btn-preset" data-count="50">50 Girls ($3,750)</button>
+                    <button class="btn-preset" data-count="100">100 Girls ($7,500)</button>
+                </div>
+
+                <div class="calc-output-box">
+                    <div class="calc-output-math">
+                        <div class="total-cost" id="calcTotalCost">$75</div>
+                        <div class="target-girls" id="calcTotalGirls">1 Adolescent Girl Supported for 1 Month</div>
+                    </div>
+                    <button class="btn-pill btn-pill-gold" onclick="openPledgeModal(currentCalculatedCount)">
+                        <span>Pledge Investment</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </button>
+                </div>
+                <p style="font-size: 0.85rem; color: #E6DCE8; font-style: italic;" id="calcImpactNote">
+                    Guarantees 12 months of sanitary towels, education retention, and mentorship.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. Strategic Targets (Exit Artifacts) -->
+        <section class="targets-card" aria-label="Exit Artifacts">
+            <h3>Verified 2029 Strategic Targets (Logframe Alignment)</h3>
+            <div class="targets-grid">
+                <div class="target-item">
+                    <div class="pct">80%</div>
+                    <div class="desc">Of adolescent girls accessing quality youth-friendly SRHR services across
+                        Kajiado.</div>
+                </div>
+                <div class="target-item">
+                    <div class="pct">90%</div>
+                    <div class="desc">School retention rate maintained among all supported adolescent mothers and
+                        vulnerable girls.</div>
+                </div>
+                <div class="target-item">
+                    <div class="pct">50%</div>
+                    <div class="desc">Reduction in community acceptance of FGM and forced early marriage practices.</div>
+                </div>
+                <div class="target-item">
+                    <div class="pct">20+</div>
+                    <div class="desc">County, national, and regional policies actively influenced by girl-led research
+                        products.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom-Right Grouped Expandable FAB Dock -->
+    <aside class="fab-dock-bottom" aria-label="Quick Actions">
+        <button class="fab-trigger fab-telemetry" onclick="toggleStatsDrawer()" aria-label="Field Telemetry and FAQs">
+            <i class="ph-bold ph-scales"></i>
+            <span class="fab-text">Strategic Targets</span>
+        </button>
+        <button class="fab-trigger fab-bigidea" onclick="openBigIdeaModal()" aria-label="The Big Idea Manifesto">
+            <i class="ph-bold ph-lightbulb"></i>
+            <span class="fab-text">The Big Idea</span>
+        </button>
+    </aside>
+
+    <!-- Shared Drawer Backdrop -->
+    <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeAllDrawers()"></div>
+
+    <!-- Shared Slide-out Navigation Drawer -->
+    <nav class="nav-drawer smooth-transition" id="navDrawer" aria-label="Primary Directory">
+        <div>
+            <div class="nav-drawer-header">
+                <img src="../assets/images/logo.png" alt="The Malkia Initiative Logo" class="nav-drawer-logo"
+                    onerror="this.src='../assets/images/logo.png'; this.onerror=null;" />
+            </div>
+            <div class="drawer-nav-links">
+                <a href="../">
+                    <span>Overview</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="../impact-stories/">
+                    <span>Impact Dossiers</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="../../annual-reports/2025/" target="_blank">
+                    <span>2025 Audited Report</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="./" class="active">
+                    <span>Strategic Vision 2029</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+                <a href="../program/">
+                    <span>Event Experience</span>
+                    <span class="nav-arrow-circle"><i class="ph ph-caret-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--m-text-muted);">
+            ACK Tenebo House, Kajiado Central<br>
+            <a href="../../"
+                style="color: var(--m-purple); text-decoration: none; font-weight: 700;">&larr; Back To Main Site</a>
+        </div>
+    </nav>
+
+    <!-- Slide-out Telemetry Drawer (Strategic FAQ Focus) -->
+    <aside class="stats-drawer smooth-transition" id="statsDrawer" aria-label="Strategic Details">
+        <div class="stats-drawer-header">
+            <h3><i class="ph-bold ph-scales"></i> Strategic FAQs</h3>
+            <button onclick="toggleStatsDrawer()" class="btn-stats-close" aria-label="Close Drawer">✕</button>
+        </div>
+
+        <div class="telemetry-grid">
+            <div class="telemetry-stat-card bead-accent-top">
+                <div class="stat-card-badge">Target Cohort 2029</div>
+                <div class="stat-card-value-row">
+                    <span class="stat-card-metric">32,000</span>
+                    <i class="ph-bold ph-target stat-card-trend-icon"></i>
+                </div>
+                <p class="stat-card-desc">
+                    Total girls targeted for direct agency, education retention, and leadership empowerment across Kenya
+                    by 2029.
+                </p>
+            </div>
+
+            <div class="telemetry-stat-card">
+                <div class="stat-card-badge">Capital Efficiency</div>
+                <div class="stat-card-value-row">
+                    <span class="stat-card-metric">81.4%</span>
+                    <i class="ph-bold ph-chart-line-up stat-card-trend-icon"></i>
+                </div>
+                <p class="stat-card-desc">
+                    Historical benchmark of resources deployed directly into grassroots communities versus
+                    administration.
+                </p>
+            </div>
+        </div>
+
+        <h4 class="faq-section-title">Investor Inquiries</h4>
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <span>How does the 1,000-Day Sprint connect to the $2M plan?</span>
+                <span class="faq-indicator">+</span>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    The 1,000-Day Sprint is our initial acceleration push requiring $900,000 to resource 12,000 girls
+                    immediately, serving as the catalyst for the wider 5-year $2,000,000 institutional
+                    strategy.
+                </p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <span>What makes the $75 unit cost sustainable?</span>
+                <span class="faq-indicator">+</span>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    By leveraging existing public schools, local polytechnics (MNP), and community volunteer mentors
+                    (Mentors on the Road), we eliminate bloated overhead while maintaining direct
+                    impact.
+                </p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <span>How will progress be monitored?</span>
+                <span class="faq-indicator">+</span>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    Progress is evaluated quarterly and overseen by our MERL Manager against the 2025–2029 Logical
+                    Framework, with a formal mid-term evaluation scheduled for mid-2027.
+                </p>
+            </div>
+        </details>
+    </aside>
+
+    <!-- Investment & Pledge Modal (VISA / MPESA Multi-tier) -->
+    <dialog class="modal-bigidea pledge-dialog" id="bigIdeaDialog">
+        <div class="pledge-dialog-header">
+            <h3><i class="ph-fill ph-crown" style="color: var(--m-gold);"></i> Sponsor Her Sovereignty</h3>
+            <button onclick="closeBigIdeaModal()" style="background:none; border:none; font-size: 1.3rem; cursor:pointer;"
+                aria-label="Close Dialog">✕</button>
+        </div>
+    
+        <form class="pledge-form" onsubmit="handlePledgeSubmit(event)">
+    
+            <!-- Cadence Switcher -->
+            <div class="form-group">
+                <label>Investment Frequency</label>
+                <div class="cadence-switch">
+                    <label>
+                        <input type="radio" name="pledgeCadence" value="monthly" checked>
+                        <span>Monthly Subscription</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pledgeCadence" value="annual">
+                        <span>Annual Commitment</span>
+                    </label>
+                </div>
+            </div>
+    
+            <!-- Payment Channel -->
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div class="payment-methods-grid">
+                    <label class="payment-method-card">
+                        <input type="radio" name="paymentChannel" value="mpesa" checked
+                            onchange="handlePaymentChannelChange()">
+                        <span>M-PESA Paybill</span>
+                    </label>
+                    <label class="payment-method-card">
+                        <input type="radio" name="paymentChannel" value="visa" onchange="handlePaymentChannelChange()">
+                        <span>VISA / Mastercard</span>
+                    </label>
+                </div>
+            </div>
+    
+            <!-- Sized Tiers -->
+            <div class="form-group">
+                <label>Support Volume</label>
+                <div class="tiers-selector">
+                    <label class="tier-option" id="tierOption1">
+                        <span>1 Girl ($75)</span>
+                        <input type="radio" name="selectedTier" value="1" checked>
+                    </label>
+                    <label class="tier-option" id="tierOption10">
+                        <span>10 Girls ($750)</span>
+                        <input type="radio" name="selectedTier" value="10">
+                    </label>
+                    <label class="tier-option disabled" id="tierOption50">
+                        <span>50 Girls ($3,750)</span>
+                        <input type="radio" name="selectedTier" value="50">
+                    </label>
+                    <label class="tier-option disabled" id="tierOption100">
+                        <span>100 Girls ($7,500)</span>
+                        <input type="radio" name="selectedTier" value="100">
+                    </label>
+                </div>
+            </div>
+    
+            <!-- Donor Details -->
+            <div class="form-group" id="channelDynamicInput">
+                <label id="channelInputLabel">M-PESA Mobile Number</label>
+                <input type="text" class="input-text" id="channelInputValue" placeholder="e.g. 0712345678" required>
+            </div>
+    
+            <div class="form-group">
+                <label>Full Name or Institution</label>
+                <input type="text" class="input-text" placeholder="e.g. Full Names" required>
+            </div>
+    
+            <button type="submit" class="btn-pill btn-pill-purple"
+                style="width: 100%; justify-content: center; height: 46px; margin-top: 8px;">
+                Confirm Sponsorship Commitment
+            </button>
+        </form>
+    </dialog>
+
+    <!-- Core Scripts -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/vision.js"></script>
+</body>
+
+</html>

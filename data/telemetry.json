@@ -12,7 +12,7 @@
         "icon": "ph-chart-pie-slice"
       },
       {
-        "title": "Unit Cost / Year",
+        "title": "Unit Cost / Month",
         "number": "$75",
         "icon": "ph-currency-dollar"
       },
@@ -32,7 +32,7 @@
         "answer": "All operational expenditures are independently audited under ISA standards, with an 81.4% direct frontline delivery efficiency."
       },
       {
-        "question": "What does the $75/year unit sponsorship cover?",
+        "question": "What does the $75/month unit sponsorship cover?",
         "answer": "It fully covers 12 months of boarding sanctuary access, menstrual hygiene dignity kits, foundational KUZA learning toolkits, and in-school mentoring."
       }
     ]
@@ -63,7 +63,7 @@
     "faqs": [
       {
         "question": "What are the core areas of improvement to close the education gap?",
-        "answer": "Providing infant care support to returning adolescent mothers allows learners to remain in vocational tracks throughout the full year."
+        "answer": "Providing infant care support to returning adolescent mothers allows learners to remain in vocational tracks throughout the full month."
       },
       {
         "question": "Why did traditional top-down interventions fail previously?",
@@ -481,7 +481,7 @@
     "faqs": [
       {
         "question": "How much does it cost to sponsor a pastoralist girl?",
-        "answer": "A gift of $75 (KES 9,750) fully secures boarding, menstrual hygiene, learning kits, and mentoring for an entire academic year."
+        "answer": "A gift of $75 (KES 9,750) fully secures boarding, menstrual hygiene, learning kits, and mentoring for an entire academic month."
       },
       {
         "question": "What corporate partnership opportunities exist?",
@@ -633,7 +633,7 @@
     "faqs": [
       {
         "question": "What is the 1,000-Day Goal presented at UNGA?",
-        "answer": "It is an intentional catalytic campaign to enhance the agency of 12,000 more adolescent girls in rural Kajiado through a $900,000 USD investment need ($75/girl/year)."
+        "answer": "It is an intentional catalytic campaign to enhance the agency of 12,000 more adolescent girls in rural Kajiado through a $900,000 USD investment need ($75/girl/month)."
       },
       {
         "question": "What was the inspiration behind The Malkia Initiative?",

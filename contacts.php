@@ -21,7 +21,7 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
         "mainEntity": {
             "@type": "NGO",
             "name": "The Malkia Initiative",
-            "telephone": "+254700000000",
+            "telephone": "+254717864726",
             "email": "info@malkiainitiative.org",
             "address": {
             "@type": "PostalAddress",
@@ -182,7 +182,7 @@ $selected_interest = isset($_GET['interest']) ? htmlspecialchars($_GET['interest
 
                     <div class="hotline-action-box">
                         <span class="hotline-lbl">Emergency Frontline Dispatch</span>
-                        <a href="tel:+254700000000" class="hotline-tel">+254 (0) 717 864 726</a>
+                        <a href="tel:+254717864726" class="hotline-tel">+254 (0) 717 864 726</a>
                         <span class="hotline-note">24/7 Community Escalation Desk</span>
                     </div>
 

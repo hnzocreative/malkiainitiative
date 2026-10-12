@@ -1,0 +1,137 @@
+[
+  {
+    "id": "olgulului",
+    "name": "Olgulului",
+    "meaning": "Place of the resilient circular ridges",
+    "description": "Host community of the Olgulului Boarding Primary Sanctuary and Malkia Youth Resource Center, shielding over 587 pastoralist boarders from long-distance predatory routes.",
+    "image": "assets/images/projects/01-KUZA.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Olgulului+Kajiado+Kenya",
+    "beneficiaries": 1840
+  },
+  {
+    "id": "lorngosua",
+    "name": "Lorng'osua",
+    "meaning": "The plain of wild fig trees",
+    "description": "Critical pastoralist corridor where Malkia deployed remedial KUZA numeracy toolkits across 3 remote feeder schools.",
+    "image": "assets/images/projects/02-sauti-ya-dada.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lorngosua+Kajiado+Kenya",
+    "beneficiaries": 920
+  },
+  {
+    "id": "iseuri",
+    "name": "Iseuri",
+    "meaning": "The valley of clean springs",
+    "description": "Frontline Crown Club outpost establishing community-led child protection alerts and emergency sanitary dignity pad banks.",
+    "image": "assets/images/projects/03-voices-uncut.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Iseuri+Kajiado+Kenya",
+    "beneficiaries": 640
+  },
+  {
+    "id": "sajiloni",
+    "name": "Sajiloni",
+    "meaning": "Ridge of safe gatherings",
+    "description": "Key transition zone where community elders signed formal multi-village resolutions against early child betrothal.",
+    "image": "assets/images/projects/04-she-rise.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sajiloni+Kajiado+Kenya",
+    "beneficiaries": 1120
+  },
+  {
+    "id": "eiti",
+    "name": "Eiti",
+    "meaning": "The peaceful clearing",
+    "description": "Focal zone for SheRISE adolescent mother re-enrollments into secondary schooling and vocational enterprise pathways.",
+    "image": "assets/images/projects/05-break-free.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eiti+Kajiado+Kenya",
+    "beneficiaries": 480
+  },
+  {
+    "id": "saina",
+    "name": "Saina",
+    "meaning": "Sandy seasonal river basin",
+    "description": "Location of intensive cross-village parent-teacher workshops dismantling menstrual taboos.",
+    "image": "assets/images/projects/06-for-her.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Saina+Kajiado+Kenya",
+    "beneficiaries": 760
+  },
+  {
+    "id": "iltilal",
+    "name": "Iltilal",
+    "meaning": "The gentle green slopes",
+    "description": "Border community site operating joint inter-agency intercept networks against cross-border cut caravans.",
+    "image": "assets/images/projects/01-KUZA.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Iltilal+Kajiado+Kenya",
+    "beneficiaries": 890
+  },
+  {
+    "id": "paranae",
+    "name": "Paranae",
+    "meaning": "Land of wide horizons",
+    "description": "Active cluster for foundational literacy regrouping, accelerating reading fluency for young primary girls.",
+    "image": "assets/images/projects/02-sauti-ya-dada.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Paranae+Kajiado+Kenya",
+    "beneficiaries": 530
+  },
+  {
+    "id": "eluai",
+    "name": "Eluai",
+    "meaning": "Abode of the yellow whistling thorn",
+    "description": "Sanctuary corridor providing safe transit and academic catch-up coaching for rescued out-of-school girls.",
+    "image": "assets/images/projects/03-voices-uncut.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eluai+Kajiado+Kenya",
+    "beneficiaries": 670
+  },
+  {
+    "id": "oloosuyian",
+    "name": "Oloosuyian",
+    "meaning": "Place of the wild hunting dogs",
+    "description": "Youth leadership hub where Sauti Ya Dada advocates mentor younger primary school students on bodily autonomy.",
+    "image": "assets/images/projects/04-she-rise.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Oloosuyian+Kajiado+Kenya",
+    "beneficiaries": 980
+  },
+  {
+    "id": "orkungu",
+    "name": "Orkung'u",
+    "meaning": "The rock pinnacle lookout",
+    "description": "High-altitude pastoral ward featuring community-built dormitories backed by Malkia's For Her infrastructure campaign.",
+    "image": "assets/images/projects/05-break-free.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Orkungu+Kajiado+Kenya",
+    "beneficiaries": 810
+  },
+  {
+    "id": "piliwa",
+    "name": "Piliwa",
+    "meaning": "The shaded river crossing",
+    "description": "Feeder community connected to clean water access points, eliminating 5-kilometer morning water treks for schoolgirls.",
+    "image": "assets/images/projects/06-for-her.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Piliwa+Kajiado+Kenya",
+    "beneficiaries": 430
+  },
+  {
+    "id": "kumpa",
+    "name": "Kumpa",
+    "meaning": "The meeting grounds",
+    "description": "Central training site for adolescent girl researchers codifying field data into policy recommendations.",
+    "image": "assets/images/projects/01-KUZA.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kumpa+Kajiado+Kenya",
+    "beneficiaries": 1340
+  },
+  {
+    "id": "ilbisil",
+    "name": "Ilbisil",
+    "meaning": "The trading crossroads",
+    "description": "Economic epicenter where teen mothers from the SheRISE program sell artisan beadwork, tailoring, and ceramic crafts.",
+    "image": "assets/images/projects/02-sauti-ya-dada.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ilbisil+Kajiado+Kenya",
+    "beneficiaries": 2100
+  },
+  {
+    "id": "olmotiany",
+    "name": "Olmotiany",
+    "meaning": "Crest of the olive grove",
+    "description": "Grassroots assembly center where community champions monitor girl retention rates across 5 partner primary schools.",
+    "image": "assets/images/projects/03-voices-uncut.webp",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Olmotiany+Kajiado+Kenya",
+    "beneficiaries": 610
+  }
+]
