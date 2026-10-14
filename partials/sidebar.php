@@ -102,6 +102,7 @@ $is_about_active = in_array($current_page, $about_pages);
             <a href="mailto:info@malkiainitiative.org" aria-label="Mail"><i class="ph-bold ph-envelope-simple-open"></i></a>
             <a href="https://maps.app.goo.gl/3y8ppcyS5hgsWhC28" aria-label="Map" target="_blank"><i class="ph-bold ph-map-pin"></i></a>
             <a href="https://www.facebook.com/malkia.initiative/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph-bold ph-facebook-logo"></i></a>
+            <a href="https://www.instagram.com/the_malkiainitiative/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a>
         </div>
         <div class="sidebar-legal">
             <a href="<?= BASE_URL ?>safeguarding-policy">Safe Guarding Policy</a>

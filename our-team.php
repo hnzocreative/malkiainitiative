@@ -99,18 +99,18 @@
                         <!-- Lead 1: KUZA Literacy -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/lewis.webp" alt="KUZA Literacy Lead" loading="lazy">
+                                <img src="./assets/images/team/lewis.webp" alt="Finance and Operations Manager" loading="lazy">
                             </div>
                             <div class="staff-details">
                                 <h4>Lewis Gautama</h4>
-                                <span class="role-pill">Finance Manager</span>
+                                <span class="role-pill">Finance and Operations Manager</span>
                             </div>
                         </div>
 
                         <!-- Lead 2: Voices Uncut (SRHR & Protection) -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/joyce.webp" alt="Child Protection Lead" loading="lazy">
+                                <img src="./assets/images/team/joyce.webp" alt="Programs Manager" loading="lazy">
                             </div>
                             <div class="staff-details">
                                 <h4>Joyce Muriithi</h4>
@@ -121,44 +121,55 @@
                         <!-- Lead 3: SheRISE (TVET & Economic Agency) -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/amon.webp" alt="Vocational Programs Lead" loading="lazy">
+                                <img src="./assets/images/team/amon.webp" alt="Programs Officer" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Amon Name</h4>
-                                <span class="role-pill">Operational Title</span>
+                                <h4>Amon Letia</h4>
+                                <span class="role-pill">Programs Officer</span>
                             </div>
                         </div>
 
                         <!-- Lead 4: Finance & Compliance -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/anita.webp" alt="Finance & Compliance Lead" loading="lazy">
+                                <img src="./assets/images/team/anita.webp" alt="Programs Officer" loading="lazy">
                             </div>
                             <div class="staff-details">
                                 <h4>Anita Ikua</h4>
-                                <span class="role-pill">Operational Title</span>
+                                <span class="role-pill">Programs Officer</span>
                             </div>
                         </div>
 
                         <!-- Lead 5: Finance & Compliance -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/agnes.webp" alt="Finance & Compliance Lead" loading="lazy">
+                                <img src="./assets/images/team/agnes.webp" alt="Programmes Assistant" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Agnes Name</h4>
-                                <span class="role-pill">Operational Title</span>
+                                <h4>Agnes Murea</h4>
+                                <span class="role-pill">Programmes Assistant</span>
                             </div>
                         </div>
 
                         <!-- Lead 5: Finance & Compliance -->
                         <div class="staff-card">
                             <div class="staff-photo">
-                                <img src="./assets/images/team/amina.webp" alt="Finance & Compliance Lead" loading="lazy">
+                                <img src="./assets/images/team/amina.webp" alt="Programmes Assistant" loading="lazy">
                             </div>
                             <div class="staff-details">
-                                <h4>Amina Name</h4>
-                                <span class="role-pill">Operational Title</span>
+                                <h4>Amina Juma</h4>
+                                <span class="role-pill">Programmes Assistant</span>
+                            </div>
+                        </div>
+
+                        <!-- Lead 5: Finance & Compliance -->
+                        <div class="staff-card">
+                            <div class="staff-photo">
+                                <img src="./assets/images/team/gideon.webp" alt="Field Officer" loading="lazy">
+                            </div>
+                            <div class="staff-details">
+                                <h4>Gideon Moikai</h4>
+                                <span class="role-pill">Field Officer</span>
                             </div>
                         </div>
                     </div>
